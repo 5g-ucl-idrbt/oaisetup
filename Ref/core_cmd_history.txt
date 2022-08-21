@@ -1,0 +1,223 @@
+
+oaidev@oaicore:~/oai-cn5g-fed/docker-compose$ history 300
+    1  sudo apt-get update
+    2  sudo apt-get upgrade 
+    3  nmcli dev show
+    4  sudo apt install network-manager
+    5  sudo apt install wireshark
+    6  nmcli dev show
+    7  sudo apt install iperf
+    8  sudo apt install iperf3
+    9  sudo apt-get remove docker docker-engine docker.io containerd runc
+   10  sudo apt-get update
+   11  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+   12  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+   13    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   14  sudo apt-get update
+   15  sudo docker run hello-world
+   16  git
+   17  git clone https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed.git
+   18  dpkg --list | grep docke
+   19  dpkg --list | grep docker
+   20  sudo usermod -a -G docker myusername
+   21  sudo usermod -a -G docker oaidev
+   22  docker login
+   23  sudo docker login
+   24  docker pull ubuntu:bionic
+   25  sudo docker pull ubuntu:bionic
+   26  sudo docker pull mysql:5.7
+   27  iptables -h
+   28  iptables -l
+   29  iptables --list
+   30  sudo iptables --list
+   31  sudo sysctl net.ipv4.conf.all.forwarding=1
+   32  sudo iptables -P FORWARD ACCEPT
+   33  sudo iptables --list
+   34  sudo nano /etc/docker/daemon.json
+   35  ip a
+   36  sudo nano /etc/docker/daemon.json
+   37  172.17.0.1
+   38  sudo nano /etc/docker/daemon.json
+   39  sudo service docker restart
+   40  ssudo docker info
+   41  sudo docker info
+   42  ip a
+   43  docker network inspect bridge
+   44  sudo docker network inspect bridge
+   45  sudo docker images list
+   46  sudo nano pullimgs.sh
+   47  ls
+   48  sudo ./pullimgs.sh
+   49  ls -l
+   50  chmod -777 pullimgs.sh 
+   51  sudo chmod -777 pullimgs.sh 
+   52  sudo ./pullimgs.sh
+   53  ls -l
+   54  sudo chmod 777 pullimgs.sh 
+   55  ls -l
+   56  sudo ./pullimgs.sh
+   57  ls
+   58  docker build --target oai-amf --tag oai-amf:v1.4.0                --file component/oai-amf/docker/Dockerfile.amf.ubuntu18                component/oai-amf
+   59  sudo docker build --target oai-amf --tag oai-amf:v1.4.0 --file component/oai-amf/docker/Dockerfile.amf.ubuntu18 component/oai-amf
+   60  sudo docker network inspect bridge
+   61  sudo nano /etc/docker/daemon.json 
+   62  sudo systemctl restart docker.service 
+   63  sudo docker build --target oai-amf --tag oai-amf:v1.4.0 --file component/oai-amf/docker/Dockerfile.amf.ubuntu18 component/oai-amf
+   64  sudo docker image prune --force
+   65  sudo docker image ls
+   66  sudo docker build --target oai-smf --tag oai-smf:v1.4.0                --file component/oai-smf/docker/Dockerfile.smf.ubuntu18                component/oai-smf
+   67  sudo docker image ls
+   68  sudo docker image prune --force
+   69  sudo docker image ls
+   70  sudo docker build --target oai-nrf --tag oai-nrf:v1.4.0                --file component/oai-nrf/docker/Dockerfile.nrf.ubuntu18                component/oai-nrf
+   71  docker image prune --force
+   72  docker image ls
+   73  sudo  docker build --target oai-spgwu-tiny --tag oai-spgwu-tiny:v1.4.0                --file component/oai-upf-equivalent/docker/Dockerfile.ubuntu18.04                component/oai-upf-equivalent
+   74  sudo docker image prune --force
+   75  sudo docker image ls
+   76  sudo docker build --target oai-ausf --tag oai-ausf:v1.4.0                --file component/oai-ausf/docker/Dockerfile.ausf.ubuntu18                component/oai-ausf
+   77  sudo docker image prune --force
+   78  sudo docker image ls
+   79  sudo docker build --target oai-udm --tag oai-udm:v1.4.0                --file component/oai-udm/docker/Dockerfile.udm.ubuntu18                component/oai-udm
+   80  sudo docker image prune --force
+   81  sudo docker image ls
+   82  sudo docker build --target oai-udr --tag oai-udr:v1.4.0                --file component/oai-udr/docker/Dockerfile.udr.ubuntu18                component/oai-udr
+   83  sudo docker image prune --force
+   84  sudo docker image ls
+   85  sudo docker build --target oai-upf-vpp --tag oai-upf-vpp:v1.4.0                --file component/oai-upf-vpp/docker/Dockerfile.upf-vpp.ubuntu18                component/oai-upf-vpp
+   86  sudo docker build --target oai-upf-vpp --tag oai-upf-vpp:v1.4.0                --file component/oai-upf-vpp/docker/Dockerfile.upf-vpp.ubuntu18                component/oai-upf-vpp
+   87  ls
+   88  sudo docker build --target oai-upf-vpp --tag oai-upf-vpp:v1.4.0                --file component/oai-upf-vpp/docker/Dockerfile.upf-vpp.ubuntu                component/oai-upf-vpp
+   89  sudo docker image prune --force
+   90  sudo docker image ls
+   91  sudo docker build --target oai-nssf --tag oai-nssf:v1.4.0                --file component/oai-nssf/docker/Dockerfile.nssf.ubuntu18                component/oai-nssf
+   92  sudo docker image prune --force
+   93  sudo docker image ls
+   94  $ docker build --target trf-gen-cn5g --tag trf-gen-cn5g:latest                --file ci-scripts/Dockerfile.traffic.generator.ubuntu18.04                 .
+   95  sudo  docker build --target trf-gen-cn5g --tag trf-gen-cn5g:latest --file ci-scripts/Dockerfile.traffic.generator.ubuntu18.04 .
+   96  docker network create   --driver=bridge   --subnet=192.168.70.128/26   -o "com.docker.network.bridge.name"="demo-oai"   demo-oai-public-net
+   97  sudo docker network create   --driver=bridge   --subnet=192.168.70.128/26   -o "com.docker.network.bridge.name"="demo-oai"   demo-oai-public-net
+   98  ifconfig demo-oai
+   99  docker network ls
+  100  sudo docker exec -it mysql /bin/bash
+  101  sudo docker image ls
+  102  sudo docker exec -it 3147495b3a5c /bin/bash
+  103  sudo docker container ls
+  104  ls
+  105  ls ./docker-compose/
+  106  python3 ./docker-compose/core-network.py --help
+  107  python3 ./docker-compose/core-network.py
+  108  python3 ./docker-compose/core-network.py -t start-basic
+  109  python3 ./docker-compose/core-network.py --type start-basic
+  110  cd ./docker-compose/
+  111  ls
+  112  python3 ./docker-compose/core-network.py --type start-basic
+  113  python3 core-network.py --type start-basic
+  114  sudo python3 core-network.py --type start-basic
+  115  ls
+  116  sudo python3 core-network.py --type start-basic
+  117  clear
+  118  sudo docker image ls
+  119  sudo python3 core-network.py --type start-basic
+  120  python3 core-network.py --type start-basic --scenario 
+  121  python3 core-network.py --type start-basic --scenario 2
+  122  sudo python3 core-network.py --type start-basic --scenario 2
+  123  pwd
+  124  sudo python3 ./core-network.py --type start-basic
+  125  docker-compose
+  126  sudo apt install docker-compose
+  127  sudo python3 ./core-network.py --type start-basic
+  128  python3 ./core-network.py --type start-basic
+  129  docker-compose version 
+  130  ls
+  131  sudo apt remove docker-compose
+  132  sudo apt-cache show docker-compose
+  133  sudo apt install docker-compose-3.8
+  134  python3 ./core-network.py --type start-basic
+  135  docker-compose version 
+  136  sudo apt update
+  137  sudo apt install docker-compose
+  138  docker-compose version 
+  139  sudo apt remove docker-compose
+  140  docker-compose version 
+  141  sudo nano imgsTag.sh
+  142* 
+  143  cd oai-cn5g-fed
+  144  ls
+  145  git checkout -f v1.4.0
+  146  ./scripts/syncComponents.sh 
+  147  ls
+  148  cd docker-compose/
+  149  ls
+  150  sudo nano ./docker-compose-basic-nrf.yaml 
+  151  ip a
+  152  sudo nano ./docker-compose-basic-nrf.yaml 
+  153  curl -fsSL https://code-server.dev/install.sh | sh
+  154  sudo systemctl start code-server@$USER
+  155  sudo systemctl enable --now code-server@$USER
+  156  sudo systemctl start code-server@$USER
+  157  sudo systemctl enable --now code-server@$USER
+  158  nano ~/.config/code-server/config.yaml
+  159  sudo systemctl restart code-server@$USER
+  160  cd docker-compose/
+  161  ls
+  162  ls        python3 core-network.py --type start-basic
+  163  sudo python3 core-network.py --type start-basic
+  164  docker logs --follow oai-amf
+  165  sudo sysctl net.ipv4.conf.all.forwarding=1
+  166  sudo iptables -P FORWARD ACCEPT
+  167  docker logs --follow oai-amf
+  168  ls        python3 core-network.py --type stop
+  169  ping 192.168.150.161
+  170  sudo python3 core-network.py --type stop-basic --fqdn no --scenario 1
+  171  clear
+  172  sudo python3 core-network.py --type stop-basic --fqdn no --scenario 1
+  173  sudo python3 core-network.py --type stop-basic
+  174  sudo python3 core-network.py --type start-basic --fqdn no --scenario 1
+  175  sudo python3 core-network.py --type start-basic --scenario 1
+  176  docker logs --follow oai-amf
+  177  sudo sysctl net.ipv4.conf.all.forwarding=1
+  178  sudo iptables -P FORWARD ACCEPT
+  179  sudo python3 core-network.py --type stop-basic --scenario 1
+  180  sudo python3 core-network.py --type start-basic --scenario 1
+  181  sudo python3 core-network.py --type stop-basic --scenario 1
+  182  sudo python3 core-network.py --type start-basic --scenario 1
+  183  sudo python3 core-network.py --type stop-basic --scenario 1
+  184  sudo python3 core-network.py --type start-basic --scenario 1
+  185  sudo python3 core-network.py --type stop-basic --scenario 1
+  186  sudo python3 core-network.py --type start-basic --scenario 1
+  187  sudo python3 core-network.py --type stop-basic --scenario 1
+  188  sudo python3 core-network.py --type start-basic --scenario 1
+  189  sudo python3 core-network.py --type stop-basic --scenario 1
+  190  sudo python3 core-network.py --type start-basic --scenario 1
+  191  sudo docker logs --follow oai-amf
+  192  sudo python3 core-network.py --type start-basic --scenario 1
+  193  sudo python3 core-network.py --type stop-basic --scenario 1
+  194  sudo python3 core-network.py --type start-basic --scenario 1
+  195  sudo python3 core-network.py --type stop-basic --scenario 1
+  196  sudo sysctl net.ipv4.conf.all.forwarding=1
+  197  sudo python3 core-network.py --type start-basic --scenario 2
+  198  sudo python3 core-network.py --type stop-basic --scenario 2
+  199  sudo python3 cor
+  200  sudo python3 core-network.py --type start-basic --scenario 2
+  201  sudo python3 core-network.py --type stop-basic --scenario 2
+  202  sudo python3 core-network.py --type start-basic --scenario 2
+  203  sudo python3 core-network.py --type stop-basic --scenario 2
+  204  sudo sysctl net.ipv4.conf.all.forwarding=1
+  205  sudo iptables -P FORWARD ACCEPT
+  206  sudo python3 core-network.py --type start-basic --scenario 2
+  207  sudo python3 core-network.py --type stop-basic --scenario 2
+  208  sudo python3 core-network.py --type start-basic --fqdn no --scenario 1
+  209  sudo python3 core-network.py --type start-basic --scenario 1
+  210  sudo python3 core-network.py --type stop-basic --scenario 1
+  211  sudo python3 core-network.py --type start-basic --scenario 1
+  212  sudo python3 core-network.py --type stop-basic --scenario 1
+  213  sudo python3 core-network.py --type start-basic --scenario 1
+  214  sudo python3 core-network.py --type stop-basic --scenario 1
+  215  sudo python3 core-network.py --type start-basic --scenario 1
+  216  ping 8.8.8.8
+  217  sudo python3 core-network.py --type start-basic --scenario 1
+  218  clear
+  219  sudo python3 core-network.py --type start-basic --scenario 1
+  220  history 300
+oaidev@oaicore:~/oai-cn5g-fed/docker-compose$ 

@@ -1,0 +1,454 @@
+diff --git a/component/oai-amf b/component/oai-amf
+index 8341c82..e12d77f 160000
+--- a/component/oai-amf
++++ b/component/oai-amf
+@@ -1 +1 @@
+-Subproject commit 8341c82073923601091f59803fe6c066cd8a68d8
++Subproject commit e12d77f9392fdd3aade437c4eac32315571e776a
+diff --git a/component/oai-ausf b/component/oai-ausf
+index 93da5c3..d44f11c 160000
+--- a/component/oai-ausf
++++ b/component/oai-ausf
+@@ -1 +1 @@
+-Subproject commit 93da5c30233453199c0b62ae0eb4cdaaa39e1a26
++Subproject commit d44f11c0ce17d3b2c7c36043f4a2ff2a2c6d3043
+diff --git a/component/oai-nrf b/component/oai-nrf
+index 738473e..ce48732 160000
+--- a/component/oai-nrf
++++ b/component/oai-nrf
+@@ -1 +1 @@
+-Subproject commit 738473e2d16d78569acb8ded41a363bac8c0deeb
++Subproject commit ce487326a3e837321ba28ec6fb3b990d26b6f8e9
+diff --git a/component/oai-nssf b/component/oai-nssf
+index a60d6b8..6b60ad8 160000
+--- a/component/oai-nssf
++++ b/component/oai-nssf
+@@ -1 +1 @@
+-Subproject commit a60d6b84e30e25d255734289e93ed4f9dfe68f28
++Subproject commit 6b60ad84340fa7a920ba4b30bcf832dcad7e28f1
+diff --git a/component/oai-smf b/component/oai-smf
+index e43b442..b83ff60 160000
+--- a/component/oai-smf
++++ b/component/oai-smf
+@@ -1 +1 @@
+-Subproject commit e43b4429ce0eb8e754dd2bfbaa2c620cfa36ac49
++Subproject commit b83ff606285677b8c1681b216fd6f24e1e7468bf
+diff --git a/component/oai-udm b/component/oai-udm
+index c9447d2..508d4fc 160000
+--- a/component/oai-udm
++++ b/component/oai-udm
+@@ -1 +1 @@
+-Subproject commit c9447d2dc4c9880c0df7fb25fa8632c23ab8f086
++Subproject commit 508d4fc4296ac15f44b5147181515b1944065b7d
+diff --git a/component/oai-udr b/component/oai-udr
+index 88ea191..c03b44d 160000
+--- a/component/oai-udr
++++ b/component/oai-udr
+@@ -1 +1 @@
+-Subproject commit 88ea191b53264de71d0c32df7f309ddb186b7f9d
++Subproject commit c03b44d8b17618b6de06b54262440df428ce9752
+diff --git a/component/oai-upf-equivalent b/component/oai-upf-equivalent
+index e812920..924e55a 160000
+--- a/component/oai-upf-equivalent
++++ b/component/oai-upf-equivalent
+@@ -1 +1 @@
+-Subproject commit e812920bc48dcedb0e8f3811f3dbbe2ebebeb899
++Subproject commit 924e55a84faca4f2305839cdfb0daf4641e233ea
+diff --git a/component/oai-upf-vpp b/component/oai-upf-vpp
+index dbc6555..d099956 160000
+--- a/component/oai-upf-vpp
++++ b/component/oai-upf-vpp
+@@ -1 +1 @@
+-Subproject commit dbc6555e6c1b09b9d9be3d2e9b55f3505cfc6e95
++Subproject commit d0999567ba60ac62952856f4b0376036251a718d
+diff --git a/docker-compose/database/oai_db2.sql b/docker-compose/database/oai_db2.sql
+index 4a85b01..b40b9d1 100755
+--- a/docker-compose/database/oai_db2.sql
++++ b/docker-compose/database/oai_db2.sql
+@@ -151,6 +151,7 @@ CREATE TABLE `AuthenticationSubscription` (
+ --
+ 
+ INSERT INTO `AuthenticationSubscription` (`ueid`, `authenticationMethod`, `encPermanentKey`, `protectionParameterId`, `sequenceNumber`, `authenticationManagementField`, `algorithmId`, `encOpcKey`, `encTopcKey`, `vectorGenerationInHss`, `n5gcAuthMethod`, `rgAuthenticationInd`, `supi`) VALUES
++('001010000000017', '5G_AKA', '6874736969202073796d4b2079650a73', '6874736969202073796d4b2079650a73', '{\"sqn\": \"000000000020\", \"sqnScheme\": \"NON_TIME_BASED\", \"lastIndexes\": {\"ausf\": 0}}', '8000', 'milenage', '504f20634f6320504f50206363500a4f', NULL, NULL, NULL, NULL, '001010000000017'),
+ ('208950000000031', '5G_AKA', '0C0A34601D4F07677303652C0462535B', '0C0A34601D4F07677303652C0462535B', '{\"sqn\": \"000000000020\", \"sqnScheme\": \"NON_TIME_BASED\", \"lastIndexes\": {\"ausf\": 0}}', '8000', 'milenage', '63bfa50ee6523365ff14c1f45f88737d', NULL, NULL, NULL, NULL, '208950000000031'),
+ ('208950000000032', '5G_AKA', '0C0A34601D4F07677303652C0462535B', '0C0A34601D4F07677303652C0462535B', '{\"sqn\": \"000000000020\", \"sqnScheme\": \"NON_TIME_BASED\", \"lastIndexes\": {\"ausf\": 0}}', '8000', 'milenage', '63bfa50ee6523365ff14c1f45f88737d', NULL, NULL, NULL, NULL, '208950000000032'),
+ ('208950000000033', '5G_AKA', '0C0A34601D4F07677303652C0462535B', '0C0A34601D4F07677303652C0462535B', '{\"sqn\": \"000000000020\", \"sqnScheme\": \"NON_TIME_BASED\", \"lastIndexes\": {\"ausf\": 0}}', '8000', 'milenage', '63bfa50ee6523365ff14c1f45f88737d', NULL, NULL, NULL, NULL, '208950000000033'),
+@@ -308,6 +309,15 @@ INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singl
+ ('208950000000031', '20895', '{\"sst\": 222, \"sd\": \"123\"}','{\"default\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},\"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.4\"}]}}');
+ INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES 
+ ('208950000000032', '20895', '{\"sst\": 222, \"sd\": \"123\"}','{\"default\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"}}}');
++INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES 
++('001010000000017', '00101', '{\"sst\": 1, \"sd\": \"1\"}','{\"default\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},\"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.158\"}]}}');
++
++INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES 
++('001010000000031', '00101', '{\"sst\": 1, \"sd\": \"1\"}','{\"oai\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},\"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.4\"}]}}');
++INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES 
++('001010000000032', '00101', '{\"sst\": 1, \"sd\": \"1\"}','{\"oai\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},\"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.5\"}]}}');
++INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES 
++('001010000000033', '00101', '{\"sst\": 1, \"sd\": \"1\"}','{\"oai\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},\"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.6\"}]}}');
+ -- --------------------------------------------------------
+ 
+ --
+diff --git a/docker-compose/docker-compose-basic-nrf.yaml b/docker-compose/docker-compose-basic-nrf.yaml
+index ac06a28..c9d0229 100644
+--- a/docker-compose/docker-compose-basic-nrf.yaml
++++ b/docker-compose/docker-compose-basic-nrf.yaml
+@@ -4,8 +4,8 @@ services:
+         container_name: "mysql"
+         image: mysql:5.7
+         volumes:
+-            - ./database/oai_db2.sql:/docker-entrypoint-initdb.d/oai_db.sql
+-            - ./healthscripts/mysql-healthcheck2.sh:/tmp/mysql-healthcheck.sh
++            - ./oai_db2.sql:/docker-entrypoint-initdb.d/oai_db.sql
++            - ./mysql-healthcheck2.sh:/tmp/mysql-healthcheck.sh
+         environment:
+             - TZ=Europe/Paris
+             - MYSQL_DATABASE=oai_db
+@@ -22,7 +22,7 @@ services:
+                 ipv4_address: 192.168.70.131
+     oai-udr:
+         container_name: "oai-udr"
+-        image: oai-udr:v1.4.0
++        image: oai-udr:latest
+         environment:
+             - TZ=Europe/Paris
+             - INSTANCE=0
+@@ -31,15 +31,13 @@ services:
+             - UDR_INTERFACE_NAME_FOR_NUDR=eth0
+             - UDR_INTERFACE_PORT_FOR_NUDR=80
+             - UDR_INTERFACE_HTTP2_PORT_FOR_NUDR=8080
+-            - USE_HTTP2=no
+             - UDR_API_VERSION=v1
+             - MYSQL_IPV4_ADDRESS=192.168.70.131
+             - MYSQL_USER=test
+             - MYSQL_PASS=test
+-            - DB_CONNECTION_TIMEOUT=300 # Reset the connection to the DB after expiring the timeout (in second) currently can't be changed
+             - MYSQL_DB=oai_db
+             - WAIT_MYSQL=120
+-            - USE_FQDN_DNS=yes
++            - USE_FQDN_DNS=no
+             - REGISTER_NRF=yes
+             - NRF_IPV4_ADDRESS=192.168.70.130
+             - NRF_PORT=80
+@@ -52,7 +50,7 @@ services:
+             public_net:
+                 ipv4_address: 192.168.70.136
+         volumes:
+-            - ./healthscripts/udr-healthcheck.sh:/openair-udr/bin/udr-healthcheck.sh
++            - ./udr-healthcheck.sh:/openair-udr/bin/udr-healthcheck.sh
+         healthcheck:
+             test: /bin/bash -c "/openair-udr/bin/udr-healthcheck.sh"
+             interval: 10s
+@@ -60,7 +58,7 @@ services:
+             retries: 5
+     oai-udm:
+         container_name: "oai-udm"
+-        image: oai-udm:v1.4.0
++        image: oai-udm:latest
+         environment:
+             - TZ=Europe/Paris
+             - INSTANCE=0
+@@ -68,10 +66,8 @@ services:
+             - UDM_NAME=OAI_UDM
+             - SBI_IF_NAME=eth0
+             - SBI_PORT=80
+-            - SBI_HTTP2_PORT=8080
+-            - USE_HTTP2=no
+             - UDM_VERSION_NB=v1
+-            - USE_FQDN_DNS=yes
++            - USE_FQDN_DNS=no
+             - UDR_IP_ADDRESS=192.168.70.136
+             - UDR_PORT=80
+             - UDR_VERSION_NB=v1
+@@ -87,7 +83,7 @@ services:
+             public_net:
+                 ipv4_address: 192.168.70.137
+         volumes:
+-            - ./healthscripts/udm-healthcheck.sh:/openair-udm/bin/udm-healthcheck.sh
++            - ./udm-healthcheck.sh:/openair-udm/bin/udm-healthcheck.sh
+         healthcheck:
+             test: /bin/bash -c "/openair-udm/bin/udm-healthcheck.sh"
+             interval: 10s
+@@ -95,7 +91,7 @@ services:
+             retries: 5
+     oai-ausf:
+         container_name: "oai-ausf"
+-        image: oai-ausf:v1.4.0
++        image: oai-ausf:latest
+         environment:
+             - TZ=Europe/Paris
+             - INSTANCE_ID=0
+@@ -103,9 +99,7 @@ services:
+             - AUSF_NAME=OAI_AUSF
+             - SBI_IF_NAME=eth0
+             - SBI_PORT=80
+-            - USE_HTTP2
+-            - SBI_HTTP2_PORT
+-            - USE_FQDN_DNS=yes
++            - USE_FQDN_DNS=no
+             - UDM_IP_ADDRESS=192.168.70.137
+             - UDM_PORT=80
+             - UDM_VERSION_NB=v1
+@@ -121,7 +115,7 @@ services:
+             public_net:
+                 ipv4_address: 192.168.70.138
+         volumes:
+-            - ./healthscripts/ausf-healthcheck.sh:/openair-ausf/bin/ausf-healthcheck.sh
++            - ./ausf-healthcheck.sh:/openair-ausf/bin/ausf-healthcheck.sh
+         healthcheck:
+             test: /bin/bash -c "/openair-ausf/bin/ausf-healthcheck.sh"
+             interval: 10s
+@@ -129,12 +123,11 @@ services:
+             retries: 5
+     oai-nrf:
+         container_name: "oai-nrf"
+-        image: oai-nrf:v1.4.0
++        image: oai-nrf:latest
+         environment:
+-            - TZ=Europe/Paris
+             - NRF_INTERFACE_NAME_FOR_SBI=eth0
+             - NRF_INTERFACE_PORT_FOR_SBI=80
+-            - NRF_INTERFACE_HTTP2_PORT_FOR_SBI=8080
++            - NRF_INTERFACE_HTTP2_PORT_FOR_SBI=9090
+             - NRF_API_VERSION=v1
+             - INSTANCE=0
+             - PID_DIRECTORY=/var/run
+@@ -142,7 +135,7 @@ services:
+             public_net:
+                 ipv4_address: 192.168.70.130
+         volumes:
+-            - ./healthscripts/nrf-healthcheck.sh:/openair-nrf/bin/nrf-healthcheck.sh
++            - ./nrf-healthcheck.sh:/openair-nrf/bin/nrf-healthcheck.sh
+         healthcheck:
+             test: /bin/bash -c "/openair-nrf/bin/nrf-healthcheck.sh"
+             interval: 10s
+@@ -150,32 +143,30 @@ services:
+             retries: 5
+     oai-amf:
+         container_name: "oai-amf"
+-        image: oai-amf:v1.4.0
++        image: oai-amf:latest
+         environment:
+             - TZ=Europe/paris
+             - INSTANCE=0
+             - PID_DIRECTORY=/var/run
+-            - MCC=208
+-            - MNC=95
++            - MCC=001
++            - MNC=01
+             - REGION_ID=128
+             - AMF_SET_ID=1
+-            - SERVED_GUAMI_MCC_0=208
+-            - SERVED_GUAMI_MNC_0=95
++            - SERVED_GUAMI_MCC_0=001
++            - SERVED_GUAMI_MNC_0=01
+             - SERVED_GUAMI_REGION_ID_0=128
+             - SERVED_GUAMI_AMF_SET_ID_0=1
+-            - SERVED_GUAMI_MCC_1=460
+-            - SERVED_GUAMI_MNC_1=11
++            - SERVED_GUAMI_MCC_1=001
++            - SERVED_GUAMI_MNC_1=01
+             - SERVED_GUAMI_REGION_ID_1=10
+             - SERVED_GUAMI_AMF_SET_ID_1=1
+-            - PLMN_SUPPORT_MCC=208
+-            - PLMN_SUPPORT_MNC=95
+-            - PLMN_SUPPORT_TAC=0xa000
++            - PLMN_SUPPORT_MCC=001
++            - PLMN_SUPPORT_MNC=01
++            - PLMN_SUPPORT_TAC=1
+             - SST_0=1
+-            - SD_0=0xFFFFFF
++            - SD_0=1
+             - SST_1=1
+             - SD_1=1
+-            - SST_2=222
+-            - SD_2=123
+             - AMF_INTERFACE_NAME_FOR_NGAP=eth0
+             - AMF_INTERFACE_NAME_FOR_N11=eth0
+             - SMF_INSTANCE_ID_0=1
+@@ -192,16 +183,14 @@ services:
+             - MYSQL_USER=root
+             - MYSQL_PASS=linux
+             - MYSQL_DB=oai_db
++            - OPERATOR_KEY=504f20634f6320504f50206363500a4f
+             - NRF_IPV4_ADDRESS=192.168.70.130
+             - NRF_PORT=80
+-            - EXTERNAL_NRF=no
++            - EXTERNAL_NRF=yes
+             - NF_REGISTRATION=yes
+             - SMF_SELECTION=yes
+-            - USE_FQDN_DNS=yes
++            - USE_FQDN_DNS=no
+             - EXTERNAL_AUSF=yes
+-            - EXTERNAL_UDM=no
+-            - EXTERNAL_NSSF=no
+-            - USE_HTTP2=no
+             - NRF_API_VERSION=v1
+             - NRF_FQDN=oai-nrf
+             - AUSF_IPV4_ADDRESS=192.168.70.138
+@@ -217,7 +206,7 @@ services:
+             - oai-nrf
+             - oai-ausf
+         volumes:
+-            - ./healthscripts/amf-healthcheck.sh:/openair-amf/bin/amf-healthcheck.sh
++            - ./amf-healthcheck.sh:/openair-amf/bin/amf-healthcheck.sh
+         healthcheck:
+             test: /bin/bash -c "/openair-amf/bin/amf-healthcheck.sh"
+             interval: 10s
+@@ -228,7 +217,7 @@ services:
+                 ipv4_address: 192.168.70.132
+     oai-smf:
+         container_name: "oai-smf"
+-        image: oai-smf:v1.4.0
++        image: oai-smf:latest
+         environment:
+             - TZ=Europe/Paris
+             - INSTANCE=0
+@@ -238,7 +227,7 @@ services:
+             - SMF_INTERFACE_PORT_FOR_SBI=80
+             - SMF_INTERFACE_HTTP2_PORT_FOR_SBI=9090
+             - SMF_API_VERSION=v1
+-            - DEFAULT_DNS_IPV4_ADDRESS=172.21.3.100
++            - DEFAULT_DNS_IPV4_ADDRESS=127.0.0.53
+             - DEFAULT_DNS_SEC_IPV4_ADDRESS=8.8.8.8
+             - AMF_IPV4_ADDRESS=192.168.70.132
+             - AMF_PORT=80
+@@ -246,52 +235,38 @@ services:
+             - AMF_FQDN=oai-amf
+             - UDM_IPV4_ADDRESS=192.168.70.137
+             - UDM_PORT=80
+-            - UDM_API_VERSION=v2
++            - UDM_API_VERSION=v1 #v2
+             - UDM_FQDN=oai-udm
+             - UPF_IPV4_ADDRESS=192.168.70.134
+             - UPF_FQDN_0=oai-spgwu
+             - NRF_IPV4_ADDRESS=192.168.70.130
+             - NRF_PORT=80
+             - NRF_API_VERSION=v1
+-            - USE_LOCAL_SUBSCRIPTION_INFO=yes  #Set to yes if SMF uses local subscription information instead of from an UDM
+-            - USE_NETWORK_INSTANCE=no  #Set yes if network instance is to be used for given UPF
++            - USE_LOCAL_SUBSCRIPTION_INFO=yes
+             - NRF_FQDN=oai-nrf
+             - REGISTER_NRF=yes
+             - DISCOVER_UPF=yes
+-            - USE_FQDN_DNS=yes
+-            - HTTP_VERSION=1        # Default: 1
+-            - UE_MTU=1500
+-            - DNN_NI0=oai
+-            - TYPE0=IPv4
+-            - DNN_RANGE0=12.1.1.151 - 12.1.1.253
++            - USE_FQDN_DNS=no
++            - DNN_RANGE0=12.1.1.2 - 12.1.1.128
++            #- DNN_RANGE1=12.2.1.2 - 12.2.1.128 by Arpit 13 Aug 2022
++            - DNN_NI0=oai.ipv4 #arpit 13 Aug 2022
++            #- DNN_NI1=oai
+             - NSSAI_SST0=1
+-            - NSSAI_SD0=0xFFFFFF
+-            - SESSION_AMBR_UL0=200Mbps
+-            - SESSION_AMBR_DL0=400Mbps
+-            - DNN_NI1=oai.ipv4
+-            - TYPE1=IPv4
+-            - DNN_RANGE1=12.1.1.51 - 12.1.1.150
++            - NSSAI_SD0=1
+             - NSSAI_SST1=1
+             - NSSAI_SD1=1
+-            - SESSION_AMBR_UL1=100Mbps
+-            - SESSION_AMBR_DL1=200Mbps
+-            - DNN_NI2=default
+-            - TYPE2=IPv4
+-            - DNN_RANGE2=12.1.1.2 - 12.1.1.50
+-            - NSSAI_SST2=222
+-            - NSSAI_SD2=123
+-            - SESSION_AMBR_UL2=50Mbps
+-            - SESSION_AMBR_DL2=100Mbps
+-            - DNN_NI3=ims
+-            - TYPE3=IPv4v6
+-            - DNN_RANGE3=14.1.1.2 - 14.1.1.253
+-            - DEFAULT_CSCF_IPV4_ADDRESS=127.0.0.1  # only needed when ims is being used
+-            - ENABLE_USAGE_REPORTING=no # Set yes if UE USAGE REPORTING is to be done at UPF
++            - NSSAI_SST2=1
++            - NSSAI_SD2=1
++            - SST_0=1
++            - SD_0=1
++            - SST_1=1
++            - SD_1=1
++            - UE_MTU=1500
+         depends_on:
+             - oai-nrf
+             - oai-amf
+         volumes:
+-            - ./healthscripts/smf-healthcheck.sh:/openair-smf/bin/smf-healthcheck.sh
++            - ./smf-healthcheck.sh:/openair-smf/bin/smf-healthcheck.sh
+         healthcheck:
+             test: /bin/bash -c "/openair-smf/bin/smf-healthcheck.sh"
+             interval: 10s
+@@ -302,7 +277,7 @@ services:
+                 ipv4_address: 192.168.70.133
+     oai-spgwu:
+         container_name: "oai-spgwu"
+-        image: oai-spgwu-tiny:v1.4.0
++        image: oai-spgwu-tiny:latest
+         environment:
+             - TZ=Europe/Paris
+             - PID_DIRECTORY=/var/run
+@@ -313,35 +288,25 @@ services:
+             - NETWORK_UE_IP=12.1.1.0/24
+             - SPGWC0_IP_ADDRESS=192.168.70.133
+             - BYPASS_UL_PFCP_RULES=no
+-            - MCC=208
+-            - MNC=95
+-            - MNC03=095
+-            - TAC=40960
++            - MCC=001
++            - MNC=01
++            - MNC03=001
++            - TAC=1
+             - GW_ID=1
+-            - THREAD_S1U_PRIO=80
+-            - S1U_THREADS=8
+-            - THREAD_SX_PRIO=81
+-            - SX_THREADS=1
+-            - THREAD_SGI_PRIO=80
+-            - SGI_THREADS=8
+             - REALM=openairinterface.org
+             - ENABLE_5G_FEATURES=yes
+             - REGISTER_NRF=yes
+-            - USE_FQDN_NRF=yes
++            - USE_FQDN_NRF=no #no
+             - UPF_FQDN_5G=oai-spgwu
+             - NRF_IPV4_ADDRESS=192.168.70.130
+             - NRF_PORT=80
+             - NRF_API_VERSION=v1
+             - NRF_FQDN=oai-nrf
+             - NSSAI_SST_0=1
+-            - NSSAI_SD_0=0xFFFFFF
+-            - DNN_0=oai
+-            - NSSAI_SST_1=1
+-            - NSSAI_SD_1=1
+-            - DNN_1=oai.ipv4
+-            - NSSAI_SST_2=222
+-            - NSSAI_SD_2=123
+-            - DNN_2=default
++            - NSSAI_SD_0=1
++            - NSSAI_SST_1=1 #added_for_sim 33
++            - NSSAI_SD_1=1 #added_for_sim 33
++            - DNN_0=oai.ipv4 #arpit 13 Aug 2022
+         depends_on:
+             - oai-nrf
+             - oai-smf
+@@ -352,7 +317,7 @@ services:
+             - ALL
+         privileged: true
+         volumes:
+-            - ./healthscripts/spgwu-healthcheck.sh:/openair-spgwu-tiny/bin/spgwu-healthcheck.sh
++            - ./spgwu-healthcheck.sh:/openair-spgwu-tiny/bin/spgwu-healthcheck.sh
+         healthcheck:
+             test: /bin/bash -c "/openair-spgwu-tiny/bin/spgwu-healthcheck.sh"
+             interval: 10s
+@@ -383,4 +348,4 @@ networks:
+             config:
+                 - subnet: 192.168.70.128/26
+         driver_opts:
+-            com.docker.network.bridge.name: "demo-oai"
++            com.docker.network.bridge.name: "demo-oai"
+\ No newline at end of file

@@ -1,0 +1,59 @@
+diff --git a/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf b/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+index 9d00ae2..c9056c7 100644
+--- a/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
++++ b/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+@@ -12,13 +12,13 @@ gNBs =
+     // Tracking area code, 0x0000 and 0xfffe are reserved values
+     tracking_area_code  =  1;
+     plmn_list = ({
+-                  mcc = 208;
+-                  mnc = 99;
++                  mcc = 001;
++                  mnc = 01;
+                   mnc_length = 2;
+                   snssaiList = (
+                     {
+                       sst = 1;
+-                      sd  = 0x1; // 0 false, else true
++                      sd  = 1; // 0 false, else true
+                     }
+                   );
+ 
+@@ -28,9 +28,8 @@ gNBs =
+ 
+     ////////// Physical parameters:
+ 
++    ssb_SubcarrierOffset                                      = 0;
+     min_rxtxtime                                              = 2;
+-    do_CSIRS                                                  = 1;
+-    do_SRS                                                    = 1;
+ 
+      pdcch_ConfigSIB1 = (
+       {
+@@ -247,9 +246,9 @@ servingCellConfigDedicated = ({
+     NETWORK_INTERFACES :
+     {
+         GNB_INTERFACE_NAME_FOR_NG_AMF            = "demo-oai";
+-        GNB_IPV4_ADDRESS_FOR_NG_AMF              = "192.168.70.129/24";
++        GNB_IPV4_ADDRESS_FOR_NG_AMF              = "192.168.150.161/24"; #"192.168.70.129/24";
+         GNB_INTERFACE_NAME_FOR_NGU               = "demo-oai";
+-        GNB_IPV4_ADDRESS_FOR_NGU                 = "192.168.70.129/24";
++        GNB_IPV4_ADDRESS_FOR_NGU                 = "192.168.150.161/24"; #"192.168.70.129/24";
+         GNB_PORT_FOR_S1U                         = 2152; # Spec 2152
+     };
+ 
+@@ -263,7 +262,6 @@ MACRLCs = (
+   tr_n_preference             = "local_RRC";
+   pusch_TargetSNRx10          = 150;
+   pucch_TargetSNRx10          = 200;
+-  ul_prbblack_SNR_threshold   = 10;
+   ulsch_max_frame_inactivity  = 0;
+ }
+ );
+@@ -341,5 +339,5 @@ log_config :
+   rrc_log_level                         ="info";
+   ngap_log_level                        ="debug";
+   f1ap_log_level                        ="debug";
++  gtpu_log_level			="info"; //arpit for GTPU logs - 28 June 2022
+ };
+-

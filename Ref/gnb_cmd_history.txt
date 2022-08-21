@@ -1,0 +1,403 @@
+
+oaidev@OAIgNB:~/openairinterface5g/cmake_targets/ran_build/build$ history 200
+  151  sudo ./nr-softmodem -O -E ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf
+  152  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf -E
+  153  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpn300.conf -E
+  154  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf -E
+  155  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  156  sudo ./nr-softmodem -O -E ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf
+  157  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  158  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpn300.conf -E
+  159  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf -E
+  160  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.fr1.106PRB.usrpb210.conf -E
+  161  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  162  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  163  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  164  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  165  cd /home/oaidev/
+  166  ls
+  167  cd openairinterface5g/
+  168  ls
+  169  source oaienv
+  170  cd cmake_targets/
+  171  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  172  cd ran_build/build/
+  173  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  174  ls
+  175  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  176  cd ..
+  177  ls
+  178  rm -r openairinterface5g/
+  179  ls
+  180  sudo  rm -r openairinterface5g/
+  181  git clone --branch develop --single-branch https://gitlab.eurecom.fr/oai/openairinterface5g.git
+  182  ping 8.8.8.8
+  183  sudo netplan apply
+  184  sudo nano /etc/network/interfaces
+  185  sudo /etc/init.d/networking restart
+  186  sudo nano /etc/environment 
+  187  source /etc/environment 
+  188  git clone --branch develop --single-branch https://gitlab.eurecom.fr/oai/openairinterface5g.git
+  189  ping 8.8.8.8
+  190  sudo /etc/init.d/networking restart
+  191  sudo nano /etc/environment 
+  192  source /etc/environment 
+  193  ping 8.8.8.8
+  194  sudo nano /etc/environment 
+  195  source /etc/environment 
+  196  ping 8.8.8.8
+  197  ping 192.168.150.1
+  198  ping 192.168.150.101
+  199  sudo nano /etc/network/interfaces
+  200  ip a
+  201  sudo nano /etc/network/interfaces
+  202  ping 192.168.150.101
+  203  ping 192.168.150.1
+  204  ping 117.205.64.193
+  205  ping 117.205.64.192
+  206  117.205.64.198
+  207  ping 117.205.64.198
+  208  ping 8.8.8.8
+  209  ping 117.205.64.198
+  210  ping 8.8.8.8
+  211  ping 117.205.64.198
+  212  sudo nano /etc/environment 
+  213  source /etc/environment 
+  214  ping 117.205.64.198
+  215  ping 8.8.8.8
+  216  sudo reboot
+  217  ping 8.8.8.8
+  218  sudo nano .bashrc
+  219  export HTTPS_PROXY=192.168.150.1:3129
+  220  export HTTP_PROXY=192.168.150.1:3129
+  221  export FTP_PROXY=192.168.150.1:3129
+  222  ping 8.8.8.8
+  223  sudo nano /etc/environment 
+  224  git clone --branch develop --single-branch https://gitlab.eurecom.fr/oai/openairinterface5g.git
+  225  git checkout develop
+  226  cd openairinterface5g/
+  227  source oaienv
+  228  cd cmake_targets/
+  229  ./build_oai -I -w USRP
+  230  sudo apt update
+  231  sudo reboot 
+  232  sudo apt update
+  233  sudo nano /etc/environment 
+  234  cd openairinterface5g/
+  235  source oaienv
+  236  sudo apt update
+  237  ping 8.8.8.8
+  238  ping 91.189.91.39
+  239  sudo nano /etc/network/interfaces
+  240  source /etc/environment 
+  241  ping 91.189.91.39
+  242  ping 8.8.8.8
+  243  sudo apt update
+  244  curl https://ipinfo.io/ip
+  245  sudo apt update
+  246  ping 8.8.8.8
+  247  source oaienv
+  248  ping 8.8.8.8
+  249  cd cmake_targets/
+  250  ./build_oai --gNB -w USRP
+  251  ifocnfig
+  252  ip a
+  253  cd cmake_targets/ran_build/build
+  254  cd ./ran_build/build
+  255  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  256  ping 8.8.8.8
+  257  ping 192.168.150.161
+  258  ping 192.168.150.162
+  259  ping 192.168.70.132
+  260  ping 192.168.70.130
+  261  sudo ip route add route 192.168.70.128/26                        via IP_ADDR_NIC1                       dev NIC1_NAME
+  262  ip a
+  263  sudo ip route add route 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  264  sudo ip route add 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  265  ping 192.168.70.130
+  266  ping 192.168.70.132
+  267  ping 192.168.70.130
+  268  ping 192.168.70.132
+  269  iptables -L
+  270  sudo iptables -L
+  271  route
+  272  ping 192.168.70.132
+  273  ping 192.168.70.129
+  274  ping 192.168.70.132
+  275  ip route show
+  276  $ route -n
+  277  route -n
+  278  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  279  sudo ip route add route 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  280  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  281  route -n
+  282  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  283  sudo ip route add 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  284  ip route show
+  285  sudo ip route add 192.168.70.128/26 via 192.168.150.1 dev enxa0cec8ed9791
+  286  ping 192.168.70.132
+  287  ping 192.168.150.161
+  288  ping 192.168.150.162
+  289  ping 192.168.70.128
+  290  ping 192.168.70.130
+  291  ping 192.168.70.132
+  292  sudo ip route add 192.168.70.132 via 192.168.150.161 dev enxa0cec8ed9791
+  293  ping 192.168.70.132
+  294  ping 192.168.70.128
+  295  ping 192.168.150.162
+  296  ip route 
+  297  ping 192.168.70.132
+  298  ping 192.168.70.129
+  299  ping 192.168.70.132
+  300  ping 192.168.70.129
+  301  ping 192.168.70.130
+  302  ip route 
+  303  ip route list
+  304  sudo ip route flush 192.168.70.132
+  305  sudo ip route flush 192.168.70.128/26
+  306  ip route list
+  307  ping 8.8.8.8
+  308  ping 192.168.70.130
+  309  ping 192.168.70.129
+  310  sudo ip route add 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  311  ping 192.168.70.129
+  312  ping 192.168.70.132
+  313  ip route list
+  314  ip a
+  315  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  316  sudo ip route del 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  317  sudo ip route del 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  318  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  319  ping 192.168.70.132
+  320  cd 
+  321  source oaienv 
+  322  cd ./cmake_targets/ran_build/build/
+  323  sudo ./nr-softmodem -O -E ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  324  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  325  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  326  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  327  ifconfig
+  328  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  329  htop
+  330  sudo apt install htop
+  331  sudo apt install iftop
+  332  sudo iftop -n
+  333  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  334  ls
+  335  cd openairinterface5g/cmake_targets/ran_build/build/
+  336  ls
+  337  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  338  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  339  ping 192.168.70.132
+  340  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  341  ifconfig 
+  342  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  343  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  344  sudo ip route del 192.168.150.162
+  345  sudo ip route del 192.168.70.128/26
+  346  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  347  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  348  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  349  history 100
+  350  history 200
+oaidev@OAIgNB:~/openairinterface5g/cmake_targets/ran_build/build$ history 200
+  151  sudo ./nr-softmodem -O -E ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf
+  152  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf -E
+  153  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpn300.conf -E
+  154  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf -E
+  155  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  156  sudo ./nr-softmodem -O -E ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf
+  157  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  158  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpn300.conf -E
+  159  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.tm1.106PRB.usrpb210.conf -E
+  160  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.band78.fr1.106PRB.usrpb210.conf -E
+  161  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-LTE-EPC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  162  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  163  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  164  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  165  cd /home/oaidev/
+  166  ls
+  167  cd openairinterface5g/
+  168  ls
+  169  source oaienv
+  170  cd cmake_targets/
+  171  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  172  cd ran_build/build/
+  173  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  174  ls
+  175  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  176  cd ..
+  177  ls
+  178  rm -r openairinterface5g/
+  179  ls
+  180  sudo  rm -r openairinterface5g/
+  181  git clone --branch develop --single-branch https://gitlab.eurecom.fr/oai/openairinterface5g.git
+  182  ping 8.8.8.8
+  183  sudo netplan apply
+  184  sudo nano /etc/network/interfaces
+  185  sudo /etc/init.d/networking restart
+  186  sudo nano /etc/environment 
+  187  source /etc/environment 
+  188  git clone --branch develop --single-branch https://gitlab.eurecom.fr/oai/openairinterface5g.git
+  189  ping 8.8.8.8
+  190  sudo /etc/init.d/networking restart
+  191  sudo nano /etc/environment 
+  192  source /etc/environment 
+  193  ping 8.8.8.8
+  194  sudo nano /etc/environment 
+  195  source /etc/environment 
+  196  ping 8.8.8.8
+  197  ping 192.168.150.1
+  198  ping 192.168.150.101
+  199  sudo nano /etc/network/interfaces
+  200  ip a
+  201  sudo nano /etc/network/interfaces
+  202  ping 192.168.150.101
+  203  ping 192.168.150.1
+  204  ping 117.205.64.193
+  205  ping 117.205.64.192
+  206  117.205.64.198
+  207  ping 117.205.64.198
+  208  ping 8.8.8.8
+  209  ping 117.205.64.198
+  210  ping 8.8.8.8
+  211  ping 117.205.64.198
+  212  sudo nano /etc/environment 
+  213  source /etc/environment 
+  214  ping 117.205.64.198
+  215  ping 8.8.8.8
+  216  sudo reboot
+  217  ping 8.8.8.8
+  218  sudo nano .bashrc
+  219  export HTTPS_PROXY=192.168.150.1:3129
+  220  export HTTP_PROXY=192.168.150.1:3129
+  221  export FTP_PROXY=192.168.150.1:3129
+  222  ping 8.8.8.8
+  223  sudo nano /etc/environment 
+  224  git clone --branch develop --single-branch https://gitlab.eurecom.fr/oai/openairinterface5g.git
+  225  git checkout develop
+  226  cd openairinterface5g/
+  227  source oaienv
+  228  cd cmake_targets/
+  229  ./build_oai -I -w USRP
+  230  sudo apt update
+  231  sudo reboot 
+  232  sudo apt update
+  233  sudo nano /etc/environment 
+  234  cd openairinterface5g/
+  235  source oaienv
+  236  sudo apt update
+  237  ping 8.8.8.8
+  238  ping 91.189.91.39
+  239  sudo nano /etc/network/interfaces
+  240  source /etc/environment 
+  241  ping 91.189.91.39
+  242  ping 8.8.8.8
+  243  sudo apt update
+  244  curl https://ipinfo.io/ip
+  245  sudo apt update
+  246  ping 8.8.8.8
+  247  source oaienv
+  248  ping 8.8.8.8
+  249  cd cmake_targets/
+  250  ./build_oai --gNB -w USRP
+  251  ifocnfig
+  252  ip a
+  253  cd cmake_targets/ran_build/build
+  254  cd ./ran_build/build
+  255  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  256  ping 8.8.8.8
+  257  ping 192.168.150.161
+  258  ping 192.168.150.162
+  259  ping 192.168.70.132
+  260  ping 192.168.70.130
+  261  sudo ip route add route 192.168.70.128/26                        via IP_ADDR_NIC1                       dev NIC1_NAME
+  262  ip a
+  263  sudo ip route add route 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  264  sudo ip route add 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  265  ping 192.168.70.130
+  266  ping 192.168.70.132
+  267  ping 192.168.70.130
+  268  ping 192.168.70.132
+  269  iptables -L
+  270  sudo iptables -L
+  271  route
+  272  ping 192.168.70.132
+  273  ping 192.168.70.129
+  274  ping 192.168.70.132
+  275  ip route show
+  276  $ route -n
+  277  route -n
+  278  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  279  sudo ip route add route 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  280  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  281  route -n
+  282  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  283  sudo ip route add 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  284  ip route show
+  285  sudo ip route add 192.168.70.128/26 via 192.168.150.1 dev enxa0cec8ed9791
+  286  ping 192.168.70.132
+  287  ping 192.168.150.161
+  288  ping 192.168.150.162
+  289  ping 192.168.70.128
+  290  ping 192.168.70.130
+  291  ping 192.168.70.132
+  292  sudo ip route add 192.168.70.132 via 192.168.150.161 dev enxa0cec8ed9791
+  293  ping 192.168.70.132
+  294  ping 192.168.70.128
+  295  ping 192.168.150.162
+  296  ip route 
+  297  ping 192.168.70.132
+  298  ping 192.168.70.129
+  299  ping 192.168.70.132
+  300  ping 192.168.70.129
+  301  ping 192.168.70.130
+  302  ip route 
+  303  ip route list
+  304  sudo ip route flush 192.168.70.132
+  305  sudo ip route flush 192.168.70.128/26
+  306  ip route list
+  307  ping 8.8.8.8
+  308  ping 192.168.70.130
+  309  ping 192.168.70.129
+  310  sudo ip route add 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  311  ping 192.168.70.129
+  312  ping 192.168.70.132
+  313  ip route list
+  314  ip a
+  315  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  316  sudo ip route del 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  317  sudo ip route del 192.168.70.128/26 via 192.168.150.161 dev enxa0cec8ed9791
+  318  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  319  ping 192.168.70.132
+  320  cd 
+  321  source oaienv 
+  322  cd ./cmake_targets/ran_build/build/
+  323  sudo ./nr-softmodem -O -E ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  324  sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  325  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  326  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  327  ifconfig
+  328  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  329  htop
+  330  sudo apt install htop
+  331  sudo apt install iftop
+  332  sudo iftop -n
+  333  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  334  ls
+  335  cd openairinterface5g/cmake_targets/ran_build/build/
+  336  ls
+  337  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  338  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  339  ping 192.168.70.132
+  340  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  341  ifconfig 
+  342  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  343  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  344  sudo ip route del 192.168.150.162
+  345  sudo ip route del 192.168.70.128/26
+  346  sudo ip route add 192.168.70.128/26 via 192.168.150.162 dev enxa0cec8ed9791
+  347  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf -E
+  348  sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+  349  history 100
+  350  history 200
