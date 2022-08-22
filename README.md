@@ -22,13 +22,19 @@ git branch -a |grep "*"  # Check branch
 * Create VM with the image
 * Inside VM install openssh server, git, docker
 ```
-sudo apt update; sudo apt install openssh-server git docker
+sudo apt update
+sudo apt install openssh-server git docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 * Use the following commands 
 ```
 mkdir ~/GIT
 cd GIT/
 git clone --branch v1.4.0 https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed.git
+git clone https://github.com/subhrendu1987/oaisetup
+sudo bash oaisetup/Util/pullimgs.sh
+sudo bash oaisetup/Util/
+
 cd oai-cn5g-fed
 git checkout -f v1.4.0
 ./scripts/syncComponents.sh
