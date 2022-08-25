@@ -1,0 +1,64 @@
+### The purpose of this yaml file is to create a testing pod which will be after upf.
+### It can be used to perform iperf test between UE and an edge application placed after UPF
+### Multus is optional it is only needed if our SGI/PDN interface is in different subnet than cluster pod CIDR
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: iperf-net1
+spec:
+  config: '{
+      "cniVersion": "0.3.0",
+      "type": "macvlan",
+      "master": "ens2f0np0",
+      "mode": "bridge",
+      "ipam": {
+        "type": "static",
+        "addresses": [
+                {
+                        "address": "172.21.10.5/22"
+                }
+        ]
+      }
+    }'
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: iperf-pod
+data:
+  script.sh: |
+   #!/bin/sh
+   microdnf install -y iputils iperf3 iperf iproute net-tools procps-ng
+   ip route add 12.2.1.0/24 via 172.21.10.2 dev net1
+   /bin/bash -c 'trap : TERM INT; sleep infinity & wait'
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: iperf-pod
+  annotations:
+    k8s.v1.cni.cncf.io/networks: >-
+          [{
+              "name": "iperf-net1",
+              "default-route": ["172.21.11.254"]
+          }]
+spec:
+  securityContext:
+    runAsUser: 0
+    runAsGroup: 0
+  containers:
+  - name: iperf3
+    volumeMounts:
+    - mountPath: /tmp/script.sh
+      name: scripts
+      subPath: script.sh 
+    securityContext:
+      privileged: true
+    command: ["./tmp/script.sh"]
+    image: fedora-minimal
+  volumes:
+  - name: scripts
+    configMap:
+      name: iperf-pod
+      defaultMode: 0777

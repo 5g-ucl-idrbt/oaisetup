@@ -24,17 +24,28 @@ git branch -a |grep "*"  # Check branch
 ```
 sudo apt update
 sudo apt install openssh-server git docker
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose
 ```
-* Use the following commands 
+* Initial configuration pulling
 ```
 mkdir ~/GIT
 cd GIT/
 git clone --branch v1.4.0 https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed.git
 git clone https://github.com/subhrendu1987/oaisetup
 sudo bash oaisetup/Util/pullimgs.sh
-sudo bash oaisetup/Util/
-
+sudo bash oaisetup/Util/imgsTag.sh
+```
+* VM configurations
+```
+sudo -S
+sudo sysctl net.ipv4.conf.all.forwarding=1
+echo "net.ipv4.ip_forward=1           # For IPv4" >> /etc/sysctl.conf
+echo "net.ipv6.conf.all.forwarding=1  # For IPv6" >> /etc/sysctl.conf
+exit
+sudo sysctl -p /etc/sysctl.conf
+```
+* VNF configurations
+```
 cd oai-cn5g-fed
 git checkout -f v1.4.0
 ./scripts/syncComponents.sh

@@ -1,0 +1,82 @@
+# Default values for oai-nssf.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+nfimage:
+  registry: local
+  repository: docker.io/oaisoftwarealliance/oai-nssf # image name either locally present or in a public/private repository
+  version: develop # image tag
+  #pullPolicy: IfNotPresent or Never or Always
+  pullPolicy: IfNotPresent
+
+tcpdumpimage:
+  registry: local
+  repository: docker.io/corfr/tcpdump
+  version: latest
+  #pullPolicy: IfNotPresent or Never or Always
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: 
+  - name: "regcred"
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: "oai-nssf-sa"
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+securityContext:
+  privileged: false
+
+service:
+  type: ClusterIP
+  http1Port: 80
+  http2Port: 8080
+
+start:
+  nssf: true
+  tcpdump: false #start tcpdump collection to analyse but beware it will take a lot of space in the container/persistent volume
+
+
+config:
+  tz: "Europe/Paris"
+  instance: "0"
+  nssfname: "oai-nssf"
+  pidDirectory: "/var/run"
+  nssfFqdn: "oai-nssf-svc"
+  sbiIfName: "eth0"
+  sbiPortHttp1: "80"
+  sbiPortHttp2: "8080"
+  sbiApiVersion: "v1"
+  nssfSliceConfig: "/tmp/nssf_slice_config.yaml"   # Do not change
+
+
+persistence:
+  sharedvolume: false
+  volumneName: managed-nfs-storage
+  size: 1Gi
+  
+resources:
+  define: false
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+   cpu: 100m
+   memory: 256Mi
+
+terminationGracePeriodSeconds: 30
+
+nodeSelector: {}
+
+nodeName:
+

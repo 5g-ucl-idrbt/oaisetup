@@ -1,0 +1,68 @@
+1. Get the application name by running these commands:
+{{- if contains "NodePort" .Values.servicesctp.type }}
+  export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} -o jsonpath="{.spec.ports[0].nodePort}" services {{ include "oai-amf.fullname" . }})
+  export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} -o jsonpath="{.items[0].status.addresses[0].address}")
+{{- end }}
+{{- if contains "LoadBalancer" .Values.servicesctp.type }}
+     NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+           You can watch the status of by running 'kubectl get --namespace {{ .Release.Namespace }} svc -w {{ include "oai-amf.fullname" . }}'
+  export SERVICE_IP=$(kubectl get svc --namespace {{ .Release.Namespace }} {{ include "oai-amf.fullname" . }} --template "{{"{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}"}}")
+{{- end }}
+{{- if contains "ClusterIP" .Values.servicehttp.type }}
+  export AMF_POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app.kubernetes.io/name={{ include "oai-amf.name" . }},app.kubernetes.io/instance={{ .Release.Name }}" -o jsonpath="{.items[0].metadata.name}")
+  export AMF_eth0_IP=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app.kubernetes.io/name={{ include "oai-amf.name" . }},app.kubernetes.io/instance={{ .Release.Name }}" -o jsonpath="{.items[*].status.podIP}")
+{{- end }}
+
+######################################################################################################################18/07/22
+{"anType":"3GPP_ACCESS","dnn":"oai","gpsi":"msisdn-200000000001","n1MessageContainer":{"n1MessageClass":"SM","n1MessageContent":{"contentId":"n1SmMsg"}},"pduSessionId":1,"pei":"imei-200000000000001","requestType":"INITIAL_REQUEST","sNssai":{"sd":"1","sst":1},"servingNetwork":{"mcc":"001","mnc":"01"},"servingNfId":"servingNfId","smContextStatusUri":"http://192.168.70.132:80/nsmf-pdusession/callback/imsi-001010000000031/1","supi":"imsi-001010000000031"}
+------Boundary
+Content-Type: application/vnd.3gpp.5gnas
+Content-Id: n1SmMsg
+
+.�
+[2022-07-17T05:03:22.426362] [AMF] [amf_n11] [info ] Get response with HTTP code (403)
+[2022-07-17T05:03:22.426368] [AMF] [amf_n11] [info ] Response body ------Boundary
+Content-Type: application/problem+json
+
+{"error":{"cause":"DNN_DENIED"},"n1SmMsg":{"contentId":"n1SmMsg"}}
+------Boundary
+Content-Type: application/vnd.3gpp.5gnas
+Content-Id: n1SmMsg
+
+.��
+------Boundary--
+
+[2022-07-17T05:03:22.426374] [AMF] [amf_app] [debug] Parsing the message with Simple Parser
+[2022-07-17T05:03:22.426377] [AMF] [amf_app] [debug] Boundary: ----Boundary
+[2022-07-17T05:03:22.426380] [AMF] [amf_app] [debug] Content Type: application/problem+json
+[2022-07-17T05:03:22.426385] [AMF] [amf_app] [debug] Body: {"error":{"cause":"DNN_DENIED"},"n1SmMsg":{"contentId":"n1SmMsg"}}
+[2022-07-17T05:03:22.426389] [AMF] [amf_app] [debug] Content Type: application/vnd.3gpp.5gnas
+[2022-07-17T05:03:22.426391] [AMF] [amf_app] [debug] Body: .��
+[2022-07-17T05:03:22.426397] [AMF] [amf_n11] [info ] JSON part {"error":{"cause":"DNN_DENIED"},"n1SmMsg":{"contentId":"n1SmMsg"}}
+[2022-07-17T05:03:22.426415] [AMF] [amf_n11] [debug] Get response with json_data: {"error":{"cause":"DNN_DENIED"},"n1SmMsg":{"contentId":"n1SmMsg"}}
+2e 01 07 c3 1b f1 
+tmp string: 2e0107c31bf1
+data: 2e0107c31bf1
+[2022-07-17T05:03:22.426425] [AMF] [amf_n11] [debug] Get response with n1sm:
+2e 1 7 c3 1b f1 
+[2022-07-17T05:03:22.426429] [AMF] [amf_n11] [debug] Network Function services failure (with cause DNN_DENIED)
+[2022-07-17T05:03:22.426431] [AMF] [amf_n11] [debug] n1 sm
+2e 1 7 c3 1b f1 
+[2022-07-17T05:03:22.426442] [AMF] [amf_app] [debug] Received N1N2_MESSAGE_TRANSFER_REQ
+[2022-07-17T05:03:22.426450] [AMF] [amf_app] [info ] Handle ITTI N1N2 Message Transfer Request
+[2022-07-17T05:03:22.426480] [AMF] [nas_mm ] [debug] Encoding DLNASTransport message
+[2022-07-17T05:03:22.426485] [AMF] [nas_mm ] [debug] Encoding NasMmPlainHeader
+[2022-07-17T05:03:22.426486] [AMF] [nas_mm ] [debug] Encoded NasMmPlainHeader (len 3 octets)
+[2022-07-17T05:03:22.426488] [AMF] [nas_mm ] [debug] encoding Payload_Container_Type IE iei(0x0)
+[2022-07-17T05:03:22.426489] [AMF] [nas_mm ] [debug] encoded Payload_Container_Type IE(len(1/2 octet))
+[2022-07-17T05:03:22.426491] [AMF] [nas_mm ] [debug] Encoding Payload_Container iei(0x0)
+[2022-07-17T05:03:22.426493] [AMF] [nas_mm ] [debug] Encoded Payload_Container len(8)
+[2022-07-17T05:03:22.426495] [AMF] [nas_mm ] [debug] encoding PDU_Session_Identity_2 iei(0x12)
+[2022-07-17T05:03:22.426497] [AMF] [nas_mm ] [debug] encoded PDU_Session_Identity_2 len(2)
+[2022-07-17T05:03:22.426513] [AMF] [nas_mm ] [warn ] IE ie_additional_information is not available
+[2022-07-17T05:03:22.426515] [AMF] [nas_mm ] [warn ] IE ie_5gmm_cause is not available
+[2022-07-17T05:03:22.426517] [AMF] [nas_mm ] [warn ] IE ie_back_off_timer_value is not available
+[2022-07-17T05:03:22.426519] [AMF] [nas_mm ] [debug] Encoded DLNASTransport message len (14)
+[2022-07-17T05:03:22.426521] [AMF] [amf_app] [debug] n1n2 transfer
+#################################################################################################################################
+

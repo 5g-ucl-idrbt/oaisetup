@@ -1,0 +1,6 @@
+/openairinterface5g/cmake_targets/ran_build/build
+
+sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --continuous -tx
+
+sudo ip route add 192.168.70.128/26 via 192.168.138.234 dev eno1
+
