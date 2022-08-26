@@ -100,7 +100,7 @@ oaidev@OAIgNB:~/openairinterface5g/cmake_targets/ran_build/build$ history 200
   248  ping 8.8.8.8
   249  cd cmake_targets/
   250  ./build_oai --gNB -w USRP
-  251  ifocnfig
+  251  ifconfig
   252  ip a
   253  cd cmake_targets/ran_build/build
   254  cd ./ran_build/build

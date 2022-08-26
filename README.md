@@ -6,7 +6,8 @@ Consists of two steps; (a) gNodeb and (b)core
 * Create VM with the image
 * Inside VM install openssh server, git
 ```
-sudo apt update; sudo apt install openssh-server git
+sudo apt update; sudo apt install openssh-server git cmake
+sudo apt update; sudo apt install openssh-server git cmake
 ```
 * Use the following commands
 ```
@@ -15,6 +16,11 @@ cd GIT
 git clone -b develop https://gitlab.eurecom.fr/oai/openairinterface5g.git
 cd openairinterface5g
 git branch -a |grep "*"  # Check branch
+source oaidev
+cd cmake
+./build_oai -I --eNB -x --install-system-files -w USRP
+./build_oai --gNB -w USRP
+cd ran_build/build
 ```
 
 ## core Setup
