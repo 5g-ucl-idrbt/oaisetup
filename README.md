@@ -8,20 +8,28 @@ Consists of two steps; (a) gNodeb and (b)core
 ```
 sudo apt update; sudo apt install openssh-server git cmake
 ```
-* Use the following commands
+* Use the following commands to compile the gNodeB source
 ```
 mkdir ~/GIT
 cd GIT
-git clone -b develop https://gitlab.eurecom.fr/oai/openairinterface5g.git
-sudo apt-get install linux-image-$(uname -r)-lowlatency linux-headers-$(uname -r)-lowlatency
-cd BBU/openairinterface5g
-git branch -a |grep "*"  # Check branch
-source oaidev
-cd cmake
+#git clone -b develop https://gitlab.eurecom.fr/oai/openairinterface5g.git
+#git branch -a |grep "*"  # Check branch
+
+git clone https://github.com/subhrendu1987/oaisetup
+
+sudo apt-get install linux-image-4.15.0.142-lowlatency linux-headers-4.15.0.142-lowlatency
+cd oaisetup/BBU/openairinterface5g/
+source ../oaienv
+cd cmake_targets/
 ./build_oai -I --eNB -x --install-system-files -w USRP
-./build_oai --gNB -w USRP
+./build_oai --gNB -x -w USRP
 cd ran_build/build
+sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --continuous -tx
 ```
+* Debug
+ check detected USRP `uhd_find_devices`
+
+
 
 ## core Setup
 * Download https://releases.ubuntu.com/18.04/  64bit

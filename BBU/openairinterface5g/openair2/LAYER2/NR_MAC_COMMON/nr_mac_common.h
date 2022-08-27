@@ -37,6 +37,8 @@
 #include "nr_mac.h"
 #include "openair1/PHY/impl_defs_nr.h"
 
+uint32_t get_Y(NR_SearchSpace_t *ss, int slot, rnti_t rnti);
+
 uint64_t from_nrarfcn(int nr_bandP, uint8_t scs_index, uint32_t dl_nrarfcn);
 
 uint32_t to_nrarfcn(int nr_bandP, uint64_t dl_CarrierFreq, uint8_t scs_index, uint32_t bw);
@@ -103,7 +105,7 @@ uint8_t get_pusch_mcs_table(long *mcs_Table,
 uint8_t compute_nr_root_seq(NR_RACH_ConfigCommon_t *rach_config,
                             uint8_t nb_preambles,
                             uint8_t unpaired,
-			    frequency_range_t);
+                            frequency_range_t);
 
 int ul_ant_bits(NR_DMRS_UplinkConfig_t *NR_DMRS_UplinkConfig,long transformPrecoder);
 
@@ -121,9 +123,26 @@ int32_t get_l_prime(uint8_t duration_in_symbols, uint8_t mapping_type, pusch_dmr
 uint8_t get_L_ptrs(uint8_t mcs1, uint8_t mcs2, uint8_t mcs3, uint8_t I_mcs, uint8_t mcs_table);
 uint8_t get_K_ptrs(uint16_t nrb0, uint16_t nrb1, uint16_t N_RB);
 
+uint32_t nr_compute_tbs(uint16_t Qm,
+                        uint16_t R,
+			uint16_t nb_rb,
+			uint16_t nb_symb_sch,
+			uint16_t nb_dmrs_prb,
+                        uint16_t nb_rb_oh,
+                        uint8_t tb_scaling,
+			uint8_t Nl);
+
+/** \brief Computes Q based on I_MCS PDSCH and table_idx for downlink. Implements MCS Tables from 38.214. */
+uint8_t nr_get_Qm_dl(uint8_t Imcs, uint8_t table_idx);
+uint32_t nr_get_code_rate_dl(uint8_t Imcs, uint8_t table_idx);
+
+/** \brief Computes Q based on I_MCS PDSCH and table_idx for uplink. Implements MCS Tables from 38.214. */
+uint8_t nr_get_Qm_ul(uint8_t Imcs, uint8_t table_idx);
+uint32_t nr_get_code_rate_ul(uint8_t Imcs, uint8_t table_idx);
+
 uint16_t get_nr_srs_offset(NR_SRS_PeriodicityAndOffset_t periodicityAndOffset);
 
-int get_bw_tbslbrm(NR_BWP_t *genericParameters,
+int get_bw_tbslbrm(int scc_bwpsize,
                    NR_CellGroupConfig_t *cg);
 
 uint32_t nr_compute_tbslbrm(uint16_t table,
@@ -215,4 +234,36 @@ void nr_mac_gNB_rrc_ul_failure_reset(const module_id_t Mod_instP,
                                      const frame_t frameP,
                                      const sub_frame_t subframeP,
                                      const rnti_t rntiP);
+
+uint8_t number_of_bits_set(uint8_t buf);
+
+void compute_rsrp_bitlen(struct NR_CSI_ReportConfig *csi_reportconfig,
+                         uint8_t nb_resources,
+                         nr_csi_report_t *csi_report);
+
+uint8_t compute_ri_bitlen(struct NR_CSI_ReportConfig *csi_reportconfig,
+                          nr_csi_report_t *csi_report);
+
+void compute_li_bitlen(struct NR_CSI_ReportConfig *csi_reportconfig,
+                       uint8_t ri_restriction,
+                       nr_csi_report_t *csi_report);
+
+void get_n1n2_o1o2_singlepanel(int *n1, int *n2, int *o1, int *o2,
+                               struct NR_CodebookConfig__codebookType__type1__subType__typeI_SinglePanel__nrOfAntennaPorts__moreThanTwo *morethantwo);
+
+void get_x1x2_bitlen_singlepanel(int n1, int n2, int o1, int o2,
+                                 int *x1, int *x2, int rank, int codebook_mode);
+
+void compute_pmi_bitlen(struct NR_CSI_ReportConfig *csi_reportconfig,
+                        uint8_t ri_restriction,
+                        nr_csi_report_t *csi_report);
+
+void compute_cqi_bitlen(struct NR_CSI_ReportConfig *csi_reportconfig,
+                        uint8_t ri_restriction,
+                        nr_csi_report_t *csi_report);
+
+void compute_csi_bitlen(NR_CSI_MeasConfig_t *csi_MeasConfig, nr_csi_report_t *csi_report_template);
+
+uint16_t nr_get_csi_bitlen(nr_csi_report_t *csi_report_template, uint8_t csi_report_id);
+
 #endif

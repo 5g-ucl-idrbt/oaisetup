@@ -31,6 +31,7 @@
 
 #undef MALLOC //there are two conflicting definitions, so we better make sure we don't use it at all
 
+#include "common/utils/nr/nr_common.h"
 #include "common/utils/assertions.h"
 #include "common/utils/system.h"
 #include "common/ran_context.h"
@@ -719,10 +720,17 @@ void tx_rf(RU_t *ru,int frame,int slot, uint64_t timestamp) {
 
       AssertFatal(txsymb>0,"illegal txsymb %d\n",txsymb);
 
-      if(slot%(fp->slots_per_subframe/2))
-        siglen = txsymb * (fp->ofdm_symbol_size + fp->nb_prefix_samples);
-      else
-        siglen = (fp->ofdm_symbol_size + fp->nb_prefix_samples0) + (txsymb - 1) * (fp->ofdm_symbol_size + fp->nb_prefix_samples);
+      if (fp->slots_per_subframe == 1) {
+        if (txsymb <= 7)
+          siglen = (fp->ofdm_symbol_size + fp->nb_prefix_samples0) + (txsymb - 1) * (fp->ofdm_symbol_size + fp->nb_prefix_samples);
+        else
+          siglen = 2 * (fp->ofdm_symbol_size + fp->nb_prefix_samples0) + (txsymb - 2) * (fp->ofdm_symbol_size + fp->nb_prefix_samples);
+      } else {
+        if(slot%(fp->slots_per_subframe/2))
+          siglen = txsymb * (fp->ofdm_symbol_size + fp->nb_prefix_samples);
+        else
+          siglen = (fp->ofdm_symbol_size + fp->nb_prefix_samples0) + (txsymb - 1) * (fp->ofdm_symbol_size + fp->nb_prefix_samples);
+      }
 
       //+ ru->end_of_burst_delay;
       flags = 3; // end of burst
@@ -802,226 +810,13 @@ void fill_rf_config(RU_t *ru, char *rf_config_file) {
   int mu = config->ssb_config.scs_common.value;
   int N_RB = config->carrier_config.dl_grid_size[config->ssb_config.scs_common.value].value;
 
-  if (mu == NR_MU_0) {
-    switch(N_RB) {
-    case 270:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=92.16e6;
-        cfg->samples_per_frame = 921600;
-        cfg->tx_bw = 50e6;
-        cfg->rx_bw = 50e6;
-      } else {
-        cfg->sample_rate=61.44e6;
-        cfg->samples_per_frame = 614400;
-        cfg->tx_bw = 50e6;
-        cfg->rx_bw = 50e6;
-      }
-    case 216:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=46.08e6;
-        cfg->samples_per_frame = 460800;
-        cfg->tx_bw = 40e6;
-        cfg->rx_bw = 40e6;
-      }
-      else {
-        cfg->sample_rate=61.44e6;
-        cfg->samples_per_frame = 614400;
-        cfg->tx_bw = 40e6;
-        cfg->rx_bw = 40e6;
-      }
-      break; 
-    case 160: //30 MHz
-    case 133: //25 MHz
-      if (fp->threequarter_fs) {
-        AssertFatal(1==0,"N_RB %d cannot use 3/4 sampling\n",N_RB);
-      }
-      else {
-        cfg->sample_rate=30.72e6;
-        cfg->samples_per_frame = 307200;
-        cfg->tx_bw = 20e6;
-        cfg->rx_bw = 20e6;
-      }
-    case 106:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=23.04e6;
-        cfg->samples_per_frame = 230400;
-        cfg->tx_bw = 20e6;
-        cfg->rx_bw = 20e6;
-      }
-      else {
-        cfg->sample_rate=30.72e6;
-        cfg->samples_per_frame = 307200;
-        cfg->tx_bw = 20e6;
-        cfg->rx_bw = 20e6;
-      }
-      break;
-    case 52:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=11.52e6;
-        cfg->samples_per_frame = 115200;
-        cfg->tx_bw = 10e6;
-        cfg->rx_bw = 10e6;
-      }
-      else {
-        cfg->sample_rate=15.36e6;
-        cfg->samples_per_frame = 153600;
-        cfg->tx_bw = 10e6;
-        cfg->rx_bw = 10e6;
-      }
-    case 25:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=5.76e6;
-        cfg->samples_per_frame = 57600;
-        cfg->tx_bw = 5e6;
-        cfg->rx_bw = 5e6;
-      }
-      else {
-        cfg->sample_rate=7.68e6;
-        cfg->samples_per_frame = 76800;
-        cfg->tx_bw = 5e6;
-        cfg->rx_bw = 5e6;
-      }
-      break;
-    default:
-      AssertFatal(0==1,"N_RB %d not yet supported for numerology %d\n",N_RB,mu);
-    }
-  } else if (mu == NR_MU_1) {
-    switch(N_RB) {
-
-    case 273:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=184.32e6;
-        cfg->samples_per_frame = 1843200;
-        cfg->tx_bw = 100e6;
-        cfg->rx_bw = 100e6;
-      } else {
-        cfg->sample_rate=122.88e6;
-        cfg->samples_per_frame = 1228800;
-        cfg->tx_bw = 100e6;
-        cfg->rx_bw = 100e6;
-      }
-      break;
-    case 217:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=92.16e6;
-        cfg->samples_per_frame = 921600;
-        cfg->tx_bw = 80e6;
-        cfg->rx_bw = 80e6;
-      } else {
-        cfg->sample_rate=122.88e6;
-        cfg->samples_per_frame = 1228800;
-        cfg->tx_bw = 80e6;
-        cfg->rx_bw = 80e6;
-      }
-      break;
-    case 162 :
-      if (fp->threequarter_fs) {
-        AssertFatal(1==0,"N_RB %d cannot use 3/4 sampling\n",N_RB);
-      }
-      else {
-        cfg->sample_rate=61.44e6;
-        cfg->samples_per_frame = 614400;
-        cfg->tx_bw = 60e6;
-        cfg->rx_bw = 60e6;
-      }
-
-      break;
-
-    case 133 :
-      if (fp->threequarter_fs) {
-	AssertFatal(1==0,"N_RB %d cannot use 3/4 sampling\n",N_RB);
-      }
-      else {
-        cfg->sample_rate=61.44e6;
-        cfg->samples_per_frame = 614400;
-        cfg->tx_bw = 50e6;
-        cfg->rx_bw = 50e6;
-      }
-
-      break;
-    case 106:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=46.08e6;
-        cfg->samples_per_frame = 460800;
-        cfg->tx_bw = 40e6;
-        cfg->rx_bw = 40e6;
-      }
-      else {
-        cfg->sample_rate=61.44e6;
-        cfg->samples_per_frame = 614400;
-        cfg->tx_bw = 40e6;
-        cfg->rx_bw = 40e6;
-      }
-     break;
-    case 51:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=23.04e6;
-        cfg->samples_per_frame = 230400;
-        cfg->tx_bw = 20e6;
-        cfg->rx_bw = 20e6;
-      }
-      else {
-        cfg->sample_rate=30.72e6;
-        cfg->samples_per_frame = 307200;
-        cfg->tx_bw = 20e6;
-        cfg->rx_bw = 20e6;
-      }
-      break;
-    case 24:
-      if (fp->threequarter_fs) {
-        cfg->sample_rate=11.52e6;
-        cfg->samples_per_frame = 115200;
-        cfg->tx_bw = 10e6;
-        cfg->rx_bw = 10e6;
-      }
-      else {
-        cfg->sample_rate=15.36e6;
-        cfg->samples_per_frame = 153600;
-        cfg->tx_bw = 10e6;
-        cfg->rx_bw = 10e6;
-      }
-      break;
-    default:
-      AssertFatal(0==1,"N_RB %d not yet supported for numerology %d\n",N_RB,mu);
-    }
-  } else if (mu == NR_MU_3) {
-    switch(N_RB) {
-      case 66:
-        if (fp->threequarter_fs) {
-          cfg->sample_rate=184.32e6;
-          cfg->samples_per_frame = 1843200;
-          cfg->tx_bw = 100e6;
-          cfg->rx_bw = 100e6;
-        } else {
-          cfg->sample_rate = 122.88e6;
-          cfg->samples_per_frame = 1228800;
-          cfg->tx_bw = 100e6;
-          cfg->rx_bw = 100e6;
-        }
-
-        break;
-
-      case 32:
-        if (fp->threequarter_fs) {
-          cfg->sample_rate=92.16e6;
-          cfg->samples_per_frame = 921600;
-          cfg->tx_bw = 50e6;
-          cfg->rx_bw = 50e6;
-        } else {
-          cfg->sample_rate=61.44e6;
-          cfg->samples_per_frame = 614400;
-          cfg->tx_bw = 50e6;
-          cfg->rx_bw = 50e6;
-        }
-
-        break;
-
-      default:
-        AssertFatal(0==1,"N_RB %d not yet supported for numerology %d\n",N_RB,mu);
-    }
-  } else {
-    AssertFatal(0 == 1,"Numerology %d not supported for the moment\n",mu);
-  }
+  get_samplerate_and_bw(mu,
+                        N_RB,
+                        fp->threequarter_fs,
+                        &cfg->sample_rate,
+                        &cfg->samples_per_frame,
+                        &cfg->tx_bw,
+                        &cfg->rx_bw);
 
   if (config->cell_config.frame_duplex_type.value==TDD)
     cfg->duplex_mode = duplex_mode_TDD;
@@ -1049,11 +844,12 @@ void fill_rf_config(RU_t *ru, char *rf_config_file) {
     cfg->tx_gain[i] = ru->att_tx;
     cfg->rx_gain[i] = ru->max_rxgain-ru->att_rx;
     cfg->configFilename = rf_config_file;
-    LOG_I(PHY, "Channel %d: setting tx_gain offset %f, rx_gain offset %f, tx_freq %lu Hz, rx_freq %lu Hz\n",
+    LOG_I(PHY, "Channel %d: setting tx_gain offset %.0f, rx_gain offset %.0f, tx_freq %.0f Hz, rx_freq %.0f Hz, tune_offset %.0f Hz\n",
           i, cfg->tx_gain[i],
           cfg->rx_gain[i],
-          (unsigned long)cfg->tx_freq[i],
-          (unsigned long)cfg->rx_freq[i]);
+          cfg->tx_freq[i],
+          cfg->rx_freq[i],
+          cfg->tune_offset);
   }
 }
 
@@ -2050,6 +1846,8 @@ static void NRRCconfig_RU(void) {
         LOG_I(PHY,"Setting time source to internal\n");
         RC.ru[j]->openair0_cfg.time_source = internal;
       }
+
+      RC.ru[j]->openair0_cfg.tune_offset = get_softmodem_params()->tune_offset;
 
       if (strcmp(*(RUParamList.paramarray[j][RU_LOCAL_RF_IDX].strptr), "yes") == 0) {
         if ( !(config_isparamset(RUParamList.paramarray[j],RU_LOCAL_IF_NAME_IDX)) ) {

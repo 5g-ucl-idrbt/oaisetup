@@ -96,6 +96,8 @@ typedef struct {
   uint32_t subframe;
   /// MIMO mode for this DLSCH
   MIMO_mode_t mimo_mode;
+  /// Interleaver outputs
+  uint8_t *f;
   /// LDPC lifting size
   uint32_t Z;
 } NR_DL_gNB_HARQ_t;
@@ -186,8 +188,6 @@ typedef struct {
   uint8_t codebook_index;
   /// Maximum number of HARQ processes
   uint8_t Mdlharq;
-  /// Maximum number of HARQ rounds
-  uint8_t Mlimit;
   /// MIMO transmission mode indicator for this sub-frame
   uint8_t Kmimo;
   /// Nsoft parameter related to UE Category
@@ -343,8 +343,6 @@ typedef struct {
 typedef struct {
   /// Pointers to 16 HARQ processes for the ULSCH
   NR_UL_gNB_HARQ_t *harq_processes[NR_MAX_ULSCH_HARQ_PROCESSES];
-  /// Current HARQ process id
-  int harq_process_id[NR_MAX_SLOTS_PER_FRAME];
   /// HARQ process mask, indicates which processes are currently active
   uint16_t harq_mask;
   /// ACK/NAK Bundling flag
@@ -371,8 +369,6 @@ typedef struct {
   uint8_t cyclicShift;
   /// for cooperative communication
   uint8_t cooperation_flag;
-  /// Maximum number of HARQ rounds
-  uint8_t Mlimit;
   /// Maximum number of LDPC iterations
   uint8_t max_ldpc_iterations;
   /// number of iterations used in last LDPC decoding
@@ -428,10 +424,6 @@ typedef struct {
   /// - first index: rx antenna id [0..nb_antennas_rx[
   /// - second index: ? [0..2*ofdm_symbol_size[
   int32_t **rxdataF_ext;
-  /// \brief Holds the received data in the frequency domain for the allocated RBs in normal format.
-  /// - first index: rx antenna id [0..nb_antennas_rx[
-  /// - second index (definition from phy_init_lte_eNB()): ? [0..12*N_RB_UL*frame_parms->symbols_per_tti[
-  int32_t **rxdataF_ext2;
   /// \brief Hold the channel estimates in time domain based on DRS.
   /// - first index: rx antenna id [0..nb_antennas_rx[
   /// - second index: ? [0..4*ofdm_symbol_size[
@@ -444,14 +436,6 @@ typedef struct {
   /// - first index: ? [0..7] (hard coded) FIXME! accessed via \c nb_antennas_rx
   /// - second index: ? [0..12*N_RB_UL*frame_parms->symbols_per_tti[
   int32_t **ul_ch_estimates_ext;
-  /// \brief Hold the PTRS phase estimates in frequency domain.
-  /// - first index: rx antenna id [0..nb_antennas_rx[
-  /// - second index: ? [0..12*N_RB_UL*frame_parms->symbols_per_tti[
-  int32_t **ul_ch_ptrs_estimates;
-  /// \brief Uplink phase estimates extracted in PRBS.
-  /// - first index: ? [0..7] (hard coded) FIXME! accessed via \c nb_antennas_rx
-  /// - second index: ? [0..12*N_RB_UL*frame_parms->symbols_per_tti[
-  int32_t **ul_ch_ptrs_estimates_ext;
   /// \brief Holds the compensated signal.
   /// - first index: rx antenna id [0..nb_antennas_rx[
   /// - second index: ? [0..12*N_RB_UL*frame_parms->symbols_per_tti[
@@ -775,6 +759,9 @@ typedef struct PHY_VARS_gNB_s {
   /// SRS variables
   nr_srs_info_t *nr_srs_info[NUMBER_OF_NR_SRS_MAX];
 
+  /// CSI variables
+  nr_csi_info_t *nr_csi_info;
+
   uint8_t pbch_configured;
   char gNB_generate_rar;
 
@@ -806,9 +793,6 @@ typedef struct PHY_VARS_gNB_s {
   // Mask of occupied RBs, per symbol and PRB
   uint32_t rb_mask_ul[14][9];
 
-  /// CSI  RS sequence
-  uint32_t ***nr_gold_csi_rs;
-
   /// Indicator set to 0 after first SR
   uint8_t first_sr[NUMBER_OF_NR_SR_MAX];
 
@@ -838,14 +822,17 @@ typedef struct PHY_VARS_gNB_s {
   int              **dl_precoder_SgNB[3];
   char             log2_maxp; /// holds the maximum channel/precoder coefficient
 
-  int  prb_interpolation;
+  int max_ldpc_iterations;
+  /// indicate the channel estimation technique in time domain
+  int chest_time;
+  /// indicate the channel estimation technique in freq domain
+  int chest_freq;
 
   /// if ==0 enables phy only test mode
   int mac_enabled;
   /// counter to average prach energh over first 100 prach opportunities
   int prach_energy_counter;
 
-  int csi_gold_init;
   int pdcch_gold_init;
   int pdsch_gold_init[2];
   int pusch_gold_init[2];
