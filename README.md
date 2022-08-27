@@ -7,14 +7,14 @@ Consists of two steps; (a) gNodeb and (b)core
 * Inside VM install openssh server, git
 ```
 sudo apt update; sudo apt install openssh-server git cmake
-sudo apt update; sudo apt install openssh-server git cmake
 ```
 * Use the following commands
 ```
 mkdir ~/GIT
 cd GIT
 git clone -b develop https://gitlab.eurecom.fr/oai/openairinterface5g.git
-cd openairinterface5g
+sudo apt-get install linux-image-$(uname -r)-lowlatency linux-headers-$(uname -r)-lowlatency
+cd BBU/openairinterface5g
 git branch -a |grep "*"  # Check branch
 source oaidev
 cd cmake
