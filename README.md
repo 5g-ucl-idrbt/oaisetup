@@ -88,5 +88,6 @@ cd ~/GIT/oaisetup/CORE/oai-cn5g-fed
 #sudo docker network create   --driver=bridge   --subnet=192.168.70.128/26   -o "com.docker.network.bridge.name"="demo-oai"   demo-oai-public-net
 
 cd docker-compose
+sudo python3 core-network.py --type start-basic
 sudo docker-compose -f docker-compose-basic-nrf.yaml up -d
 ```

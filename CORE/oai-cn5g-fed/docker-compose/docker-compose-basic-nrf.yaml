@@ -22,7 +22,7 @@ services:
                 ipv4_address: 192.168.70.131
     oai-udr:
         container_name: "oai-udr"
-        image: oai-udr:latest
+        image: oai-udr:v1.4.0
         environment:
             - TZ=Europe/Paris
             - INSTANCE=0
@@ -58,7 +58,7 @@ services:
             retries: 5
     oai-udm:
         container_name: "oai-udm"
-        image: oai-udm:latest
+        image: oai-udm:v1.4.0
         environment:
             - TZ=Europe/Paris
             - INSTANCE=0
@@ -91,7 +91,7 @@ services:
             retries: 5
     oai-ausf:
         container_name: "oai-ausf"
-        image: oai-ausf:latest
+        image: oai-ausf:v1.4.0
         environment:
             - TZ=Europe/Paris
             - INSTANCE_ID=0
@@ -123,7 +123,7 @@ services:
             retries: 5
     oai-nrf:
         container_name: "oai-nrf"
-        image: oai-nrf:latest
+        image: oai-nrf:v1.4.0
         environment:
             - NRF_INTERFACE_NAME_FOR_SBI=eth0
             - NRF_INTERFACE_PORT_FOR_SBI=80
@@ -143,7 +143,7 @@ services:
             retries: 5
     oai-amf:
         container_name: "oai-amf"
-        image: oai-amf:latest
+        image: oai-amf:v1.4.0
         environment:
             - TZ=Europe/paris
             - INSTANCE=0
@@ -217,7 +217,7 @@ services:
                 ipv4_address: 192.168.70.132
     oai-smf:
         container_name: "oai-smf"
-        image: oai-smf:latest
+        image: oai-smf:v1.4.0
         environment:
             - TZ=Europe/Paris
             - INSTANCE=0
@@ -277,7 +277,7 @@ services:
                 ipv4_address: 192.168.70.133
     oai-spgwu:
         container_name: "oai-spgwu"
-        image: oai-spgwu-tiny:latest
+        image: oai-spgwu-tiny:v1.4.0
         environment:
             - TZ=Europe/Paris
             - PID_DIRECTORY=/var/run
