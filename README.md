@@ -19,7 +19,7 @@ git clone https://github.com/subhrendu1987/oaisetup
 
 sudo apt-get install linux-image-4.15.0.142-lowlatency linux-headers-4.15.0.142-lowlatency
 cd oaisetup/BBU/openairinterface5g/
-source ../oaienv
+source oaienv
 cd cmake_targets/
 ./build_oai -I --eNB -x --install-system-files -w USRP
 ./build_oai --gNB -x -w USRP
