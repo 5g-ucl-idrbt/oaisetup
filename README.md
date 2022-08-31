@@ -30,7 +30,16 @@ sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb
  * check detected USRP `uhd_find_devices`
  * Check USB version used `lsusb -v |grep USB` or `lsusb -D /dev/bus/usb/<busno>/<devno>`
  * "Unable to change cpu clock" -> cpufreq is missing from /sys/devices/system/cpu/cpu0/
-   --> Check `cat /proc/cpuinfo |grep "MHz"`
+   --> Check `cat /proc/cpuinfo |grep "MHz"` <Pending>
+ * Sampling issue
+ ```
+ [PHY]   rx_rf: Asked for 23040 samples, got 20737 from USRP
+ [PHY]   problem receiving samples
+ [HW]   [recv] received 20737 samples out of 23040
+ [HW]   Time: 3.60604 s
+ ERROR_CODE_OVERFLOW (Overflow)
+ ```
+ -> <Pending>
 
 
 
