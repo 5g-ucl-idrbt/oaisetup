@@ -6,7 +6,7 @@ Consists of two steps; (a) gNodeb and (b)core
 * Create VM with the image
 * Inside VM install openssh server, git
 ```
-sudo apt update; sudo apt install openssh-server git cmake
+sudo apt update; sudo apt install openssh-server git cmake cpufrequtils
 ```
 * Use the following commands to compile the gNodeB source
 ```
@@ -29,6 +29,8 @@ sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb
 * Debug
  * check detected USRP `uhd_find_devices`
  * Check USB version used `lsusb -v |grep USB` or `lsusb -D /dev/bus/usb/<busno>/<devno>`
+ * "Unable to change cpu clock" -> cpufreq is missing from /sys/devices/system/cpu/cpu0/
+   --> Check `cat /proc/cpuinfo |grep "MHz"`
 
 
 
