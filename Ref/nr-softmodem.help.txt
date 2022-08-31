@@ -1,0 +1,91 @@
+[1;31m[HW]   Can't set /dev/cpu_dma_latency to 2 us
+[0m[1;31m[HW]   Can't set cpu frequency
+[0m[ENB_APP]   nfapi running mode: MONOLITHIC
+[0mCMDLINE: "./nr-softmodem" "--help" 
+[CONFIG] get parameters from cmdline , debug flags: 0x00400000
+[CONFIG] log_config: 2/3 parameters successfully set 
+[CONFIG] log_config: 55/55 parameters successfully set 
+[CONFIG] log_config: 55/55 parameters successfully set 
+[CONFIG] log_config: 16/16 parameters successfully set 
+[CONFIG] log_config: 16/16 parameters successfully set 
+log init done
+Reading in command-line options
+[CONFIG] (root): 32/36 parameters successfully set 
+
+-----Help for section (root section)            : 036 entries------
+    --rf-config-file: Configuration file for front-end (e.g. LMS7002M)
+    --split73: Split 7.3 (below rate matching) option: <cu|du>:<remote ip address>:<remote port>    --thread-pool: Thread pool configuration: 
+  default no pool (runs in calling thread),
+  list of cores, comma separated (negative value is no core affinity)
+  example: -1,3 launches two working threads one floating, the second set on core 3    --phy-test: test UE phy layer, mac disabled
+    --do-ra: test gNB  and UE with RA procedures
+    --sa: run gNB in standalone mode
+    --usim-test: use XOR autentication algo in case of test usim mode
+    --clock-source: tells hardware to use a clock reference (0:internal, 1:external, 2:gpsdo)
+    --time-source: tells hardware to use a time reference (0:internal, 1:external, 2:gpsdo)
+    --tune-offset: LO tuning offset to use in Hz
+    --wait-for-sync: Help string not specified
+    --single-thread-enable: Disables single-thread mode in lte-softmodem
+    -C: Set the downlink frequency for all component carriers
+    --CO: Set the uplink frequency offset for all component carriers
+    -a: Channel id offset
+    -d: Enable soft scope and L1 and L2 stats (Xforms)
+    -q: Enable processing timing measurement of lte softmodem on per subframe basis 
+    --numerology: adding numerology for 5G
+    --band: band index
+    --emulate-rf: Emulated RF enabled(disable by defult)
+    --parallel-config: three config for level of parallelism 'PARALLEL_SINGLE_THREAD', 'PARALLEL_RU_L1_SPLIT', or 'PARALLEL_RU_L1_TRX_SPLIT'
+    --worker-config: two option for worker 'WORKER_DISABLE' or 'WORKER_ENABLE'
+    --noS1: Disable s1 interface
+    --rfsim: Run in rf simulator mode
+    --nokrnmod: (noS1 only): Use tun instead of namesh module 
+    --nbiot-disable: disable nb-iot, even if defined in config
+    --chest-freq: Set channel estimation type in frequency domain. 0-Linear interpolation (default). 1-PRB based averaging of channel estimates in frequency. 
+    --chest-time: Set channel estimation type in time domain. 0-Symbols take estimates of the last preceding DMRS symbol (default). 1-Symbol based averaging of channel estimates in time. 
+    --nsa: Enable NSA mode 
+    --node-number: Help string not specified
+    --usrp-tx-thread-config: having extra thead for usrp tx
+    --nfapi: Change the nFAPI mode for NR
+    --non-stop: Go back to frame sync mode after 100 consecutive PBCH failures
+    --emulate-l1: Run in L1 emulated mode (disable PHY layer)
+    --continuous-tx: perform continuous transmission, even in TDD mode (to work around USRP issues)
+    --disable-stats: disable globally the stats generation and persistence--------------------------------------------------------------------
+
+[CONFIG] (root): 4/5 parameters successfully set 
+
+-----Help for section (root section)            : 005 entries------
+    -R: Enable online log 
+    -g: Set the global log level, valid options: (4:trace, 3:debug, 2:info, 1:warn, (0:error))
+    --telnetsrv: Start embedded telnet server 
+    --log-mem: Help string not specified
+    --telnetclt: Help string not specified
+--------------------------------------------------------------------
+
+
+-----Help for section (root section)            : 014 entries------
+    --single-thread-disable: Disables single-thread mode in lte-softmodem
+    -A: Set timing_advance
+    -E: Apply three-quarter of sampling frequency, 23.04 Msps to reduce the data rate on USB/PCIe transfers (only valid for 20 MHz)
+    -m: Set the downlink MCS for PHYTEST mode
+    -l: Set the downlink nrOfLayers for PHYTEST [GNB_APP]   Getting GNBSParams
+[0mmode
+    -L: Set the uplink nrOfLayers for PHYTEST mode
+    -t: Set the uplink MCS for PHYTEST mode
+    -M: Set the number of PRBs used for DLSCH in PHYTEST mode
+    -T: Set the number of PRBs used for ULSCH in PHYTEST mode
+    -D: Bitmap for DLSCH slots (slot 0 starts at LSB)
+    -U: Bitmap for ULSCH slots (slot 0 starts at LSB)
+    --usrp-tx-thread-config: having extra thead for usrp tx
+    --uecap_file: path for UE Capabilities file
+    -s: Set average SNR in dB (for --siml1 option)
+--------------------------------------------------------------------
+
+[CONFIG] (root): 1/2 parameters successfully set 
+
+-----Help for section (root section)            : 002 entries------
+    --Asn1_verbosity: Help string not specified
+    --Active_gNBs: Help string not specified
+--------------------------------------------------------------------
+
+/home/gnodeb/GIT/oaisetup/BBU/openairinterface5g/common/config/config_cmdline.c:226 config_process_cmdline() Exiting OAI softmodem: [CONFIG] Exiting after displaying help
+
