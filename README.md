@@ -28,6 +28,7 @@ sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb
 ```
 * Debug
  * check detected USRP `uhd_find_devices`
+ * Check USB version used `lsusb -v |grep USB` or `lsusb -D /dev/bus/usb/<busno>/<devno>`
 
 
 
