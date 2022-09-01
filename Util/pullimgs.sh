@@ -2,6 +2,8 @@
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+docker pull mysql:5.7
+echo -e "${RED} Downloaded mysql:5.7 ${NC}"
 docker pull oaisoftwarealliance/oai-amf:v1.4.0
 echo -e "${RED} Downloaded oai-amf:v1.4.0 ${NC}"
 docker pull oaisoftwarealliance/oai-nrf:v1.4.0

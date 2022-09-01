@@ -21,13 +21,29 @@ sudo apt-get install linux-image-4.15.0.142-lowlatency linux-headers-4.15.0.142-
 cd oaisetup/BBU/openairinterface5g/
 source oaienv
 cd cmake_targets/
+# LTE USRP
 ./build_oai -I --eNB -x --install-system-files -w USRP
+# UE USRP
+./build_oai --gNB --nrUE
+# gnodeb USRP 
 ./build_oai --gNB -x -w USRP
+
 cd ran_build/build
 sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --continuous -tx
 ```
 * Debug
- * check detected USRP `uhd_find_devices`
+ * Check host system virtualization
+ ```
+  egrep -wo 'vmx|ept|vpid|npt|tpr_shadow|flexpriority|vnmi|lm|aes' /proc/cpuinfo 
+  ## Only show Intel CPU flags ##
+  egrep -wo 'vmx|ept|vpid|npt|tpr_shadow|flexpriority|vnmi|lm|aes' /proc/cpuinfo  | sort | uniq
+  ## OR better use the following ##
+  egrep -wo 'vmx|lm|aes' /proc/cpuinfo  | sort | uniq\
+  | sed -e 's/aes/Hardware encryption=Yes (&)/g' \
+  -e 's/lm/64 bit cpu=Yes (&)/g' -e 's/vmx/Intel hardware virtualization=Yes (&)/g'
+ ```
+ Check the meaning of the tags to understand the capabilities of the host system [here](https://www.cyberciti.biz/faq/linux-xen-vmware-kvm-intel-vt-amd-v-support/)
+ * Check detected USRP `uhd_find_devices`
  * Check USB version used `lsusb -v |grep USB` or `lsusb -D /dev/bus/usb/<busno>/<devno>`
  * "Unable to change cpu clock" -> cpufreq is missing from /sys/devices/system/cpu/cpu0/
    --> Check `cat /proc/cpuinfo |grep "MHz"` <Pending>
@@ -102,4 +118,5 @@ cd ~/GIT/oaisetup/CORE/oai-cn5g-fed
 cd docker-compose
 sudo python3 core-network.py --type start-basic
 sudo docker-compose -f docker-compose-basic-nrf.yaml up -d
+sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 ```
