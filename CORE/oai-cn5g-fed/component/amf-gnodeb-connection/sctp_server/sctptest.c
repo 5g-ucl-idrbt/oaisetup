@@ -22,11 +22,10 @@ static void die(const char *s) {
         exit(1);
 }
 /***************************************/
-char* fdToIP(int newfd) {
+void fdToIP(int newfd,char* clientip) {
         struct sockaddr_in addr;
         socklen_t addr_size = sizeof(struct sockaddr_in);
         int res = getpeername(newfd, (struct sockaddr *)&addr, &addr_size);
-        char *clientip[20];
         strcpy(clientip, inet_ntoa(addr.sin_addr));
         return(clientip);
 }
@@ -71,8 +70,8 @@ static void server(void) {
                 conn_fd = accept(listen_fd, (struct sockaddr *) NULL, NULL);
                 if(conn_fd < 0)
                         die("accept()");
-
-                char* cli_ip=fdToIP(conn_fd);
+                char cli_ip[20];
+                fdToIP(conn_fd,cli_ip);
                 printf("New client connected from %s\n",cli_ip);
                 fflush(stdout);
 
