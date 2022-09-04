@@ -33,7 +33,7 @@ cd cmake_targets/
 ./build_oai -I --gNB -x -w USRP
 
 cd ran_build/build
-sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --continuous -tx
+sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.modified.conf --continuous -tx
 ```
 * Debug
  * Check host system virtualization

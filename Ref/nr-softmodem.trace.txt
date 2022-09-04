@@ -1,0 +1,1469 @@
+[HW]   # /dev/cpu_dma_latency set to 2 us
+[0m[ENB_APP]   nfapi running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[ITTI]   Starting itti queue: TASK_UNKNOWN as task 0
+[0m[ITTI]   Starting itti queue: TASK_TIMER as task 1
+[0m[ITTI]   Starting itti queue: TASK_L2L1 as task 2
+[0m[ITTI]   Starting itti queue: TASK_BM as task 3
+[0m[ITTI]   Starting itti queue: TASK_PHY_ENB as task 4
+[0m[ITTI]   Starting itti queue: TASK_MAC_ENB as task 5
+[0m[ITTI]   Starting itti queue: TASK_MAC_GNB as task 6
+[0m[ITTI]   Starting itti queue: TASK_RLC_ENB as task 7
+[0m[ITTI]   Starting itti queue: TASK_RRC_ENB_NB_IoT as task 8
+[0m[ITTI]   Starting itti queue: TASK_PDCP_ENB as task 9
+[0m[ITTI]   Starting itti queue: TASK_PDCP_GNB as task 10
+[0m[ITTI]   Starting itti queue: TASK_DATA_FORWARDING as task 11
+[0m[ITTI]   Starting itti queue: TASK_END_MARKER as task 12
+[0m[ITTI]   Starting itti queue: TASK_RRC_ENB as task 13
+[0m[ITTI]   Starting itti queue: TASK_RRC_GNB as task 14
+[0m[ITTI]   Starting itti queue: TASK_RAL_ENB as task 15
+[0m[ITTI]   Starting itti queue: TASK_S1AP as task 16
+[0m[ITTI]   Starting itti queue: TASK_NGAP as task 17
+[0m[ITTI]   Starting itti queue: TASK_X2AP as task 18
+[0m[ITTI]   Starting itti queue: TASK_M2AP_ENB as task 19
+[0m[ITTI]   Starting itti queue: TASK_M2AP_MCE as task 20
+[0m[ITTI]   Starting itti queue: TASK_M3AP as task 21
+[0m[ITTI]   Starting itti queue: TASK_M3AP_MME as task 22
+[0m[ITTI]   Starting itti queue: TASK_M3AP_MCE as task 23
+[0m[ITTI]   Starting itti queue: TASK_SCTP as task 24
+[0m[ITTI]   Starting itti queue: TASK_ENB_APP as task 25
+[0m[ITTI]   Starting itti queue: TASK_GNB_APP as task 26
+[0m[ITTI]   Starting itti queue: TASK_MCE_APP as task 27
+[0m[ITTI]   Starting itti queue: TASK_MME_APP as task 28
+[0m[ITTI]   Starting itti queue: TASK_FLEXRAN_AGENT as task 29
+[0m[ITTI]   Starting itti queue: TASK_PHY_UE as task 30
+[0m[ITTI]   Starting itti queue: TASK_MAC_UE as task 31
+[0m[ITTI]   Starting itti queue: TASK_RLC_UE as task 32
+[0m[ITTI]   Starting itti queue: TASK_PDCP_UE as task 33
+[0m[ITTI]   Starting itti queue: TASK_RRC_UE as task 34
+[0m[ITTI]   Starting itti queue: TASK_RRC_NRUE as task 35
+[0m[ITTI]   Starting itti queue: TASK_NAS_UE as task 36
+[0m[ITTI]   Starting itti queue: TASK_RAL_UE as task 37
+[0m[ITTI]   Starting itti queue: TASK_GTPV1_U as task 38
+[0m[ITTI]   Starting itti queue: TASK_CU_F1 as task 39
+[0m[ITTI]   Starting itti queue: TASK_DU_F1 as task 40
+[0m[ITTI]   Starting itti queue: TASK_RRC_UE_SIM as task 41
+[0m[ITTI]   Starting itti queue: TASK_RRC_GNB_SIM as task 42
+[0m[ITTI]   Starting itti queue: TASK_RRC_NSA_UE as task 43
+[0m[ITTI]   Starting itti queue: TASK_RRC_NSA_NRUE as task 44
+[0m[ITTI]   Starting itti queue: TASK_NAS_NRUE as task 45
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: main Abrev. Hash: 80a5900 Date: Fri Sep 2 12:50:59 2022 +0530
+[0m[NR_PHY]   PRB blacklist 
+[0m[NR_PHY]   RC.gNB = 0x34bb740
+[0m[NR_PHY]   RC.gNB[0] = 0x7fa6c7bd6010
+[0m[NR_PHY]   Copying 0 blacklisted PRB to L1 context
+[0m[PHY]   l1_north_init_gNB() RC.nb_nr_L1_inst:1
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[MAC]   Allocating shared L1/L2 interface structure for instance 0 @ 0x34b83a0
+[0m[PHY]   l1_north_init_gNB() RC.gNB[0] installing callbacks
+[0m[ITTI]   Created Posix thread TASK_SCTP
+[0m[X2AP]   X2AP is disabled.
+[0m[34m[NGAP]   Configuration in the file: demo-oai.
+[0m[34m[NGAP]   Configuration in the file: 192.168.0.181/24.
+[0m[NGAP]   Starting NGAP layer
+[0m[ITTI]   Created Posix thread TASK_NGAP
+[0m[PHY]   gNB_app_task() Task ready initialize structures
+[0m[ITTI]   Created Posix thread TASK_GNB_APP
+[0m[NR_RRC]   Creating NR RRC gNB Task
+[0m[NR_PHY]   PRB blacklist 
+[0m[NR_PHY]   Copying 0 blacklisted PRB to L1 context
+[0m[PHY]   l1_north_init_gNB() RC.nb_nr_L1_inst:1
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[PHY]   l1_north_init_gNB() RC.gNB[0] installing callbacks
+[0m[MAC]   [MAIN] Init function start:nb_nr_macrlc_inst=1
+[0m[NR_RRC]   Entering main loop of NR_RRC message task
+[0m[ITTI]   Created Posix thread TASK_RRC_GNB
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[NR_MAC]   PUSCH Target 150, PUCCH Target 200, PUCCH Failure 10, PUSCH Failure 10
+[0m[PHY]   gNB_app_task() RC.nb_nr_L1_inst:1
+[0m[PHY]   l1_north_init_gNB() RC.nb_nr_L1_inst:1
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[PHY]   l1_north_init_gNB() RC.gNB[0] installing callbacks
+[0m[GNB_APP]   Allocating gNB_RRC_INST for 1 instances
+[0m[PHY]   gNB_app_task() RC.nb_nr_inst:1 RC.nrrrc:0x7fa6bc00a270
+[0m[PHY]   gNB_app_task() Creating RRC instance RC.nrrrc[0]:0x7fa6bc00a7f0 (1 of 1)
+[0m[RRC]   Read in ServingCellConfigCommon (PhysCellId 0, ABSFREQSSB 641280, DLBand 78, ABSFREQPOINTA 640008, DLBW 106,RACH_TargetReceivedPower -96
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[37].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[37].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[RRC]   Read in ServingCellConfigDedicated UL (FreqDensity_0 -1, FreqDensity_1 -1, TimeDensity_0 -1, TimeDensity_1 -1, TimeDensity_2 -1, RE offset -1, First_active_BWP_ID 1 SCS 1, LocationandBW 28875 
+[0m[GNB_APP]   DL PTRS frequencyDensity 1 not set. Assuming PTRS not present! 
+[0m[GNB_APP]   DL PTRS frequencyDensity 1 not set. Assuming PTRS not present! 
+[0m[GNB_APP]   DL PTRS frequencyDensity 1 not set. Assuming PTRS not present! 
+[0m[GNB_APP]   UL PTRS frequencyDensity 1 not set. Assuming PTRS not present! 
+[0m[GNB_APP]   UL PTRS frequencyDensity 1 not set. Assuming PTRS not present! 
+[0m[GNB_APP]   UL PTRS frequencyDensity 1 not set. Assuming PTRS not present! 
+[0m[NR_RRC]   Setting node_type to ngran_gNB
+[0m[GNB_APP]   pdsch_AntennaPorts N1 1
+[0m[GNB_APP]   pdsch_AntennaPorts N2 1
+[0m[GNB_APP]   pdsch_AntennaPorts XP 1
+[0m[GNB_APP]   pusch_AntennaPorts 1
+[0m[GNB_APP]   minTXRXTIME 2
+[0m[GNB_APP]   SIB1 TDA 1
+[0m[GNB_APP]   Do CSI-RS 1
+[0m[GNB_APP]   Do SRS 1
+[0m[GNB_APP]   256 QAM: may be on
+[0m[GNB_APP]   SDAP layer is disabled
+[0m[GNB_APP]   RRC starting with node type 2
+[0m[GNB_APP]   Sending configuration message to NR_RRC task
+[0m[PDCP]   pdcp init,usegtp 
+[0m[NR_RRC]   Received message NRRRC_CONFIGURATION_REQ
+[0m[NR_RRC]   [gNB 0] Received NRRRC_CONFIGURATION_REQ : 0x7fa6bc00bed0
+[0m[NR_RRC]   [FRAME 00000][gNB][MOD 00][RNTI 0] Init...
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[37].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_RRC]   [FRAME 00000][gNB][MOD 00][RNTI 0] Checking release 
+[0mCMDLINE: "./nr-softmodem" "-E" "--sa" "-O" "../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.modified.conf" "--continuous" "-tx" 
+[CONFIG] get parameters from libconfig ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.modified.conf , debug flags: 0x00000000
+[LIBCONFIG] Path for include directive set to: ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF
+[CONFIG] function config_libconfig_init returned 0
+[CONFIG] config module libconfig loaded
+[LIBCONFIG] config: 1/1 parameters successfully set, (1 to default value)
+[LIBCONFIG] log_config: 3/3 parameters successfully set, (1 to default value)
+[LIBCONFIG] log_config: 55/55 parameters successfully set, (47 to default value)
+[LIBCONFIG] log_config: 55/55 parameters successfully set, (55 to default value)
+[LIBCONFIG] log_config: 16/16 parameters successfully set, (16 to default value)
+[LIBCONFIG] log_config: 16/16 parameters successfully set, (16 to default value)
+log init done
+Reading in command-line options
+[LIBCONFIG] (root): 36/36 parameters successfully set, (32 to default value)
+[LIBCONFIG] (root): 5/5 parameters successfully set, (4 to default value)
+[LIBCONFIG] (root): 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] THREAD_STRUCT.[0]: 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] THREAD_STRUCT.[0]: 2/2 parameters successfully set, (0 to default value)
+[CONFIG] parallel_conf is set to 0
+[CONFIG] worker_conf is set to 1
+Configuration: nb_rrc_inst 1, nb_nr_L1_inst 1, nb_ru 1
+[LIBCONFIG] TTracer: 4/4 parameters successfully set, (4 to default value)
+configuring for RAU/RRU
+CPU Freq is 3.096230 
+[LIBCONFIG] opt: 3/3 parameters successfully set, (3 to default value)
+[LIBCONFIG] (root): 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0]: 27/27 parameters successfully set, (18 to default value)
+[LIBCONFIG] L1s.[0]: 15/15 parameters successfully set, (10 to default value)
+Initializing northbound interface for L1
+[LIBCONFIG] eNBs.[0]: 1/1 parameters successfully set, (1 to default value)
+[LIBCONFIG] gNBs.[0]: 1/1 parameters successfully set, (1 to default value)
+[LIBCONFIG] gNBs.[0].NETWORK_INTERFACES: 10/10 parameters successfully set, (3 to default value)
+[LIBCONFIG] (root): 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0]: 27/27 parameters successfully set, (18 to default value)
+[LIBCONFIG] L1s.[0]: 15/15 parameters successfully set, (10 to default value)
+Initializing northbound interface for L1
+[LIBCONFIG] MACRLCs.[0]: 33/33 parameters successfully set, (26 to default value)
+[LIBCONFIG] gNBs.[0]: 27/27 parameters successfully set, (18 to default value)
+[LIBCONFIG] (root): 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0]: 27/27 parameters successfully set, (18 to default value)
+[LIBCONFIG] MACRLCs.[0]: 33/33 parameters successfully set, (26 to default value)
+[LIBCONFIG] (root): 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0]: 27/27 parameters successfully set, (18 to default value)
+[LIBCONFIG] gNBs.[0].pdcch_ConfigSIB1.[0]: 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0].servingCellConfigCommon.[0]: 60/60 parameters successfully set, (9 to default value)
+[LIBCONFIG] gNBs.[0].servingCellConfigDedicated.[0]: 42/42 parameters successfully set, (21 to default value)
+NRRRC 0: Southbound Transport local_mac
+[LIBCONFIG] gNBs.[0].plmn_list.[0]: 3/3 parameters successfully set, (0 to default value)
+[LIBCONFIG] security: 4/4 parameters successfully set, (0 to default value)
+[LIBCONFIG] (root): 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0]: 27/27 parameters successfully set, (18 to default value)
+[LIBCONFIG] gNBs.[0].plmn_list.[0]: 3/3 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0].plmn_list.[0].snssaiList.[0]: 2/2 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0].amf_ip_address.[0]: 4/4 parameters successfully set, (0 to default value)
+[LIBCONFIG] gNBs.[0].SCTP: 2/2 parameters successfully s[NR_RRC]   SIB1 freq: absoluteFrequencySSB 641280, absoluteFrequencyPointA 640008
+[0m[NR_RRC]   SIB1 freq: absolute_diff 1272, 2*(absolute_diff/(12*2) - 10) 86
+[0m[GNB_APP]   default drx 0
+[0m[GTPU]   Configuring GTPu
+[0m[GTPU]   SA mode 
+[0m[GTPU]   Configuring GTPu address : 192.168.0.181 -> b500a8c0
+[0met, (0 to default value)
+<SIB1>
+    <cellSelectionInfo>
+        <q-RxLevMin>-65</q-RxLevMin>
+    </cellSelectionInfo>
+    <cellAccessRelatedInfo>
+        <plmn-IdentityList>
+            <PLMN-IdentityInfo>
+                <plmn-IdentityList>
+                    <PLMN-Identity>
+                        <mcc>
+                            <MCC-MNC-Digit>0</MCC-MNC-Digit>
+                            <MCC-MNC-Digit>0</MCC-MNC-Digit>
+                            <MCC-MNC-Digit>1</MCC-MNC-Digit>
+                        </mcc>
+                        [LIBCONFIG] gNBs.[0].NETWORK_INTERFACES: 10/10 parameters successfully set, (3 to default value)
+<mnc>
+                            <MCC-MNC-Digit>0</MCC-MNC-Digit>
+                            <MCC-MNC-Digit>1</MCC-MNC-Digit>
+                        </mnc>
+                    </PLMN-Identity>
+                </plmn-IdentityList>
+                <trackingAreaCode>
+                    000000000000000000000001
+                </trackingAreaCode>
+                <cellIdentity>
+                    000000000000000000000000111000000000
+                </cellIdentity>
+                <cellReservedForOperatorUse><notReserved/></cellReservedForOperatorUse>
+            </PLMN-IdentityInfo>
+        </plmn-IdentityList>
+    </cellAccessRelatedInfo>
+    <servingCellConfigCommon>
+        <downlinkConfigCommon>
+            <frequencyInfoDL>
+                <frequencyBandList>
+                    <NR-MultiBandInfo>
+                        <freqBandIndicatorNR>78</freqBandIndicatorNR>
+                    </NR-MultiBandInfo>
+                </frequencyBandList>
+                <offsetToPointA>86</offsetToPointA>
+                <scs-SpecificCarrierList>
+                    <SCS-SpecificCarrier>
+                        <offsetToCarrier>0</offsetToCarrier>
+                        <subcarrierSpacing><kHz30/></subcarrierSpacing>
+                        <carrierBandwidth>106</carrierBandwidth>
+                    </SCS-SpecificCarrier>
+                </scs-SpecificCarrierList>
+            </frequencyInfoDL>
+            <initialDownlinkBWP>
+                <genericParameters>
+                    <locationAndBandwidth>28875</locationAndBandwidth>
+            [LIBCONFIG] (root): 2/2 parameters successfully set, (0 to default value)
+        <subcarrierSpacing><kHz30/></subcarrierSpacing>
+                </genericParameters>
+                <pdcch-ConfigCommon>
+                    <setup>
+                        <controlResourceSetZero>12</controlResourceSetZero>
+                        <searchSpaceZero>0</searchSpaceZero>
+                        <commonSearchSpaceList>
+                            <SearchSpace>
+                                <searchSpaceId>1</searchSpaceId>
+                                <controlResourceSetId>0</controlResourceSetId>
+                                <monitoringSlotPeriodicityAndOffset>
+                                    <sl1>[LIBCONFIG] gNBs.[0].NETWORK_INTERFACES: 10/10 parameters successfully set, (3 to default value)
+</sl1>
+                                </monitoringSlotPeriodicityAndOffset>
+                                <monitoringSymbolsWithinSlot>
+                                    10000000000000
+                                </monitoringSymbolsWithinSlot>
+                                <nrofCandidates>
+                                    <aggregationLevel1><n0/></aggregationLevel1>
+                                    <aggregationLevel2><n0/></aggregationLevel2>
+                                    <aggregationLevel4><n2/></aggregationLevel4>
+                                    <aggregationLevel8><n0/></aggregationLevel8>
+                                    <aggregationLevel16><n0/></aggregationLevel16>
+                                </nrofCandidates>
+                                <searchSpaceType>
+                                    <common>
+                                        <dci-Format0-0-AndFormat1-0>
+                                        </dci-Format0-0-AndFormat1-0>
+                                    </common>
+                                </searchSpaceType>
+                            </SearchSpace>
+                            <SearchSpace>
+                                <searchSpaceId>5</searchSpaceId>
+                                <controlResourceSetId>0</controlResourceSetId>
+                                <monitoringSlotPeriodicityAndOffset>
+                                    <sl5>0</sl5>
+                                </monitoringSlotPeriodicityAndOffset>
+                                <duration>2</duration>
+                                <monitoringSymbolsWithinSlot>
+                                    10000000000000
+                                </monitoringSymbolsWithinSlot>
+                                <nrofCandidates>
+                                    <aggregationLevel1><n0/></aggregationLevel1>
+                                    <aggregationLevel2><n0/></aggregationLevel2>
+                                    <aggregationLevel4><n4/></aggregationLevel4>
+                                    <aggregationLevel8><n2/></aggregationLevel8>
+                                    <aggregationLevel16><n1/></aggregationLevel16>
+                                </nrofCandidates>
+                                <searchSpaceType>
+                                    <common>
+                                        <dci-Format0-0-AndFormat1-0>
+                                        </dci-Format0-0-AndFormat1-0>
+                                    </common>
+                                </searchSpaceType>
+                            </SearchSpace>
+                            <SearchSpace>
+                                <searchSpaceId>7</searchSpaceId>
+                                <controlResourceSetId>0</controlResourceSetId>
+                                <monitoringSlotPeriodicityAndOffset>
+                                    <sl1></sl1>
+                                </monitoringSlotPeriodicityAndOffset>
+                                <monitoringSymbolsWithinSlot>
+                                    10000000000000
+                                </monitoringSymbolsWithinSlot>
+                                <nrofCandidates>
+                                    <aggregationLevel1><n0/></aggregationLevel1>
+                                    <aggregationLevel2><n0/></aggregationLevel2>
+                                    <aggregationLevel4><n4/></aggregationLevel4>
+                                    <aggregationLevel8><n2/></aggregationLevel8>
+                                    <aggregationLevel16><n1/></aggregationLevel16>
+                                </nrofCandidates>
+                                <searchSpaceType>
+                                    <common>
+                                        <dci-Format0-0-AndFormat1-0>
+                                        </dci-Format0-0-AndFormat1-0>
+                                    </common>
+                                </searchSpaceType>
+                            </SearchSpace>
+                        </commonSearchSpaceList>
+                        <searchSpaceSIB1>0</searchSpaceSIB1>
+                        <searchSpaceOtherSystemInformation>7</searchSpaceOtherSystemInformation>
+                        <pagingSearchSpace>5</pagingSearchSpace>
+                        <ra-SearchSpace>1</ra-SearchSpace>
+                    </setup>
+                </pdcch-ConfigCommon>
+                <pdsch-ConfigCommon>
+                    <setup>
+                        <pdsch-TimeDomainAllocationList>
+                            <PDSCH-TimeDomainResourceAllocation>
+                                <mappingType><typeA/></mappingType>
+                                <startSymbolAndLength>40</startSymbolAndLength>
+                            </PDSCH-TimeDomainResourceAllocation>
+                            <PDSCH-TimeDomainResourceAllocation>
+                                <mappingType><typeA/></mappingType>
+                                <startSymbolAndLength>54</startSymbolAndLength>
+                            </PDSCH-TimeDomainResourceAllocation>
+                            <PDSCH-TimeDomainResourceAllocation>
+                                <mappingType><typeA/></mappingType>
+                                <startSymbolAndLength>57</startSymbolAndLength>
+                            </PDSCH-TimeDomainResourceAllocation>
+                        </pdsch-TimeDomainAllocationList>
+                    </setup>
+                </pdsch-ConfigCommon>
+            </initialDownlinkBWP>
+            <bcch-Config>
+                <modificationPeriodCoeff><n2/></modificationPeriodCoeff>
+            </bcch-Config>
+            <pcch-Config>
+                <defaultPagingCycle><rf256/></defaultPagingCycle>
+                <nAndPagingFrameOffset>
+                    <quarterT>1</quarterT>
+                </nAndPagingFrameOffset>
+                <ns><one/></ns>
+                <firstPDCCH-MonitoringOccasionOfPO>
+                    <sCS120KHZoneT-SCS60KHZhalfT-SCS30KHZquarterT-SCS15KHZoneEighthT>
+                        <INTEGER>0</INTEGER>
+                    </sCS120KHZoneT-SCS60KHZhalfT-SCS30KHZquarterT-SCS15KHZoneEighthT>
+                </firstPDCCH-MonitoringOccasionOfPO>
+            </pcch-Config>
+        </downlinkConfigCommon>
+        <uplinkConfigCommon>
+            <frequencyInfoUL>
+                <scs-SpecificCarrierList>
+                    <SCS-SpecificCarrier>
+                        <offsetToCarrier>0</offsetToCarrier>
+                        <subcarrierSpacing><kHz30/></subcarrierSpacing>
+                        <carrierBandwidth>106</carrierBandwidth>
+                    </SCS-SpecificCarrier>
+                </scs-SpecificCarrierList>
+                <p-Max>23</p-Max>
+            </frequencyInfoUL>
+            <initialUplinkBWP>
+                <genericParameters>
+                    <locationAndBandwidth>28875</locationAndBandwidth>
+                    <subcarrierSpacing><kHz30/></subcarrierSpacing>
+                </genericParameters>
+                <rach-ConfigCommon>
+                    <setup>
+                        <rach-ConfigGeneric>
+                            <prach-ConfigurationIndex>98</prach-ConfigurationIndex>
+                            <msg1-FDM><one/></msg1-FDM>
+                            <msg1-FrequencyStart>0</msg1-FrequencyStart>
+                            <zeroCorrelationZoneConfig>13</zeroCorrelationZoneConfig>
+                            <preambleReceivedTargetPower>-96</preambleReceivedTargetPower>
+                            <preambleTransMax><n10/></preambleTransMax>
+                            <powerRampingStep><dB2/></powerRampingStep>
+                            <ra-ResponseWindow><sl10/></ra-ResponseWindow>
+                        </rach-ConfigGeneric>
+                        <ssb-perRACH-OccasionAndCB-PreamblesPerSSB>
+                            <one><n60/></one>
+                        </ssb-perRACH-OccasionAndCB-PreamblesPerSSB>
+                        <ra-ContentionResolutionTimer><sf64/></ra-ContentionResolutionTimer>
+                        <rsrp-ThresholdSSB>19</rsrp-ThresholdSSB>
+                        <prach-RootSequenceIndex>
+                            <l139>1</l139>
+                        </prach-RootSequenceIndex>
+                        <msg1-SubcarrierSpacing><kHz30/></msg1-SubcarrierSpacing>
+                        <restrictedSetConfig><unrestrictedSet/></restrictedSetConfig>
+                    </setup>
+                </rach-ConfigCommon>
+                <pusch-ConfigCommon>
+                    <setup>
+                        <pusch-TimeDomainAllocationList>
+                            <PUSCH-TimeDomainResourceAllocation>
+                                <k2>2</k2>
+                                <mappingType><typeB/></mappingType>
+                                <startSymbolAndLength>41</startSymbolAndLength>
+                            </PUSCH-TimeDomainResourceAllocation>
+                            <PUSCH-TimeDomainResourceAllocation>
+                                <k2>2</k2>
+                                <mappingType><typeB/></mappingType>
+                                <startSymbolAndLength>38</startSymbolAndLength>
+                            </PUSCH-TimeDomainResourceAllocation>
+                            <PUSCH-TimeDomainResourceAllocation>
+                                <k2>7</k2>
+                                <mappingType><typeB/></mappingType>
+                                <startSymbolAndLength>38</startSymbolAndLength>
+                            </PUSCH-TimeDomainResourceAllocation>
+                        </pusch-TimeDomainAllocationList>
+                        <msg3-DeltaPreamble>1</msg3-DeltaPreamble>
+                        <p0-NominalWithGrant>-90</p0-NominalWithGrant>
+                    </setup>
+                </pusch-ConfigCommon>
+                <pucch-ConfigCommon>
+                    <setup>
+                        <pucch-ResourceCommon>0</pucch-ResourceCommon>
+                        <pucch-GroupHopping><neither/></pucch-GroupHopping>
+                        <hoppingId>40</hoppingId>
+                        <p0-nominal>-90</p0-nominal>
+                    </setup>
+                </pucch-ConfigCommon>
+            </initialUplinkBWP>
+            <timeAlignmentTimerCommon><infinity/></timeAlignmentTimerCommon>
+        </uplinkConfigCommon>
+        <ssb-PositionsInBurst>
+            <inOneGroup>
+                10000000
+            </inOneGroup>
+        </ssb-PositionsInBurst>
+        <ssb-PeriodicityServingCell><ms20/></ssb-PeriodicityServingCell>
+        <tdd-UL-DL-ConfigurationCommon>
+            <referenceSubcarrierSpacing><kHz30/></referenceSubcarrierSpacing>
+            <pattern1>
+                <dl-UL-TransmissionPeriodicity><ms5/></dl-UL-TransmissionPeriodicity>
+                <nrofDownlinkSlots>7</nrofDownlinkSlots>
+                <nrofDownlinkSymbols>6</nrofDownlinkSymbols>
+                <nrofUplinkSlots>2</nrofUplinkSlots>
+                <nrofUplinkSymbols>4</nrofUplinkSymbols>
+            </pattern1>
+        </tdd-UL-DL-ConfigurationCommon>
+        <ss-PBCH-BlockPower>-25</ss-PBCH-BlockPower>
+    </servingCellConfigCommon>
+    <ue-TimersAndConstants>
+        <t300><ms400/></t300>
+        <t301><ms400/></t301>
+        <t310><ms2000/></t310>
+        <n310><n10/></n310>
+        <t311><ms3000/></t311>
+        <n311><n1/></n311>
+        <t319><ms400/></t319>
+    </ue-TimersAndConstants>
+</SIB1>
+[NR_RRC]   do_SIB23_NR, size 9 
+ [0m[NR_RRC]   Done init_NR_SI
+[0m[NR_MAC]   Configuring common parameters from NR ServingCellConfig
+[0m[NR_MAC]   config_common() dl_BandwidthP:40
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[37].band = 78)
+[0m[NR_MAC]   Computing frequency (pointA 640008 => 3600120 KHz (freq_min 3300000 KHz, NR band 78 N_OFFs 620000))
+[0m[NR_MAC]   config_common() dl_BandwidthP:40
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[37].band = 78)
+[0m[NR_MAC]   Computing frequency (pointA 640008 => 3600120 KHz (freq_min 3300000 KHz, NR band 78 N_OFFs 620000))
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[37].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   Set RX antenna number to 1, Set TX antenna number to 1 (num ssb 1: 80000000,0)
+[0m[GNB_APP]   [gNB 0] gNB_app_register for instance 0
+[0m[NR_MAC]   Setting TDD configuration period to 6
+[0m[NR_MAC]   TDD has been properly configurated
+[0m[NGAP]   Registered new gNB[0] and macro gNB id 3584
+[0m[PHY]   DL frequency 3619200000 Hz, UL frequency 3619200000 Hz: band 48, uldl offset 0 Hz
+[0m[NGAP]   [gNB 0] check the amf registration state
+[0m[32m[PHY]   Configuring MIB for instance 0, : (Nid_cell 0,DL freq 3619200000, UL freq 3619200000)
+[0m[PHY]   Initializing frame parms for mu 1, N_RB 106, Ncp 0
+[0m[PHY]   Init: N_RB_DL 106, first_carrier_offset 900, nb_prefix_samples 108,nb_prefix_samples0 132
+[0m[PHY]   Doing symbol rotation calculation for gNB TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Symbol rotation 0/28 => tl 0.000000 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 1/28 => tl 0.000036 (32767,-1) (0.000000)
+[0m[PHY]   Symbol rotation 2/28 => tl 0.000072 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 3/28 => tl 0.000108 (32767,0) (0.000000)
+[0m[PHY]   Symbol rotation 4/28 => tl 0.000143 (-32767,0) (0.500000)
+[0m[PHY]   Symbol rotation 5/28 => tl 0.000179 (32767,-1) (0.000000)
+[0m[PHY]   Symbol rotation 6/28 => tl 0.000215 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 7/28 => tl 0.000250 (32767,0) (0.000000)
+[0m[PHY]   Symbol rotation 8/28 => tl 0.000286 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 9/28 => tl 0.000322 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 10/28 => tl 0.000357 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 11/28 => tl 0.000393 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 12/28 => tl 0.000429 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 13/28 => tl 0.000464 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 14/28 => tl 0.000500 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 15/28 => tl 0.000536 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 16/28 => tl 0.000572 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 17/28 => tl 0.000608 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 18/28 => tl 0.000643 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 19/28 => tl 0.000679 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 20/28 => tl 0.000715 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 21/28 => tl 0.000750 (32766,0) (1.000000)
+[0m[PHY]   Symbol rotation 22/28 => tl 0.000786 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 23/28 => tl 0.000822 (32766,0) (1.000000)
+[0m[PHY]   Symbol rotation 24/28 => tl 0.000857 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 25/28 => tl 0.000893 (32766,0) (1.000000)
+[0m[PHY]   Symbol rotation 26/28 => tl 0.000929 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 27/28 => tl 0.000964 (32766,0) (1.000000)
+[0m[PHY]   Doing symbol rotation calculation for gNB TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Symbol rotation 0/28 => tl 0.000000 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 1/28 => tl 0.000036 (32767,-1) (0.000000)
+[0m[PHY]   Symbol rotation 2/28 => tl 0.000072 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 3/28 => tl 0.000108 (32767,0) (0.000000)
+[0m[PHY]   Symbol rotation 4/28 => tl 0.000143 (-32767,0) (0.500000)
+[0m[PHY]   Symbol rotation 5/28 => tl 0.000179 (32767,-1) (0.000000)
+[0m[PHY]   Symbol rotation 6/28 => tl 0.000215 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 7/28 => tl 0.000250 (32767,0) (0.000000)
+[0m[PHY]   Symbol rotation 8/28 => tl 0.000286 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 9/28 => tl 0.000322 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 10/28 => tl 0.000357 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 11/28 => tl 0.000393 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 12/28 => tl 0.000429 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 13/28 => tl 0.000464 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 14/28 => tl 0.000500 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 15/28 => tl 0.000536 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 16/28 => tl 0.000572 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 17/28 => tl 0.000608 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 18/28 => tl 0.000643 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 19/28 => tl 0.000679 (32767,0) (1.000000)
+[0m[PHY]   Symbol rotation 20/28 => tl 0.000715 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 21/28 => tl 0.000750 (32766,0) (1.000000)
+[0m[PHY]   Symbol rotation 22/28 => tl 0.000786 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 23/28 => tl 0.000822 (32766,0) (1.000000)
+[0m[PHY]   Symbol rotation 24/28 => tl 0.000857 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 25/28 => tl 0.000893 (32766,0) (1.000000)
+[0m[PHY]   Symbol rotation 26/28 => tl 0.000929 (-32767,-1) (0.500000)
+[0m[PHY]   Symbol rotation 27/28 => tl 0.000964 (32766,0) (1.000000)
+[0m[PHY]   Timeshift symbol rotation 0 => (32767,0) 0.000000
+[0m[PHY]   Timeshift symbol rotation 1 => (32721,1742) -0.053178
+[0m[PHY]   Timeshift symbol rotation 2 => (32582,3478) -0.106356
+[0m[PHY]   Timeshift symbol rotation 3 => (32351,5205) -0.159534
+[0m[PHY]   Timeshift symbol rotation 4 => (32028,6917) -0.212712
+[0m[PHY]   Timeshift symbol rotation 5 => (31616,8610) -0.265890
+[0m[PHY]   Timeshift symbol rotation 6 => (31113,10278) -0.319068
+[0m[PHY]   Timeshift symbol rotation 7 => (30523,11918) -0.372246
+[0m[PHY]   Timeshift symbol rotation 8 => (29846,13523) -0.425424
+[0m[PHY]   Timeshift symbol rotation 9 => (29085,15090) -0.478602
+[0m[GTPU]   Initializing UDP for local address 192.168.0.181 with port 2152
+[0m[ITTI]   Created Posix thread TASK_GTPV1_U
+[0m[GTPU]   Created gtpu instance id: 100
+[0m[PHY]   gNB 0 configured
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 0 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 1 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 2 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 3 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 4 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 5 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 6 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 7 DL 1 UL 1
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 8 DL 0 UL 1
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 9 DL 0 UL 1
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 10 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 11 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 12 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 13 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 14 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 15 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 16 DL 1 UL 0
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 17 DL 1 UL 1
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 18 DL 0 UL 1
+[0m[NR_MAC]   In rrc_mac_config_req_gNB: slot 19 DL 0 UL 1
+[0m[NR_RRC]   [FRAME 00000][gNB][MOD 00][RNTI 0] gNB:OPENAIR NR RRC IN....
+[0m[1;31m[SCTP]   SCTP_ASSOC_CHANGE to SCTP_CANT_STR_ASSOC
+[0m[1;31m[SCTP]   sctp_recvmsg (fd 99, len -1 ): Protocol not available:92
+[0m[PHY]   Initializing gNB 0 single_thread_flag:1
+[0m[PHY]   Initializing gNB 0
+[0m[PHY]   Registering with MAC interface module (before 0x34b83a0)
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[PHY]   Registering with MAC interface module (after 0x34b83a0)
+[0m[PHY]   Setting indication lists
+[0m[PHY]   [nr-gnb.c] gNB structure allocated
+[0m[PHY]   RU clock source set as internal
+[0m[PHY]   Setting time source to internal
+[0m[PHY]   number of L1 instances 1, number of RU 1, number of CPU cores 12
+[0m[1;31m[PHY]   DJP - delete code above this /home/gnodeb/GIT/oaisetup/BBU/openairinterface5g/executables/nr-ru.c:1734
+[0m[PHY]   Copying frame parms from gNB in RC to gNB 0 in ru 0 and frame_parms in ru
+[0m[PHY]   Starting ru_thread 0
+[0m[PHY]   Initializing RU proc 0 (,synch_to_ext_device),
+[0m[PHY]   Starting RU 0 (,synch_to_ext_device),
+[0m[PHY]   Initializing frame parms for mu 1, N_RB 106, Ncp 0
+[0m[PHY]   Init: N_RB_DL 106, first_carrier_offset 900, nb_prefix_samples 108,nb_prefix_samples0 132
+[0m[PHY]   fp->scs=30000
+[0m[PHY]   fp->ofdm_symbol_size=1536
+[0m[PHY]   fp->nb_prefix_samples0=132
+[0m[PHY]   fp->nb_prefix_samples=108
+[0m[PHY]   fp->slots_per_subframe=2
+[0m[PHY]   fp->samples_per_subframe_wCP=43008
+[0m[PHY]   fp->samples_per_frame_wCP=430080
+[0m[PHY]   fp->samples_per_subframe=46080
+[0m[PHY]   fp->samples_per_frame=460800
+[0m[PHY]   fp->dl_CarrierFreq=3619200000
+[0m[PHY]   fp->ul_CarrierFreq=3619200000
+[0m[PHY]   Channel 0: setting tx_gain offset 6, rx_gain offset 108, tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0 Hz
+[0m[PHY]   Initializing RU signal buffers (if_south local RF) nb_tx 1, nb_rx 1
+[0m[PHY]   [INIT] common.txdata[0] = 0x7fa6a3e3d040 (1844480 bytes,sf_extension 320)
+[0m[PHY]   [INIT] common.txdata[0] = 0x7fa6a3e3d540 
+[0m[PHY]   nb_tx 1
+[0m[PHY]   rxdata_7_5kHz[0] 0x7fa6c010d040 for RU 0
+[0m[PHY]   [INIT] common.txdata_BF= 0x7fa6a8000aa0 (8 bytes)
+[0m[PHY]   txdataF_BF[0] 0x7fa6c7bab040 for RU 0
+[0m[PHY]   rxdataF[0] 0x7fa6c00b8040 for RU 0
+[0m[PHY]   [INIT] nr_phy_init_RU() ru->num_gNB:1 
+[0m[PHY]   init feptx thread 0
+[0m[PHY]   init feptx thread 1
+[0m[PHY]   Waiting for RUs to be configured ... RC.ru_mask:01
+[0m[HW]   openair0_cfg[0].sdr_addrs == '(null)'
+[0m[HW]   openair0_cfg[0].clock_source == '0' (internal = 0, external = 1)
+[0m[HW]   UHD version 3.15.0.0-release (3.15.0)
+[0m[HW]   Found USRP b200
+[0m[HW]   Setting clock source to internal
+[0m[HW]   Setting time source to internal
+[0mDL frequency 3619200000: band 48, UL frequency 3619200000
+NFAPI MODE:MONOLITHIC
+START MAIN THREADS
+RC.nb_nr_L1_inst:1
+Initializing gNB threads single_thread_flag:1 wait_for_sync:0
+wait_gNBs()
+Waiting for gNB L1 instances to all get configured ... sleeping 50ms (nb_nr_sL1_inst 1)
+gNB L1 are configured
+About to Init RU threads RC.nb_RU:1
+Initializing RU threads
+configuring RU from file
+[LIBCONFIG] RUs.[0]: 33/33 parameters successfully set, (22 to default value)
+Set RU mask to 1
+Creating RC.ru[0]:0x34c1d30
+Setting function for RU 0 to gNodeB_3GPP
+[RU 0] Setting nr_flag 0, nr_band 78, nr_scs_for_raster 1
+configuring ru_id 0 (start_rf 0x69eb90)
+[LIBCONFIG] device.recplay: 8/8 parameters successfully set, (8 to default value)
+[LIBCONFIG] device: 1/1 parameters successfully set, (1 to default value)
+[LIBCONFIG] loader: 2/2 parameters successfully set, (2 to default value)
+[LIBCONFIG] loader.oai_device: 2/2 parameters successfully set, (1 to default value)
+shlib_path liboai_device.so
+wait RUs
+[LOADER] library liboai_device.so successfully loaded
+[HW]   cal 0: freq 3500000000.000000, offset 44.000000, diff 119200000.000000
+[0m[HW]   cal 1: freq 2660000000.000000, offset 49.800000, diff 959200000.000000
+[0m[HW]   cal 2: freq 2300000000.000000, offset 51.000000, diff 1319200000.000000
+[0m[HW]   cal 3: freq 1880000000.000000, offset 53.000000, diff 1739200000.000000
+[0m[HW]   cal 4: freq 816000000.000000, offset 57.000000, diff 2803200000.000000
+[0m[HW]   RX Gain 0 108.000000 (44.000000) => 64.000000 (max 76.000000)
+[0m[HW]   USRP TX_GAIN:83.75 gain_range:89.75 tx_gain:6.00
+[0m[HW]   Actual master clock: 46.080000MHz...
+[0m[HW]   Actual clock source internal...
+[0m[HW]   Actual time source internal...
+[0m[HW]   RF board max packet size 1916, size for 100µs jitter 4608 
+[0m[HW]   rx_max_num_samps 1916
+[0m[HW]   setting rx channel 0
+[0m[HW]   RX Channel 0
+[0m[HW]     Actual RX sample rate: 46.080000MSps...
+[0m[HW]     Actual RX frequency: 3.619200GHz...
+[0m[HW]     Actual RX gain: 64.000000...
+[0m[HW]     Actual RX bandwidth: 40.000000M...
+[0m[HW]     Actual RX antenna: RX2...
+[0m[HW]   TX Channel 0
+[0m[HW]     Actual TX sample rate: 46.080000MSps...
+[0m[HW]     Actual TX frequency: 3.619200GHz...
+[0m[HW]     Actual TX gain: 83.750000...
+[0m[HW]     Actual TX bandwidth: 40.000000M...
+[0m[HW]     Actual TX antenna: TX/RX...
+[0m[HW]     Actual TX packet size: 1916
+[0m[HW]   Device timestamp: 2.172340...
+[0m[HW]   [RAU] has loaded USRP B200 device.
+[0m[PHY]   RU 0 Setting N_TA_offset to 600 samples (factor 1.500000, UL Freq 3600120, N_RB 106, mu 1)
+[0m[PHY]   Signaling main thread that RU 0 is ready, sl_ahead 6
+[0m[PHY]   RUs configured
+[0m[PHY]   init_eNB_afterRU() RC.nb_nr_inst:1
+[0m[PHY]   RC.nb_nr_CC[inst:0]:0x7fa6c7bd6010
+[0m[PHY]   [gNB 0] phy_init_nr_gNB() About to wait for gNB to be configured
+[0m[PHY]   Initialise nr transport
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 0/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 1/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 2/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 3/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 4/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 5/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 6/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 7/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 8/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 9/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 10/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 11/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 12/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 13/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 14/16
+[0m[PHY]   Allocating Transport Channel Buffers for PUCCH 15/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 0/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 1/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 2/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 3/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 4/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 5/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 6/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 7/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 8/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 9/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 10/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 11/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 12/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 13/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 14/16
+[0m[PHY]   Allocating Transport Channel Buffers for SRS 15/16
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  0/8
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  1/8
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  2/8
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  3/8
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  4/8
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  5/8
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  6/8
+[0m[PHY]   Allocating Transport Channel Buffers for ULSCH  7/8
+[0m[PHY]   Mapping RX ports from 1 RUs to gNB 0
+[0m[PHY]   gNB->num_RU:1
+[0m[PHY]   Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]   Number of threads requested in config file: 4, Number of threads available on this machine: 12
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 0/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 1/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 2/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 3/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 4/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 5/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 6/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 7/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 0/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 1/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 2/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 3/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 4/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 5/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 6/8
+[0m[PHY]   Allocating Transport Channel Buffers for DLSCH 7/8
+[0msetup_RU_buffers: frame_parms = 0x34c5600
+waiting for sync (ru_thread,-1/0x1376a54,0x2127e80,0x1f7cf60)
+RC.ru_mask:00
+ALL RUs READY!
+RC.nb_RU:1
+ALL RUs ready - init gNBs
+Not NFAPI mode - call init_eNB_afterRU()
+[LIBCONFIG] loader.dfts: 2/2 parameters successfully set, (1 to default value)
+shlib_path libdfts.so
+[LOADER] library libdfts.so successfully loaded
+[LIBCONFIG] loader.ldpc: 2/2 parameters successfully set, (1 to default value)
+shlib_path libldpc.so
+[LOADER] library libldpc.so successfully loaded
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+waiting for sync (L1_stats_thread,-1/0x1376a54,0x2127e80,0x1f7cf60)
+ALL RUs ready - ALL gNBs ready
+Sending sync to all threads
+About to call end_configmodule() from main() /home/gnodeb/GIT/oaisetup/BBU/openairinterface5g/executables/nr-softmodem.c:790
+Called end_configmodule() from main() /home/gnodeb/GIT/oaisetup/BBU/openairinterface5g/executables/nr-softmodem.c:795
+TYPE <CTRL-C> TO TERMINATE
+Entering ITTI signals handler
+got sync (ru_thread)
+got sync (L1_stats_thread)
+[PHY]   RU 0 rf device ready
+[0m[PHY]   RU 0 RF started
+[0msleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+[1;31m[HW]   [recv] received 21088 samples out of 23040
+[0m[1;31m[HW]   Time: 1.65903 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 21088 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 17397 samples out of 23040
+[0m[1;31m[HW]   Time: 2.07456 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 17397 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 128.0
+
+[0m[1;31m[HW]   [recv] received 22513 samples out of 23040
+[0m[1;31m[HW]   Time: 3.2552 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 22513 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 256.0
+
+[0m[1;31m[HW]   [recv] received 5893 samples out of 23040
+[0m[1;31m[HW]   Time: 3.71048 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 5893 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 384.0
+
+[0m[1;31m[HW]   [recv] received 5789 samples out of 23040
+[0m[1;31m[HW]   Time: 4.92528 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 5789 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 512.0
+
+[0m[1;31m[HW]   [recv] received 5673 samples out of 23040
+[0m[1;31m[HW]   Time: 7.19909 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 5673 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 619, slot 19 Initiating RA procedure with preamble 43, energy 42.1 dB (I0 111, thres 120), delay 14 start symbol 0 freq index 0
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 619, slot 19 Initiating RA procedure with preamble 1, energy 34.4 dB (I0 147, thres 120), delay 30 start symbol 4 freq index 0
+[0m[32m[MAC]   UL_info[Frame 619, Slot 19] Calling initiate_ra_proc RACH:SFN/SLOT:619/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 619 Activating Msg2 generation in frame 620, slot 7 using RA rnti 10b SSB, new rnti 0b9f index 0 RA index 0
+[0m[32m[MAC]   UL_info[Frame 620, Slot 0] Calling initiate_ra_proc RACH:SFN/SLOT:619/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 619 Activating Msg2 generation in frame 620, slot 7 using RA rnti 10b SSB, new rnti 1a93 index 0 RA index 1
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 620, slotP 7: Generating RA-Msg2 DCI, rnti 0x10b, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 620, Subframe 7: rnti 0b9f RA state 2
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 620, slotP 7: Generating RA-Msg2 DCI, rnti 0x10b, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 620, Subframe 7: rnti 1a93 RA state 2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   handle harq for rnti 0b9f, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   handle harq for rnti 1a93, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 621, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (621,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 621, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (621,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   handle harq for rnti 0b9f, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   handle harq for rnti 1a93, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 622, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (622,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 622, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (622,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   handle harq for rnti 0b9f, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   handle harq for rnti 1a93, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 623, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (623,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 623, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (623,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   Random Access 0 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0x0b9f
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0b9f
+[0m[93m[NR_MAC]   handle harq for rnti 0b9f, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0x0b9f in PUSCH
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   Random Access 1 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[1] = 0x1a93
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 1a93
+[0m[93m[NR_MAC]   handle harq for rnti 1a93, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0x1a93 in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0x0b9f
+[0m[93m[NR_PHY]   to remove rnti 0x1a93
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=2, up_removed=2 down_removed=0 pucch_removed=0
+[0m[NR_MAC]   Frame.Slot 640.0
+
+[0m[1;31m[HW]   [recv] received 6737 samples out of 23040
+[0m[1;31m[HW]   Time: 7.9849 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 6737 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 768.0
+
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m[1;31m[HW]   [recv] received 17709 samples out of 23040
+[0m[1;31m[HW]   Time: 10.912 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 17709 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 0.0
+
+[0m[1;31m[HW]   [recv] received 6853 samples out of 23040
+[0m[1;31m[HW]   Time: 12.0758 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 6853 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 128.0
+
+[0m[NR_MAC]   Frame.Slot 256.0
+
+[0m[1;31m[HW]   [recv] received 17369 samples out of 23040
+[0m[1;31m[HW]   Time: 14.3079 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 17369 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 384.0
+
+[0m[NR_MAC]   Frame.Slot 512.0
+
+[0m[1;31m[HW]   [recv] received 7325 samples out of 23040
+[0m[1;31m[HW]   Time: 17.4227 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 7325 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 617, slot 19 Initiating RA procedure with preamble 44, energy 23.5 dB (I0 113, thres 120), delay 2 start symbol 0 freq index 0
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 617, slot 19 Initiating RA procedure with preamble 23, energy 43.5 dB (I0 127, thres 120), delay 2 start symbol 4 freq index 0
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 617, slot 19 Initiating RA procedure with preamble 6, energy 41.9 dB (I0 163, thres 120), delay 3 start symbol 8 freq index 0
+[0m[32m[MAC]   UL_info[Frame 617, Slot 19] Calling initiate_ra_proc RACH:SFN/SLOT:617/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 617 Activating Msg2 generation in frame 618, slot 7 using RA rnti 10b SSB, new rnti fdd0 index 0 RA index 0
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 617 Activating Msg2 generation in frame 618, slot 7 using RA rnti 10f SSB, new rnti ee99 index 0 RA index 1
+[0m[32m[MAC]   UL_info[Frame 618, Slot 0] Calling initiate_ra_proc RACH:SFN/SLOT:617/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 617 Activating Msg2 generation in frame 618, slot 7 using RA rnti 10b SSB, new rnti d1d7 index 0 RA index 2
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 618, slotP 7: Generating RA-Msg2 DCI, rnti 0x10b, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 618, Subframe 7: rnti fdd0 RA state 2
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 618, slotP 7: Generating RA-Msg2 DCI, rnti 0x10f, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 618, Subframe 7: rnti ee99 RA state 2
+[0m[1;31m[NR_MAC]   nr_generate_Msg2(): cannot find free CCE for RA RNTI 0xd1d7!
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   handle harq for rnti fdd0, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   handle harq for rnti ee99, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 619, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (619,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 619, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (619,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   handle harq for rnti fdd0, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   handle harq for rnti ee99, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 620, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (620,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 620, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (620,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   handle harq for rnti fdd0, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   handle harq for rnti ee99, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 621, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (621,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 621, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (621,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   Random Access 0 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0xfdd0
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): fdd0
+[0m[93m[NR_MAC]   handle harq for rnti fdd0, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0xfdd0 in PUSCH
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   Random Access 1 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[1] = 0xee99
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): ee99
+[0m[93m[NR_MAC]   handle harq for rnti ee99, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0xee99 in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0xfdd0
+[0m[93m[NR_PHY]   to remove rnti 0xee99
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=2, up_removed=2 down_removed=0 pucch_removed=0
+[0m[NR_MAC]   Frame.Slot 640.0
+
+[0m[1;31m[HW]   [recv] received 3457 samples out of 23040
+[0m[1;31m[HW]   Time: 18.562 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 3457 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 731, slot 19 Initiating RA procedure with preamble 4, energy 40.7 dB (I0 112, thres 120), delay 16 start symbol 8 freq index 0
+[0m[32m[MAC]   UL_info[Frame 731, Slot 19] Calling initiate_ra_proc RACH:SFN/SLOT:731/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 731 Activating Msg2 generation in frame 732, slot 7 using RA rnti 113 SSB, new rnti 95c4 index 0 RA index 0
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 732, slotP 7: Generating RA-Msg2 DCI, rnti 0x113, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 732, Subframe 7: rnti 95c4 RA state 2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   handle harq for rnti 95c4, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 733, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (733,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   handle harq for rnti 95c4, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 734, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (734,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   handle harq for rnti 95c4, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 735, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (735,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   Random Access 0 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0x95c4
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 95c4
+[0m[93m[NR_MAC]   handle harq for rnti 95c4, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0x95c4 in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0x95c4
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=1, up_removed=1 down_removed=0 pucch_removed=0
+[0m[NR_MAC]   Frame.Slot 768.0
+
+[0m[1;31m[HW]   [recv] received 437 samples out of 23040
+[0m[1;31m[HW]   Time: 19.9522 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 437 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m[1;31m[HW]   [recv] received 9561 samples out of 23040
+[0m[1;31m[HW]   Time: 20.5091 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 9561 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 14949 samples out of 23040
+[0m[1;31m[HW]   Time: 20.95 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 14949 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 7089 samples out of 23040
+[0m[1;31m[HW]   Time: 21.4129 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 7089 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 0.0
+
+[0m[NR_MAC]   Frame.Slot 128.0
+
+[0m[1;31m[HW]   [recv] received 7517 samples out of 23040
+[0m[1;31m[HW]   Time: 22.8492 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 7517 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 256.0
+
+[0m[1;31m[HW]   [recv] received 385 samples out of 23040
+[0m[1;31m[HW]   Time: 24.4994 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 385 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 384.0
+
+[0m[NR_MAC]   Frame.Slot 512.0
+
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 618, slotP 7: Generating RA-Msg2 DCI, rnti 0x10b, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 618, Subframe 7: rnti d1d7 RA state 2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   handle harq for rnti d1d7, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 619, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (619,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   handle harq for rnti d1d7, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 620, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (620,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   handle harq for rnti d1d7, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 621, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (621,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   Random Access 2 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0xd1d7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d1d7
+[0m[93m[NR_MAC]   handle harq for rnti d1d7, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0xd1d7 in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0xd1d7
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=1, up_removed=1 down_removed=0 pucch_removed=0
+[0m[NR_MAC]   Frame.Slot 640.0
+
+[0m[1;31m[HW]   [recv] received 19381 samples out of 23040
+[0m[1;31m[HW]   Time: 28.886 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 19381 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 739, slot 19 Initiating RA procedure with preamble 13, energy 45.6 dB (I0 114, thres 120), delay 9 start symbol 0 freq index 0
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 739, slot 19 Initiating RA procedure with preamble 21, energy 36.7 dB (I0 155, thres 120), delay 0 start symbol 4 freq index 0
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 739, slot 19 Initiating RA procedure with preamble 58, energy 34.0 dB (I0 180, thres 120), delay 14 start symbol 8 freq index 0
+[0m[32m[MAC]   UL_info[Frame 739, Slot 19] Calling initiate_ra_proc RACH:SFN/SLOT:739/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 739 Activating Msg2 generation in frame 740, slot 7 using RA rnti 10b SSB, new rnti d7a2 index 0 RA index 0
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 739 Activating Msg2 generation in frame 740, slot 7 using RA rnti 10f SSB, new rnti 8aff index 0 RA index 1
+[0m[32m[MAC]   UL_info[Frame 740, Slot 0] Calling initiate_ra_proc RACH:SFN/SLOT:739/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 739 Activating Msg2 generation in frame 740, slot 7 using RA rnti 10b SSB, new rnti 0ddb index 0 RA index 2
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 740, slotP 7: Generating RA-Msg2 DCI, rnti 0x10b, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 740, Subframe 7: rnti d7a2 RA state 2
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 740, slotP 7: Generating RA-Msg2 DCI, rnti 0x10f, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 740, Subframe 7: rnti 8aff RA state 2
+[0m[1;31m[NR_MAC]   nr_generate_Msg2(): cannot find free CCE for RA RNTI 0x0ddb!
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   handle harq for rnti d7a2, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   handle harq for rnti 8aff, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 741, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (741,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 741, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (741,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   handle harq for rnti d7a2, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   handle harq for rnti 8aff, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 742, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (742,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 742, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (742,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   handle harq for rnti d7a2, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   handle harq for rnti 8aff, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 743, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (743,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 743, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (743,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   Random Access 0 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0xd7a2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): d7a2
+[0m[93m[NR_MAC]   handle harq for rnti d7a2, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0xd7a2 in PUSCH
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   Random Access 1 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[1] = 0x8aff
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 8aff
+[0m[93m[NR_MAC]   handle harq for rnti 8aff, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0x8aff in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0xd7a2
+[0m[93m[NR_PHY]   to remove rnti 0x8aff
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=2, up_removed=2 down_removed=0 pucch_removed=0
+[0m[NR_MAC]   Frame.Slot 768.0
+
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m[1;31m[HW]   [recv] received 15729 samples out of 23040
+[0m[1;31m[HW]   Time: 30.4565 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 15729 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 0.0
+
+[0m[1;31m[HW]   [recv] received 8973 samples out of 23040
+[0m[1;31m[HW]   Time: 32.2768 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 8973 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 128.0
+
+[0m[1;31m[HW]   [recv] received 18669 samples out of 23040
+[0m[1;31m[HW]   Time: 33.7569 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 18669 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 256.0
+
+[0m[1;31m[HW]   [recv] received 12277 samples out of 23040
+[0m[1;31m[HW]   Time: 34.8643 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 12277 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 384.0
+
+[0m[NR_MAC]   Frame.Slot 512.0
+
+[0m[1;31m[HW]   [recv] received 405 samples out of 23040
+[0m[1;31m[HW]   Time: 36.8935 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 405 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 640.0
+
+[0m[1;31m[HW]   [recv] received 22617 samples out of 23040
+[0m[1;31m[HW]   Time: 38.5122 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 22617 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 740, slotP 7: Generating RA-Msg2 DCI, rnti 0x10b, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 740, Subframe 7: rnti 0ddb RA state 2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   handle harq for rnti 0ddb, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 741, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (741,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   handle harq for rnti 0ddb, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 742, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (742,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   handle harq for rnti 0ddb, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 743, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (743,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   Random Access 2 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0x0ddb
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 0ddb
+[0m[93m[NR_MAC]   handle harq for rnti 0ddb, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0x0ddb in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0x0ddb
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=1, up_removed=1 down_removed=0 pucch_removed=0
+[0m[1;31m[HW]   [recv] received 9989 samples out of 23040
+[0m[1;31m[HW]   Time: 39.3241 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 9989 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 768.0
+
+[0m[1;31m[HW]   [recv] received 5621 samples out of 23040
+[0m[1;31m[HW]   Time: 39.7023 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 5621 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 10113 samples out of 23040
+[0m[1;31m[HW]   Time: 40.1337 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 10113 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m[NR_MAC]   Frame.Slot 0.0
+
+[0m[1;31m[HW]   [recv] received 7421 samples out of 23040
+[0m[1;31m[HW]   Time: 42.5291 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 7421 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 55, slot 19 Initiating RA procedure with preamble 6, energy 41.0 dB (I0 113, thres 120), delay 1 start symbol 4 freq index 0
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 55, slot 19 Initiating RA procedure with preamble 52, energy 44.4 dB (I0 148, thres 120), delay 30 start symbol 8 freq index 0
+[0m[32m[MAC]   UL_info[Frame 55, Slot 19] Calling initiate_ra_proc RACH:SFN/SLOT:55/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 55 Activating Msg2 generation in frame 56, slot 7 using RA rnti 10f SSB, new rnti cbdf index 0 RA index 0
+[0m[32m[MAC]   UL_info[Frame 56, Slot 0] Calling initiate_ra_proc RACH:SFN/SLOT:55/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 55 Activating Msg2 generation in frame 56, slot 7 using RA rnti 10f SSB, new rnti 2538 index 0 RA index 1
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 56, slotP 7: Generating RA-Msg2 DCI, rnti 0x10f, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 56, Subframe 7: rnti cbdf RA state 2
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 56, slotP 7: Generating RA-Msg2 DCI, rnti 0x10f, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 56, Subframe 7: rnti 2538 RA state 2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   handle harq for rnti cbdf, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   handle harq for rnti 2538, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 57, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (57,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 57, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (57,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   handle harq for rnti cbdf, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   handle harq for rnti 2538, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 58, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (58,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 58, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (58,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   handle harq for rnti cbdf, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   handle harq for rnti 2538, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 59, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (59,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 59, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (59,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   Random Access 0 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0xcbdf
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): cbdf
+[0m[93m[NR_MAC]   handle harq for rnti cbdf, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0xcbdf in PUSCH
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   Random Access 1 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[1] = 0x2538
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 2538
+[0m[93m[NR_MAC]   handle harq for rnti 2538, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0x2538 in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0xcbdf
+[0m[93m[NR_PHY]   to remove rnti 0x2538
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=2, up_removed=2 down_removed=0 pucch_removed=0
+[0m[NR_MAC]   Frame.Slot 128.0
+
+[0m[NR_MAC]   Frame.Slot 256.0
+
+[0m[1;31m[HW]   [recv] received 9409 samples out of 23040
+[0m[1;31m[HW]   Time: 44.5645 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 9409 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 2037 samples out of 23040
+[0m[1;31m[HW]   Time: 44.9002 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 2037 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 20701 samples out of 23040
+[0m[1;31m[HW]   Time: 45.3213 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 20701 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 384.0
+
+[0m[1;31m[HW]   [recv] received 14669 samples out of 23040
+[0m[1;31m[HW]   Time: 46.2043 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 14669 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 18689 samples out of 23040
+[0m[1;31m[HW]   Time: 46.8659 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 18689 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 512.0
+
+[0m[1;31m[HW]   [recv] received 1961 samples out of 23040
+[0m[1;31m[HW]   Time: 47.3422 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 1961 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[1;31m[HW]   [recv] received 11061 samples out of 23040
+[0m[1;31m[HW]   Time: 47.8236 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 11061 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 640.0
+
+[0m[1;31m[HW]   [recv] received 8677 samples out of 23040
+[0m[1;31m[HW]   Time: 48.9684 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 8677 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 768.0
+
+[0m[1;31m[HW]   [recv] received 5161 samples out of 23040
+[0m[1;31m[HW]   Time: 50.4492 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 5161 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m[1;31m[HW]   [recv] received 3537 samples out of 23040
+[0m[1;31m[HW]   Time: 50.9489 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 3537 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 0.0
+
+[0m[1;31m[HW]   [recv] received 13137 samples out of 23040
+[0m[1;31m[HW]   Time: 53.2649 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 13137 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 128.0
+
+[0m[1;31m[HW]   [recv] received 8793 samples out of 23040
+[0m[1;31m[HW]   Time: 53.8297 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 8793 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 256.0
+
+[0m[1;31m[HW]   [recv] received 2929 samples out of 23040
+[0m[1;31m[HW]   Time: 54.9745 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 2929 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 275, slot 19 Initiating RA procedure with preamble 1, energy 37.8 dB (I0 111, thres 120), delay 9 start symbol 4 freq index 0
+[0m[NR_PHY]   [gNB 0][RAPROC] Frame 275, slot 19 Initiating RA procedure with preamble 2, energy 42.4 dB (I0 142, thres 120), delay 30 start symbol 8 freq index 0
+[0m[32m[MAC]   UL_info[Frame 275, Slot 19] Calling initiate_ra_proc RACH:SFN/SLOT:275/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 275 Activating Msg2 generation in frame 276, slot 7 using RA rnti 10f SSB, new rnti b7f7 index 0 RA index 0
+[0m[32m[MAC]   UL_info[Frame 276, Slot 0] Calling initiate_ra_proc RACH:SFN/SLOT:275/19
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 275 Activating Msg2 generation in frame 276, slot 7 using RA rnti 10f SSB, new rnti 61ed index 0 RA index 1
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 276, slotP 7: Generating RA-Msg2 DCI, rnti 0x10f, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 276, Subframe 7: rnti b7f7 RA state 2
+[0m[32m[NR_MAC]   [gNB 0][RAPROC] CC_id 0 Frame 276, slotP 7: Generating RA-Msg2 DCI, rnti 0x10f, state 1, CoreSetType 2
+[0m[93m[NR_MAC]   [gNB 0][RAPROC] Frame 276, Subframe 7: rnti 61ed RA state 2
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   handle harq for rnti b7f7, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   handle harq for rnti 61ed, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 277, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (277,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 277, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (277,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   handle harq for rnti b7f7, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   handle harq for rnti 61ed, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 278, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (278,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 278, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (278,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   handle harq for rnti b7f7, in RA process
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   handle harq for rnti 61ed, in RA process
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 279, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (279,17)
+[0m[NR_MAC]   [gNB 0][RAPROC] Frame 279, Slot 10 : CC_id 0 Scheduling retransmission of Msg3 in (279,17)
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   Random Access 0 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[0] = 0xb7f7
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): b7f7
+[0m[93m[NR_MAC]   handle harq for rnti b7f7, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0xb7f7 in PUSCH
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   Random Access 1 failed at state 2 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC]   to remove in mac rnti_to_remove[1] = 0x61ed
+[0m[93m[NR_MAC]   Search for not existing rnti (ignore for RA): 61ed
+[0m[93m[NR_MAC]   handle harq for rnti 61ed, in RA process
+[0m[1;31m[NR_MAC]   handle_nr_ul_harq(): unknown RNTI 0x61ed in PUSCH
+[0m[93m[NR_PHY]   to remove rnti 0xb7f7
+[0m[93m[NR_PHY]   to remove rnti 0x61ed
+[0m[93m[NR_PHY]   to remove rnti_to_remove_count=2, up_removed=2 down_removed=0 pucch_removed=0
+[0m[NR_MAC]   Frame.Slot 384.0
+
+[0m[1;31m[HW]   [recv] received 1845 samples out of 23040
+[0m[1;31m[HW]   Time: 56.5097 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 1845 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 512.0
+
+[0m[1;31m[HW]   [recv] received 12181 samples out of 23040
+[0m[1;31m[HW]   Time: 57.3787 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 12181 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 640.0
+
+[0m[NR_MAC]   Frame.Slot 768.0
+
+[0m[1;31m[HW]   [recv] received 17109 samples out of 23040
+[0m[1;31m[HW]   Time: 60.6713 s
+ERROR_CODE_OVERFLOW (Overflow)
+
+[0m[1;31m[PHY]   rx_rf: Asked for 23040 samples, got 17109 from USRP
+[0m[1;31m[PHY]   problem receiving samples
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m
