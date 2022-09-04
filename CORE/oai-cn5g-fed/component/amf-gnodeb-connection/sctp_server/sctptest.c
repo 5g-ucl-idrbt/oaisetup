@@ -16,10 +16,19 @@
 #include <arpa/inet.h>
 
 #define MY_PORT_NUM 38412
-
+/***************************************/
 static void die(const char *s) {
         perror(s);
         exit(1);
+}
+/***************************************/
+char* fdToIP(int newfd) {
+        struct sockaddr_in addr;
+        socklen_t addr_size = sizeof(struct sockaddr_in);
+        int res = getpeername(newfd, (struct sockaddr *)&addr, &addr_size);
+        char *clientip[20];
+        strcpy(clientip, inet_ntoa(addr.sin_addr));
+        return(clientip);
 }
 /***************************************/
 static void server(void) {
@@ -35,6 +44,7 @@ static void server(void) {
                 .sinit_max_instreams = 5,
                 .sinit_max_attempts = 4,
         };
+        char *IP = inet_ntoa(servaddr.sin_addr);
 
         listen_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_SCTP);
         if (listen_fd < 0)
@@ -54,7 +64,7 @@ static void server(void) {
 
         for (;;) {
                 char buffer[1024];
-
+                printf("IP: %s\t Port %d \n",IP,MY_PORT_NUM);
                 printf("Waiting for connection\n");
                 fflush(stdout);
 
@@ -62,7 +72,8 @@ static void server(void) {
                 if(conn_fd < 0)
                         die("accept()");
 
-                printf("New client connected\n");
+                char* cli_ip=fdToIP(conn_fd);
+                printf("New client connected from %s\n",cli_ip);
                 fflush(stdout);
 
                 in = sctp_recvmsg(conn_fd, buffer, sizeof(buffer), NULL, 0, &sndrcvinfo, &flags);
