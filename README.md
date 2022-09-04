@@ -7,6 +7,10 @@ Consists of two steps; (a) gNodeb and (b)core
 * Inside VM install openssh server, git
 ```
 sudo apt update; sudo apt install openssh-server git cmake cpufrequtils
+sudo apt-get install libuhd-dev uhd-host
+sudo add-apt-repository ppa:ettusresearch/uhd
+sudo apt-get update
+sudo apt-get install libuhd-dev uhd-host
 ```
 * Use the following commands to compile the gNodeB source
 ```
@@ -24,9 +28,9 @@ cd cmake_targets/
 # LTE USRP
 ./build_oai -I --eNB -x --install-system-files -w USRP
 # UE USRP
-./build_oai --gNB --nrUE
+./build_oai -I --gNB --nrUE
 # gnodeb USRP 
-./build_oai --gNB -x -w USRP
+./build_oai -I --gNB -x -w USRP
 
 cd ran_build/build
 sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --continuous -tx
