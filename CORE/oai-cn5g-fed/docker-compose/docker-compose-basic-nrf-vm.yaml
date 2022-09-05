@@ -213,6 +213,11 @@ services:
             interval: 10s
             timeout: 15s
             retries: 5
+        expose:
+        - "9090:9090"
+        - "80:80"
+        - "38412:38412
+
         #networks:
         #    public_net:
         #        ipv4_address: 192.168.70.132

@@ -126,6 +126,7 @@ sudo docker-compose -f docker-compose-basic-nrf.yaml up -d
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.70.132:80
 sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 # Check config 
+sudo docker-compose -f docker-compose-basic-nrf.yaml logs --follow
 telnet 
 sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 ```
