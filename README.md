@@ -122,13 +122,15 @@ cd ~/GIT/oaisetup/CORE/oai-cn5g-fed
 cd docker-compose
 sudo python3 core-network.py --type start-basic
 sudo docker-compose -f docker-compose-basic-nrf.yaml up -d
-# Expose AMF in the host machine 
-sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.70.132:80
-sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 # Check config 
 sudo docker-compose -f docker-compose-basic-nrf.yaml logs --follow
 telnet 
 sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 ```
+### Expose AMF to gnodeB
+* Configure bridged network in CORE_VM
+<In gnodeB> `sudo ip route add 192.168.70.0/24 via <IP_CORE_VM>`
+
+
 ### Debug
 * For SCTP checking go to `CORE/oai-cn5g-fed/component/amf-gnodeb-connection/README.md`
