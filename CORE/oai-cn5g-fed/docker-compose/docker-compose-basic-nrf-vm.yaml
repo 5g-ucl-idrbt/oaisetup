@@ -213,7 +213,7 @@ services:
             interval: 10s
             timeout: 15s
             retries: 5
-        expose:
+        ports:
             - "9090:9090"
             - "80:80"
             - "38412:38412
