@@ -2,9 +2,9 @@
 Consists of two steps; (a) gNodeb and (b)core
 
 ## gNodeb Setup
-* Download https://releases.ubuntu.com/16.04/  64bit
-* Create VM with the image
-* Inside VM install openssh server, git
+### Download https://releases.ubuntu.com/16.04/  64bit
+### Create VM with the image
+### Inside VM install openssh server, git
 ```
 sudo apt update; sudo apt install openssh-server git cmake cpufrequtils
 sudo apt-get install libuhd-dev uhd-host
@@ -12,7 +12,7 @@ sudo add-apt-repository ppa:ettusresearch/uhd
 sudo apt-get update
 sudo apt-get install libuhd-dev uhd-host
 ```
-* Use the following commands to compile the gNodeB source
+### Use the following commands to compile the gNodeB source
 ```
 mkdir ~/GIT
 cd GIT
@@ -35,7 +35,7 @@ cd cmake_targets/
 cd ran_build/build
 sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.modified.conf --continuous -tx
 ```
-* Debug
+### Debug
  * Check host system virtualization
  ```
   egrep -wo 'vmx|ept|vpid|npt|tpr_shadow|flexpriority|vnmi|lm|aes' /proc/cpuinfo 
@@ -64,10 +64,10 @@ sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb
 
 
 ## core Setup
-* Download https://releases.ubuntu.com/18.04/  64bit
+### Download https://releases.ubuntu.com/18.04/  64bit
    * Testing Ubuntu 20.04LTS 64bit
-* Create VM with the image
-* Inside VM install openssh server, git, docker
+### Create VM with the image
+### Inside VM install openssh server, git, docker
 ```
 sudo apt update
 sudo apt install openssh-server git docker
@@ -77,7 +77,7 @@ sudo apt install docker.io docker-compose
 
 
 ```
-* Initial configuration pulling
+### Initial configuration pulling
 ```
 mkdir ~/GIT
 cd GIT/
@@ -90,7 +90,7 @@ sudo bash imgsTag.sh
 sudo bash oaisetup/Util/pullimgs.sh
 sudo bash oaisetup/Util/imgsTag.sh
 ```
-* VM configurations
+### VM configurations
 ```
 sudo apt install inetutils-tools
 sudo apt install net-tools
@@ -103,7 +103,7 @@ exit
 sudo sysctl -p /etc/sysctl.conf
 sudo iptables -P FORWARD ACCEPT
 ```
-* VNF configurations
+### VNF configurations
 ```
 cd oai-cn5g-fed
 git checkout -f v1.4.0
@@ -115,7 +115,7 @@ cd ~/GIT/oaisetup/CORE/oai-cn5g-fed
                               --ausf-branch v1.4.0 --upf-vpp-branch v1.4.0 \
                               --nssf-branch v1.4.0
 ```
-* Start VNFs
+### Start VNFs
 ```
 #sudo docker network create   --driver=bridge   --subnet=192.168.70.128/26   -o "com.docker.network.bridge.name"="demo-oai"   demo-oai-public-net
 
@@ -129,3 +129,5 @@ sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 telnet 
 sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 ```
+### Debug
+* For SCTP checking go to `CORE/oai-cn5g-fed/component/amf-gnodeb-connection/README.md`

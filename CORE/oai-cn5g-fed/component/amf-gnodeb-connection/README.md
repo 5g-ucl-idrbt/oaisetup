@@ -4,6 +4,8 @@
 `docker run --rm -it --entrypoint bash sctptest`
 
 ## SCTP test
+### Install `withsctp`
+`sudo apt install lksctp-tools -y`
 ### Enable SCTP for telnet
 `withsctp telnet <TargetIP> <TargetPort>`
 

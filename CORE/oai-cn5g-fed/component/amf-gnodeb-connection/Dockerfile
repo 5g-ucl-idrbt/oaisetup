@@ -4,7 +4,7 @@ FROM ubuntu:bionic
 RUN apt-get update
 RUN apt install libsctp-dev make gcc net-tools -y
 RUN apt install iputils-ping -y
-RUN apt-get install lksctp-tools -y
+RUN apt install lksctp-tools -y
 # Copying source code
 WORKDIR /home
 COPY sctp_server /home

@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+    sctp-server:
+        container_name: "sctp-server"
+        image: sctptest:latest
+        stdin_open: true # docker run -i
+        tty: true        # docker run -t
+
+networks:
+     public_net:
+         external:
+             name: demo-oai-public-net
+    #public_net:
+    #    driver: bridge
+    #    name: demo-oai-public-net
+    #    ipam:
+    #        config:
+    #            - subnet: 192.168.70.128/26
+    #    driver_opts:
+    #        com.docker.network.bridge.name: "demo-oai"
