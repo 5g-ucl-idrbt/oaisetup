@@ -5,11 +5,12 @@ services:
         image: sctptest:latest
         stdin_open: true # docker run -i
         tty: true        # docker run -t
+        network_mode: "host"
 
-networks:
-     public_net:
-         external:
-             name: demo-oai-public-net
+#networks:
+#     public_net:
+#         external:
+#             name: demo-oai-public-net
     #public_net:
     #    driver: bridge
     #    name: demo-oai-public-net
