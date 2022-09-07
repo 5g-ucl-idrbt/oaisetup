@@ -32,6 +32,8 @@ cd cmake_targets/
 # gnodeb USRP 
 ./build_oai -I --gNB -x -w USRP
 
+sudo ip route add 192.168.70.0/24 via <CORE_IP>
+
 cd ran_build/build
 sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.modified.conf --continuous -tx
 ```
