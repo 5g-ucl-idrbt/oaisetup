@@ -159,4 +159,8 @@ https://open-cells.com/index.php/uiccsim-programing/
 
 
 * APN setup
-APN Name
+```
+Name: <Choice>
+APN: OpenCells01 # SPN
+
+```

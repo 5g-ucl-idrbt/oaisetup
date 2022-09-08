@@ -12,6 +12,27 @@ sudo add-apt-repository ppa:ettusresearch/uhd
 sudo apt-get update
 sudo apt-get install libuhd-dev uhd-host
 ```
+### QEMU/KVM creation from OVA
+```
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+sudo apt-get install qemu-utils
+sudo apt install virt-manager
+tar -xvf 5g-gnodeb.ova
+qemu-img -h | grep "Supported formats" # Check if the disk format is supported or not
+qemu-img convert -O qcow2 5g-gnodeb-disk001.vmdk 5g-gnodeb-disk001.qcow2
+
+
+sudo mkdir -vp /var/lib/libvirt/images/5g-gnodeb
+sudo chmod -R 777 /var/lib/libvirt/images/5g-gnodeb/
+pv 5g-gnodeb-disk001.qcow2 > /var/lib/libvirt/images/5g-gnodeb/5g-gnodeb-disk001.qcow2
+cd /var/lib/libvirt/images/5g-gnodeb
+touch meta-data # Fill it with 
+echo "instance-id: 5g-gnodeb
+local-hostname: gnodeb" > meta-data
+touch user-data # Fill it with 
+export LIBGUESTFS_BACKEND=direct
+
+```
 ### Use the following commands to compile the gNodeB source
 ```
 mkdir ~/GIT
@@ -136,3 +157,4 @@ sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 
 ### Debug
 * For SCTP checking go to `CORE/oai-cn5g-fed/component/amf-gnodeb-connection/README.md`
+* Issue: "Packet forwarding problem", need to update SMF settings.
