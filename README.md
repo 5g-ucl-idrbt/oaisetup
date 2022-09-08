@@ -14,9 +14,11 @@ sudo apt-get install libuhd-dev uhd-host
 ```
 ### QEMU/KVM creation from OVA
 ```
-sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+sudo apt install -y qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
 sudo apt-get install qemu-utils
 sudo apt install virt-manager
+sudo systemctl enable --now libvirtd
+sudo systemctl start libvirtd
 tar -xvf 5g-gnodeb.ova
 qemu-img -h | grep "Supported formats" # Check if the disk format is supported or not
 qemu-img convert -O qcow2 5g-gnodeb-disk001.vmdk 5g-gnodeb-disk001.qcow2
@@ -26,11 +28,29 @@ sudo mkdir -vp /var/lib/libvirt/images/5g-gnodeb
 sudo chmod -R 777 /var/lib/libvirt/images/5g-gnodeb/
 pv 5g-gnodeb-disk001.qcow2 > /var/lib/libvirt/images/5g-gnodeb/5g-gnodeb-disk001.qcow2
 cd /var/lib/libvirt/images/5g-gnodeb
-touch meta-data # Fill it with 
-echo "instance-id: 5g-gnodeb
-local-hostname: gnodeb" > meta-data
-touch user-data # Fill it with 
+cp GIT/oaisetup/BBU/5g-gnodeb-kvm/meta-data meta-data 
+cp GIT/oaisetup/BBU/5g-gnodeb-kvm/user-data user-data
+cp GIT/oaisetup/BBU/5g-gnodeb-kvm/01-netcfg.yaml /etc/netplan/01-netcfg.yaml
 export LIBGUESTFS_BACKEND=direct
+export LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1
+#qemu-img create -f qcow2 -o preallocation=metadata 5g-gnodeb.new.image 20G
+#sudo virt-resize --quiet --expand /dev/sda1 5g-gnodeb-disk001.qcow2 5g-gnodeb.new.image
+
+systemctl start libvirtd
+sudo usermod -aG kvm $USER
+sudo usermod -aG libvirt $USER
+
+# Port forwarding
+virsh net-list
+virsh net-info default
+virsh net-dumpxml default
+
+
+
+sudo iptables -A FORWARD -d 192.168.122.0/24 -o virbr0 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
+
+/usr/bin/qemu-system-x86_64 -m 1024 -name vserialtest -hda ubuntu16.04.qcow2 -chardev socket,path=/tmp/port1,server,nowait,id=port1-char -device virtio-serial -device virtserialport,id=port1,chardev=port1-char,name=org.fedoraproject.port.0 -net user,hostfwd=tcp::2022-:22
+
 
 ```
 ### Use the following commands to compile the gNodeB source
