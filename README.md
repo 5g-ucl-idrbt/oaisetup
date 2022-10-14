@@ -182,14 +182,36 @@ sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 
 # UE
 
+## Use path of repo as an environment varible
+OAI_DIR="/home/subhrendu/GIT/oaisetup"
+
 https://open-cells.com/index.php/uiccsim-programing/
 ## Check existing values of the sim
 `sudo ./program_uicc`
 
 ## Ensure operator key consistency
-`<In CORE> cat  docker-compose-basic-nrf.yaml |grep "OPERATOR_KEY"`
+```<In CORE> cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose";
+          cat docker-compose-basic-nrf.yaml |grep "OPERATOR_KEY"
+```
 
-<MCC> and <MNC> gnodeB/target/PROJECTS.../, CORE/docker-compose/ .yaml file, CORE/docker-compose/.db
+## Ensure MCC & MNC values consistency
+### MCC: Mobile Country Code
+``` <In CORE> cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose/";
+              cat  docker-compose-basic-nrf.yaml |grep "MNC";
+              cat *.sql | grep;
+    <In gNB>  cd $OAI_DIR"BBU/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/";
+             cat  docker-compose-basic-nrf.yaml |grep "MCC";
+             cat 
+```
+### MNC: Mobile Network Code
+```<In CORE>  cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose";
+              cat  docker-compose-basic-nrf.yaml |grep "MNC";
+              cat *.sql | grep 
+
+             cat  docker-compose-basic-nrf.yaml |grep "MCC";
+             cat 
+```
+<MCC> and <MNC> gnodeB/target/PROJECTS.../, CORE/docker-compose/ .yaml file, CORE/docker-compose/.sql
 
 `sudo ./program_uicc --adm <PrintedOnSIM> --imsi <MCC><MNC>0100001101 --isdn 00000001 --acc 0001 --key 6874736969202073796d4b2079650a73 --opc <OperatorKeyfrom_OAI-AMF> -spn "OpenCells01" --authenticate`
 
