@@ -184,16 +184,28 @@ sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 
 ## Use path of repo as an environment varible
 OAI_DIR="/home/subhrendu/GIT/oaisetup"
-
+ 
 https://open-cells.com/index.php/uiccsim-programing/
+ 
+* Click on the "source code" and Download the "uicc" file.
+* Then Extract the uicc ZIP file. 
+ 
+ ## Insert the card in the reader and the reader in a USB port:
+ 
 ## Check existing values of the sim
 `sudo ./program_uicc`
+ 
+ or
+ 
+ `sudo ./program_uicc --adm 0c008506`
 
 ## Ensure operator key consistency
 ```<In CORE> cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose";
           cat docker-compose-basic-nrf.yaml |grep "OPERATOR_KEY"
 ```
 ### Check it with Sim values 
+ * Check the IMSI Value in Core (oai_db2.sql) like MCC and MNC what ever you configured in the core part.
+ * First five Digits are MCC and remaning ten Digits are MNC.
 
 ## Ensure MCC & MNC values consistency
 ### MCC: Mobile Country Code
