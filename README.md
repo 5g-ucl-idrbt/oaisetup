@@ -193,6 +193,7 @@ https://open-cells.com/index.php/uiccsim-programing/
 ```<In CORE> cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose";
           cat docker-compose-basic-nrf.yaml |grep "OPERATOR_KEY"
 ```
+### Check it with Sim values 
 
 ## Ensure MCC & MNC values consistency
 ### MCC: Mobile Country Code
