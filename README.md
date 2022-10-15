@@ -189,6 +189,7 @@ https://open-cells.com/index.php/uiccsim-programing/
  
 * Click on the **source code** and Download the **uicc** file.
 * Then Extract the **uicc** ZIP file. 
+* Note:- Use Ubuntu 20.04LTS 64bit OS for SIM Write. 
  
  ## Insert the card in the reader and the reader in a USB port:
  
