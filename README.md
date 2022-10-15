@@ -192,7 +192,7 @@ https://open-cells.com/index.php/uiccsim-programing/
  
  ## Insert the card in the reader and the reader in a USB port:
  
-## Check existing values of the sim
+## Check existing values of the sim <Binod doees not like the heading>
 `sudo ./program_uicc`
  
  or
