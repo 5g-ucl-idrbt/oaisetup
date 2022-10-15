@@ -207,7 +207,7 @@ https://open-cells.com/index.php/uiccsim-programing/
 ### Check it with Sim values 
  * Check the IMSI Value in Core (oai_db2.sql) like MCC and MNC what ever you configured in the core part.
  
-   **Path-- Home> oai-sa> oai-cn5g-fed> docker-compose> oai_db2.sql**
+   **Path-- Home/oai-sa/oai-cn5g-fed/docker-compose/oai_db2.sql**
  * MCC- first three Digits, MNC- next two Digits.
  ### IMSI: International Mobile Subscriber Identity
 
