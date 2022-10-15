@@ -198,6 +198,7 @@ https://open-cells.com/index.php/uiccsim-programing/
  or
  
  `sudo ./program_uicc --adm 0c008506`
+  ### ADM: Administrative key
 
 ## Ensure operator key consistency
 ```<In CORE> cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose";
@@ -205,7 +206,11 @@ https://open-cells.com/index.php/uiccsim-programing/
 ```
 ### Check it with Sim values 
  * Check the IMSI Value in Core (oai_db2.sql) like MCC and MNC what ever you configured in the core part.
- * First five Digits are MCC and remaning ten Digits are MNC.
+ 
+   **Path-- Home> oai-sa> oai-cn5g-fed> docker-compose> oai_db2.sql**
+ * MCC- first three Digits, MNC- next two Digits.
+ ### IMSI: International Mobile Subscriber Identity
+
 
 ## Ensure MCC & MNC values consistency
 ### MCC: Mobile Country Code
