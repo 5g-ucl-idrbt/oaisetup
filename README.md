@@ -187,8 +187,8 @@ OAI_DIR="/home/subhrendu/GIT/oaisetup"
  
 https://open-cells.com/index.php/uiccsim-programing/
  
-* Click on the "source code" and Download the "uicc" file.
-* Then Extract the uicc ZIP file. 
+* Click on the **source code** and Download the **uicc** file.
+* Then Extract the **uicc** ZIP file. 
  
  ## Insert the card in the reader and the reader in a USB port:
  
@@ -235,6 +235,7 @@ https://open-cells.com/index.php/uiccsim-programing/
 
 `sudo ./program_uicc --adm <PrintedOnSIM> --imsi <MCC><MNC>0100001101 --isdn 00000001 --acc 0001 --key 6874736969202073796d4b2079650a73 --opc <OperatorKeyfrom_OAI-AMF> -spn "OpenCells01" --authenticate --noreadafter`
 
+ ### Example:
 `sudo ./program_uicc --adm 0c008508 --imsi 001010000000011 --key 6874736969202073796d4b2079650a73 --opc 504f20634f6320504f50206363500a4f -spn "OpenCells01" --authenticate`
 
 * Find "AuthenticationSubscription" Table in CORE/docker-compose/oai_db2.sql and add a new value as 
