@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 services:
     mysql:
         container_name: "mysql"
@@ -37,7 +37,7 @@ services:
             - MYSQL_PASS=test
             - MYSQL_DB=oai_db
             - WAIT_MYSQL=120
-            - USE_FQDN_DNS=no
+            - USE_FQDN_DNS=yes
             - REGISTER_NRF=yes
             - NRF_IPV4_ADDRESS=192.168.70.130
             - NRF_PORT=80
@@ -67,7 +67,7 @@ services:
             - SBI_IF_NAME=eth0
             - SBI_PORT=80
             - UDM_VERSION_NB=v1
-            - USE_FQDN_DNS=no
+            - USE_FQDN_DNS=yes
             - UDR_IP_ADDRESS=192.168.70.136
             - UDR_PORT=80
             - UDR_VERSION_NB=v1
@@ -99,7 +99,7 @@ services:
             - AUSF_NAME=OAI_AUSF
             - SBI_IF_NAME=eth0
             - SBI_PORT=80
-            - USE_FQDN_DNS=no
+            - USE_FQDN_DNS=yes
             - UDM_IP_ADDRESS=192.168.70.137
             - UDM_PORT=80
             - UDM_VERSION_NB=v1
@@ -189,7 +189,7 @@ services:
             - EXTERNAL_NRF=yes
             - NF_REGISTRATION=yes
             - SMF_SELECTION=yes
-            - USE_FQDN_DNS=no
+            - USE_FQDN_DNS=yes
             - EXTERNAL_AUSF=yes
             - NRF_API_VERSION=v1
             - NRF_FQDN=oai-nrf
@@ -246,7 +246,7 @@ services:
             - NRF_FQDN=oai-nrf
             - REGISTER_NRF=yes
             - DISCOVER_UPF=yes
-            - USE_FQDN_DNS=no
+            - USE_FQDN_DNS=yes
             - DNN_RANGE0=12.1.1.2 - 12.1.1.128
             #- DNN_RANGE1=12.2.1.2 - 12.2.1.128 by Arpit 13 Aug 2022
             - DNN_NI0=oai.ipv4 #arpit 13 Aug 2022
@@ -296,7 +296,7 @@ services:
             - REALM=openairinterface.org
             - ENABLE_5G_FEATURES=yes
             - REGISTER_NRF=yes
-            - USE_FQDN_NRF=no #no
+            - USE_FQDN_NRF=yes #no
             - UPF_FQDN_5G=oai-spgwu
             - NRF_IPV4_ADDRESS=192.168.70.130
             - NRF_PORT=80

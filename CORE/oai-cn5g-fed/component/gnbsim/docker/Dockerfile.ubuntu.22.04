@@ -1,0 +1,42 @@
+#---------------------------------------------------------------------
+# BUILDER IMAGE
+#---------------------------------------------------------------------
+FROM ubuntu:jammy as gnbsim-builder
+
+RUN apt-get update && apt install wget -y
+
+RUN wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && tar -xvf go1.13.3.linux-amd64.tar.gz && mv go /usr/local
+ENV GOROOT=/usr/local/go
+RUN mkdir goproject
+ENV GOPATH=/goproject
+ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+COPY . /
+
+RUN cd /gnbsim/cmd && go build .
+RUN cd /example && go build .
+
+#---------------------------------------------------------------------
+# TARGET IMAGE
+#---------------------------------------------------------------------
+FROM ubuntu:jammy as gnbsim
+
+RUN apt update && apt install iproute2 iputils-ping iperf3 net-tools -y
+
+WORKDIR /usr/local
+COPY --from=gnbsim-builder /usr/local/go .
+ENV GOROOT=/usr/local/go
+RUN mkdir goproject
+ENV GOPATH=/goproject
+ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+WORKDIR /gnbsim/bin
+COPY --from=gnbsim-builder /example/example .
+COPY --from=gnbsim-builder /docker/example.json .
+COPY --from=gnbsim-builder /docker/entrypoint.sh .
+
+ENTRYPOINT ["/gnbsim/bin/entrypoint.sh"]
+
+CMD ["sh","-c","/gnbsim/bin/example && sleep infinity"]
+
+

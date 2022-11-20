@@ -1,0 +1,19 @@
+ip link set eth0 down
+ip link set eth0 name access
+ip link set access up
+
+ip link set eth1 down
+ip link set eth1 name core
+ip link set core up
+
+ip link set eth2 down
+ip link set eth2 name sgi
+ip link set sgi up
+
+ip route add 10.1.1.0/24 via 192.168.63.201 dev sgi
+ip route add 12.1.1.0/24 via 192.168.63.201 dev sgi
+
+ip route add 192.168.62.0/24 dev access
+ip route add 192.168.61.0/24 dev core
+ip route add 192.168.63.0/24 dev sgi
+

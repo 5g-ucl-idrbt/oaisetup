@@ -1,0 +1,18 @@
+{
+	"MSIN": "0123456789",
+	"MCC": 208,
+	"MNC": 93,
+	"IMEISV": "0000000100000101",
+	"RoutingIndicator": 1234,
+	"ProtectionScheme": "null",
+	"AuthParam": {
+		"K": "8baf473f2f8fd09487cccbd7097c6862",
+		"OPc": "8e27b6af0e692e750f32667a3b14605d"
+	},
+	"SNSSAI": {
+		 "sst": 1,
+         "sd": "010203"
+	},
+	"dnn": "internet",
+	"url": "http://example.com/"
+}

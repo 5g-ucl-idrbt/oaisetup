@@ -1,0 +1,21 @@
+$ docker logs oai-vpp-upf 
+
+Done setting the configuration
++ id -u
++ [ 0 -ne 0 ]
++ dirname /openair-upf/run.sh
++ base=/openair-upf
++ APP=/openair-upf/bin/vpp
++ ARGS=-c /openair-upf/etc/startup_debug.conf
++ USAGE=Usage: run.sh [-r] [ debug ]
+       debug:	executes vpp under gdb
++ getopts :r opt
++ shift 0
++ test -z 
++ /openair-upf/bin/vpp -c /openair-upf/etc/startup_debug.conf
+clib_sysfs_prealloc_hugepages:261: pre-allocating 19 additional 2048K hugepages on numa node 0
+tls_init_ca_chain:874: Could not initialize TLS CA certificates
+tls_openssl_init:948: failed to initialize TLS CA chain
+linux_epoll_file_update:120: epoll_ctl: Operation not permitted (errno 1)
+upf_nwi_add_del_command_fn:253: table 2 not (yet) defined for IPv6
+upf_nwi_add_del_command_fn:253: table 1 not (yet) defined for IPv6
