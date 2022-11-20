@@ -1,5 +1,5 @@
 # oaisetup in full virtualized environment
-## Consists of two steps; (a) gNodeb and (b)core
+Consists of three steps; (a) gNodeb (b)core and (c) UE preparations
 
 ## gNodeb Setup
 ### Download https://releases.ubuntu.com/16.04/  64bit
@@ -11,47 +11,6 @@ sudo apt-get install libuhd-dev uhd-host
 sudo add-apt-repository ppa:ettusresearch/uhd
 sudo apt-get update
 sudo apt-get install libuhd-dev uhd-host
-```
-### QEMU/KVM creation from OVA
-```
-sudo apt install -y qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
-sudo apt-get install qemu-utils
-sudo apt install virt-manager
-sudo systemctl enable --now libvirtd
-sudo systemctl start libvirtd
-tar -xvf 5g-gnodeb.ova
-qemu-img -h | grep "Supported formats" # Check if the disk format is supported or not
-qemu-img convert -O qcow2 5g-gnodeb-disk001.vmdk 5g-gnodeb-disk001.qcow2
-
-
-sudo mkdir -vp /var/lib/libvirt/images/5g-gnodeb
-sudo chmod -R 777 /var/lib/libvirt/images/5g-gnodeb/
-pv 5g-gnodeb-disk001.qcow2 > /var/lib/libvirt/images/5g-gnodeb/5g-gnodeb-disk001.qcow2
-cd /var/lib/libvirt/images/5g-gnodeb
-cp GIT/oaisetup/BBU/5g-gnodeb-kvm/meta-data meta-data 
-cp GIT/oaisetup/BBU/5g-gnodeb-kvm/user-data user-data
-cp GIT/oaisetup/BBU/5g-gnodeb-kvm/01-netcfg.yaml /etc/netplan/01-netcfg.yaml
-export LIBGUESTFS_BACKEND=direct
-export LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1
-#qemu-img create -f qcow2 -o preallocation=metadata 5g-gnodeb.new.image 20G
-#sudo virt-resize --quiet --expand /dev/sda1 5g-gnodeb-disk001.qcow2 5g-gnodeb.new.image
-
-systemctl start libvirtd
-sudo usermod -aG kvm $USER
-sudo usermod -aG libvirt $USER
-
-# Port forwarding
-virsh net-list
-virsh net-info default
-virsh net-dumpxml default
-
-
-
-sudo iptables -A FORWARD -d 192.168.122.0/24 -o virbr0 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
-
-/usr/bin/qemu-system-x86_64 -m 1024 -name vserialtest -hda ubuntu16.04.qcow2 -chardev socket,path=/tmp/port1,server,nowait,id=port1-char -device virtio-serial -device virtserialport,id=port1,chardev=port1-char,name=org.fedoraproject.port.0 -net user,hostfwd=tcp::2022-:22
-
-
 ```
 ### Use the following commands to compile the gNodeB source
 ```
@@ -72,8 +31,6 @@ cd cmake_targets/
 ./build_oai -I --gNB --nrUE
 # gnodeb USRP 
 ./build_oai -I --gNB -x -w USRP
-
-sudo ip route add 192.168.70.0/24 via <CORE_IP>
 
 cd ran_build/build
 sudo ./nr-softmodem -E --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.modified.conf --continuous -tx
@@ -177,66 +134,21 @@ sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 
 ### Debug
 * For SCTP checking go to `CORE/oai-cn5g-fed/component/amf-gnodeb-connection/README.md`
-* Issue: "Packet forwarding problem", need to update SMF settings.
 
 
 # UE
 
-## Use path of repo as an environment varible
-OAI_DIR="/home/subhrendu/GIT/oaisetup"
- 
 https://open-cells.com/index.php/uiccsim-programing/
- 
-* Click on the **source code** and Download the **uicc** file.
-* Then Extract the **uicc** ZIP file. 
-* Note:- Use Ubuntu 20.04LTS 64bit OS for SIM Write. 
- 
- ## Insert the card in the reader and the reader in a USB port:
- 
-## Check existing values of the sim <Binod doees not like the heading>
+## Check existing values of the sim
 `sudo ./program_uicc`
- 
- or
- 
- `sudo ./program_uicc --adm 0c008506`
-  ### ADM: Administrative key
 
 ## Ensure operator key consistency
-```<In CORE> cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose";
-          cat docker-compose-basic-nrf.yaml |grep "OPERATOR_KEY"
-```
-### Check it with Sim values 
- * Check the IMSI Value in Core (oai_db2.sql) like MCC and MNC what ever you configured in the core part.
- 
-   **Path-- Home/oai-sa/oai-cn5g-fed/docker-compose/oai_db2.sql**
- * MCC- first three Digits, MNC- next two Digits.
- ### IMSI: International Mobile Subscriber Identity
+`<In CORE> cat  docker-compose-basic-nrf.yaml |grep "OPERATOR_KEY"`
 
-
-## Ensure MCC & MNC values consistency
-### MCC: Mobile Country Code
-``` <In CORE> cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose/";
-              cat  docker-compose-basic-nrf.yaml |grep "MNC";
-              cat *.sql | grep;
-    <In gNB>  cd $OAI_DIR"BBU/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/";
-             cat  docker-compose-basic-nrf.yaml |grep "MCC";
-             cat 
-```
-### MNC: Mobile Network Code
-```<In CORE>  cd $OAI_DIR"/CORE/oai-cn5g-fed/docker-compose";
-              cat  docker-compose-basic-nrf.yaml |grep "MNC";
-              cat *.sql | grep 
-
-             cat  docker-compose-basic-nrf.yaml |grep "MCC";
-             cat 
-```
-<MCC> and <MNC> gnodeB/target/PROJECTS.../, CORE/docker-compose/ .yaml file, CORE/docker-compose/.sql
-
-`sudo ./program_uicc --adm <PrintedOnSIM> --imsi <MCC><MNC>0100001101 --isdn 00000001 --acc 0001 --key 6874736969202073796d4b2079650a73 --opc <OperatorKeyfrom_OAI-AMF> -spn "OpenCells01" --authenticate`
+<MCC> and <MNC> gnodeB/target/PROJECTS.../, CORE/docker-compose/ .yaml file, CORE/docker-compose/.db
 
 `sudo ./program_uicc --adm <PrintedOnSIM> --imsi <MCC><MNC>0100001101 --isdn 00000001 --acc 0001 --key 6874736969202073796d4b2079650a73 --opc <OperatorKeyfrom_OAI-AMF> -spn "OpenCells01" --authenticate --noreadafter`
 
- ### Example:
 `sudo ./program_uicc --adm 0c008508 --imsi 001010000000011 --key 6874736969202073796d4b2079650a73 --opc 504f20634f6320504f50206363500a4f -spn "OpenCells01" --authenticate`
 
 * Find "AuthenticationSubscription" Table in CORE/docker-compose/oai_db2.sql and add a new value as 

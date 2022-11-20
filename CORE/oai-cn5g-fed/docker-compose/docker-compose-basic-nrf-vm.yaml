@@ -37,7 +37,7 @@ services:
             - MYSQL_PASS=test
             - MYSQL_DB=oai_db
             - WAIT_MYSQL=120
-            - USE_FQDN_DNS=yes
+            - USE_FQDN_DNS=no
             - REGISTER_NRF=yes
             - NRF_IPV4_ADDRESS=192.168.70.130
             - NRF_PORT=80
@@ -68,7 +68,7 @@ services:
             - SBI_IF_NAME=eth0
             - SBI_PORT=80
             - UDM_VERSION_NB=v1
-            - USE_FQDN_DNS=yes
+            - USE_FQDN_DNS=no
             - UDR_IP_ADDRESS=192.168.70.136
             - UDR_PORT=80
             - UDR_VERSION_NB=v1
@@ -100,7 +100,7 @@ services:
             - AUSF_NAME=OAI_AUSF
             - SBI_IF_NAME=eth0
             - SBI_PORT=80
-            - USE_FQDN_DNS=yes
+            - USE_FQDN_DNS=no
             - UDM_IP_ADDRESS=192.168.70.137
             - UDM_PORT=80
             - UDM_VERSION_NB=v1
@@ -190,7 +190,7 @@ services:
             - EXTERNAL_NRF=yes
             - NF_REGISTRATION=yes
             - SMF_SELECTION=yes
-            - USE_FQDN_DNS=yes
+            - USE_FQDN_DNS=no
             - EXTERNAL_AUSF=yes
             - NRF_API_VERSION=v1
             - NRF_FQDN=oai-nrf
@@ -213,9 +213,13 @@ services:
             interval: 10s
             timeout: 15s
             retries: 5
-        networks:
-            public_net:
-                ipv4_address: 192.168.70.132
+        ports:
+            - "9090:9090"
+            - "80:80"
+            - "38412:38412"
+        #networks:
+        #    public_net:
+        #        ipv4_address: 192.168.70.132
     oai-smf:
         container_name: "oai-smf"
         image: oai-smf:v1.4.0
@@ -230,7 +234,7 @@ services:
             - SMF_API_VERSION=v1
             - DEFAULT_DNS_IPV4_ADDRESS=127.0.0.53
             - DEFAULT_DNS_SEC_IPV4_ADDRESS=8.8.8.8
-            - AMF_IPV4_ADDRESS=192.168.70.132
+            - AMF_IPV4_ADDRESS=192.168.0.6
             - AMF_PORT=80
             - AMF_API_VERSION=v1
             - AMF_FQDN=oai-amf
@@ -247,7 +251,7 @@ services:
             - NRF_FQDN=oai-nrf
             - REGISTER_NRF=yes
             - DISCOVER_UPF=yes
-            - USE_FQDN_DNS=yes
+            - USE_FQDN_DNS=no
             - DNN_RANGE0=12.1.1.2 - 12.1.1.128
             #- DNN_RANGE1=12.2.1.2 - 12.2.1.128 by Arpit 13 Aug 2022
             - DNN_NI0=oai.ipv4 #arpit 13 Aug 2022
@@ -297,7 +301,7 @@ services:
             - REALM=openairinterface.org
             - ENABLE_5G_FEATURES=yes
             - REGISTER_NRF=yes
-            - USE_FQDN_NRF=yes #no
+            - USE_FQDN_NRF=no #no
             - UPF_FQDN_5G=oai-spgwu
             - NRF_IPV4_ADDRESS=192.168.70.130
             - NRF_PORT=80
@@ -339,14 +343,14 @@ services:
             public_net:
                 ipv4_address: 192.168.70.135
 networks:
-     #public_net:
-     #    external:
-     #        name: demo-oai-public-net
-    public_net:
-        driver: bridge
-        #name: demo-oai-public-net
-        ipam:
-            config:
-                - subnet: 192.168.70.128/26
-        driver_opts:
-            com.docker.network.bridge.name: "demo-oai"
+     public_net:
+         external:
+             name: demo-oai-public-net
+    #public_net:
+    #    driver: bridge
+    #    name: demo-oai-public-net
+    #    ipam:
+    #        config:
+    #            - subnet: 192.168.70.128/26
+    #    driver_opts:
+    #        com.docker.network.bridge.name: "demo-oai"

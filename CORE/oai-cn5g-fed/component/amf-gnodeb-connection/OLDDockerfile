@@ -1,0 +1,26 @@
+FROM ubuntu:bionic
+
+# Copying source code
+WORKDIR /home
+COPY sctp_server /home
+
+
+# Installing all the needed libraries/packages to build and run AMF
+WORKDIR /openair-amf/build/scripts
+RUN ./build_amf --install-deps --force
+
+
+RUN ldconfig && \
+    ldd /openair-amf/bin/oai_amf
+
+# Copying template configuration files
+WORKDIR /openair-amf/etc
+COPY --from=oai-amf-builder /openair-amf/etc/amf.conf .
+
+WORKDIR /openair-amf
+
+# expose ports
+EXPOSE 80/tcp 9090/tcp 38412/sctp
+
+ENTRYPOINT ["/bin/bash","/openair-amf/bin/entrypoint.sh"]
+CMD ["/openair-amf/bin/oai_amf", "-c", "/openair-amf/etc/amf.conf", "-o"]
