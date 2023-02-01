@@ -25,12 +25,12 @@
 #
 #---------------------------------------------------------------------
 
-FROM ran-base:latest as gnb-base
+#FROM ran-base:latest as gnb-base
 
-FROM ran-build:latest AS gnb-build
+#FROM ran-build:latest AS gnb-build
 
-RUN python3 ./docker/scripts/generateTemplate.py ./docker/scripts/gnb_parameters.yaml && \
-    cp /oai-ran/docker/scripts/gnb_entrypoint.sh /oai-ran/docker/scripts/entrypoint.sh
+#RUN python3 ./docker/scripts/generateTemplate.py ./docker/scripts/gnb_parameters.yaml && \
+#    cp /oai-ran/docker/scripts/gnb_entrypoint.sh /oai-ran/docker/scripts/entrypoint.sh
 
 #start from scratch for target executable
 FROM ubuntu:bionic as oai-gnb
