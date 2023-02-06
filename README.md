@@ -165,13 +165,15 @@ cd ~/GIT/oaisetup/CORE/oai-cn5g-fed
 cd docker-compose
 sudo python3 core-network.py --type start-basic
 sudo docker-compose -f docker-compose-basic-nrf.yaml up -d
+sudo docker logs --follow oai-amf
 # Check config 
 sudo docker-compose -f docker-compose-basic-nrf.yaml logs --follow
 telnet 
 sudo docker-compose -f docker-compose-basic-nrf.yaml kill
 ```
 ### Expose AMF to gnodeB
-* Configure bridged network in CORE_VM
+* Configure bridged network in CORE_VM and get bridged IP of core VM using following command
+ 
 <In gnodeB> `sudo ip route add 192.168.70.0/24 via <IP_CORE_VM>`
 
 
