@@ -61,10 +61,7 @@ Use `ifconfig` to see the IP address of `eth0`.
 	- `sudo make install`
 
 * Add lines to `~/GIT/oaisetup/GNB/openairinterface5g/oaienv`
-	- ```
-	export BUILD_UHD_FROM_SOURCE=True
-	export UHD_VERSION=3.15.0.0
-	```
+	- `export BUILD_UHD_FROM_SOURCE=True;	export UHD_VERSION=3.15.0.0`
 
 
 
