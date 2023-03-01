@@ -1,7 +1,0 @@
-build/UDM/
-.vscode/
-.cproject
-.project
-build/ext
-build/log
-build/udm/build
