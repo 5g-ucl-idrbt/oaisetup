@@ -33,12 +33,12 @@ This parts should be executed in the Core VM
 
 Now restart the core to enable SIM registration.
 ## APN setup
-After plugging the sim in use the following APN
+After plugging the sim in use the following APN in your handset
 ```
 Name: <Choice>
 APN: OpenCells01 # SPN
 ```
-# 5G Glossary
+# Terminologies used here
 ```
 MCC: Mobile country code
 MNC: Mobile area code
