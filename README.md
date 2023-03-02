@@ -14,5 +14,4 @@ Add APN
 
 
 ## Google pixel
-Call `##4636##`
-Set NR Only
+Call `*#*#4636##` and set `NR Only`
