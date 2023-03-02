@@ -40,14 +40,14 @@ APN: OpenCells01 # SPN
 ```
 # Terminologies used here
 ```
-MCC: Mobile country code
-MNC: Mobile area code
-ADM: 
-ISDN:
-SPN:
-OPC:
-PLMN:
-IMSI:
-SUPI:
-APN:
+MCC:	Mobile country code:						[Ref](https://en.wikipedia.org/wiki/Mobile_country_code)
+MNC:	Mobile area code:							[Ref](https://en.wikipedia.org/wiki/Mobile_country_code)
+ADM:	Administrative Key
+ISDN:	Integrated Service Digital Network:			[Ref](https://en.wikipedia.org/wiki/Integrated_Services_Digital_Network)
+SPN:	Service Provider Name:
+OPC:	Operator Code:
+PLMN:	Public Land Mobile Network:					[Ref](https://en.wikipedia.org/wiki/Public_land_mobile_network)
+IMSI:	International Mobile Subscriber Identity:	[Ref](https://en.wikipedia.org/wiki/International_mobile_subscriber_identity)
+SUPI:	Subscription Permanent Identifier:			[Ref](https://www.techplayon.com/5g-identifiers-supi-and-suci/)
+APN:	Access Point Name:							[Ref](https://en.wikipedia.org/wiki/Access_Point_Name)
 ```
