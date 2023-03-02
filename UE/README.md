@@ -1,7 +1,7 @@
 # UE
 We have used usim provided by opencells[^1] in our project. The SIM editing procedure is available in [link](https://open-cells.com/index.php/uiccsim-programing/)
 
-[^1] https://open-cells.com/index.php/sim-cards/
+[^1]: https://open-cells.com/index.php/sim-cards/
 ## Check existing values of the sim
 `sudo ./program_uicc`
 
