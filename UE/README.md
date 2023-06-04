@@ -53,3 +53,21 @@ IMSI:	International Mobile Subscriber Identity:	[Ref](https://en.wikipedia.org/w
 SUPI:	Subscription Permanent Identifier:			[Ref](https://www.techplayon.com/5g-identifiers-supi-and-suci/)
 APN:	Access Point Name:							[Ref](https://en.wikipedia.org/wiki/Access_Point_Name)
 ```
+	
+## eSIM configuration
+
+eSim QR contains the following information
+1. Activation Code: A unique code that identifies the eSIM activation process. It is used to link the eSIM profile to your device.
+1. SM-DP+ Address: The address of the Subscription Manager Data Preparation (SM-DP+) server. This server is responsible for securely managing the eSIM profiles and provisioning them onto your device.
+1. SM-DP+ Protocol: The protocol used to communicate with the SM-DP+ server, such as HTTPS or another secure protocol.
+1. Confirmation Code: A code that may be required during the eSIM activation process to validate your ownership of the eSIM.
+1. ICCID (Integrated Circuit Card Identifier): A unique identifier for the eSIM. It is used to identify the eSIM when connecting to the cellular network.
+1. Operator Name: The name of the mobile network operator associated with the eSIM profile.
+1. Profile Name: A name or description assigned to the eSIM profile, often indicating the mobile network operator or a specific plan.
+1. Other Network-specific Information: Depending on the carrier and eSIM implementation, the QR code may contain additional information specific to the network, such as authentication keys, network settings, and access credentials.
+When you scan the eSIM QR code using your device's camera or enter the data manually, your device uses this information to establish a connection with the SM-DP+ server, retrieve the eSIM profile, and activate the eSIM on your device. The specific details contained within the eSIM QR code may vary depending on the carrier, device, and eSIM implementation being used.
+
+
+
+
+
