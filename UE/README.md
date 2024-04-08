@@ -40,6 +40,19 @@ After plugging the sim in use the following APN in your handset
 Name: <Choice>
 APN: OpenCells01 # SPN
 ```
+### If UE is connected, but not connecting to the Internet
+Check the oai-core logs using 
+```
+sudo docker -f docker-compose-basic-nrf.yam logs --follow
+```
+An error related to SMF means some issue in APN settings. To fix that, use the following steps.
+* In `oai_db3.sql` [file](https://github.com/5g-ucl-idrbt/oai-core/blob/main/docker-compose/database/oai_db3.sql)
+  	- ```
+  	  INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES 
+('001010000000037', '00101', '{\"sst\": 1, \"sd\": \"1\"}','{\"default\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},\"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.10\"}]}}');
+	```
+
+
 # Terminologies used here
 ```
 MCC:	Mobile country code:						[Ref](https://en.wikipedia.org/wiki/Mobile_country_code)
