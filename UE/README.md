@@ -55,139 +55,141 @@ An error related to SMF means some issue in APN settings. To fix that, use the f
    	- Check `SST` and `SD` values in `oai-amf` service
    	- <pre><p>
 		oai-amf:
-        container_name: "oai-amf"
-        image: oai-amf:v1.4.0
-        environment:
-            - TZ=Asia/India
-            - INSTANCE=0
-            - PID_DIRECTORY=/var/run
-            - MCC=001
-            - MNC=01
-            - REGION_ID=128
-            - AMF_SET_ID=1
-            - SERVED_GUAMI_MCC_0=001
-            - SERVED_GUAMI_MNC_0=01 # 95
-            - SERVED_GUAMI_REGION_ID_0=128
-            - SERVED_GUAMI_AMF_SET_ID_0=1
-            - SERVED_GUAMI_MCC_1=001  # 460
-            - SERVED_GUAMI_MNC_1=01  # 11
-            - SERVED_GUAMI_REGION_ID_1=10
-            - SERVED_GUAMI_AMF_SET_ID_1=1
-            - PLMN_SUPPORT_MCC=001
-            - PLMN_SUPPORT_MNC=01
-            - PLMN_SUPPORT_TAC=1 #0xa000 to connect gNB
-            - SST_0=1
-            - SD_0=1  #0xFFFFFF
-           <b> - SST_1=1
-            - SD_1=1 </b>
-            - SST_2=222
-            - SD_2=123 
-            - AMF_INTERFACE_NAME_FOR_NGAP=eth0
-            - AMF_INTERFACE_NAME_FOR_N11=eth0
-            - SMF_INSTANCE_ID_0=1
-            - SMF_FQDN_0=oai-smf
-            - SMF_IPV4_ADDR_0=192.168.70.133
-            - SMF_HTTP_VERSION_0=v1
-            - SELECTED_0=true
-            - SMF_INSTANCE_ID_1=2
-            - SMF_FQDN_1=oai-smf
-            - SMF_IPV4_ADDR_1=0.0.0.0
-            - SMF_HTTP_VERSION_1=v1
-            - SELECTED_1=false
-            - MYSQL_SERVER=192.168.70.131
-            - MYSQL_USER=root
-            - MYSQL_PASS=linux
-            - MYSQL_DB=oai_db
-            - OPERATOR_KEY=504f20634f6320504f50206363500a4f
-            - NRF_IPV4_ADDRESS=192.168.70.130
-            - NRF_PORT=80
-            - EXTERNAL_NRF=no
-            - NF_REGISTRATION=yes
-            - SMF_SELECTION=yes
-            - USE_FQDN_DNS=yes
-            - EXTERNAL_AUSF=yes
-            - EXTERNAL_UDM=no
-            - EXTERNAL_NSSF=no
-            - USE_HTTP2=no
-            - NRF_API_VERSION=v1
-            - NRF_FQDN=oai-nrf
-            - AUSF_IPV4_ADDRESS=192.168.70.138
-            - AUSF_PORT=80
-            - AUSF_API_VERSION=v1
-            - AUSF_FQDN=oai-ausf
-            - UDM_IPV4_ADDRESS=192.168.70.137
-            - UDM_PORT=80
-            - UDM_API_VERSION=v2
-            - UDM_FQDN=oai-udm
-            - HTTP_PROXY=${http_proxy}
-            - HTTPS_PROXY=${https_proxy}
+	        container_name: "oai-amf"
+	        image: oai-amf:v1.4.0
+	        environment:
+	            - TZ=Asia/India
+	            - INSTANCE=0
+	            - PID_DIRECTORY=/var/run
+	            - MCC=001
+	            - MNC=01
+	            - REGION_ID=128
+	            - AMF_SET_ID=1
+	            - SERVED_GUAMI_MCC_0=001
+	            - SERVED_GUAMI_MNC_0=01 # 95
+	            - SERVED_GUAMI_REGION_ID_0=128
+	            - SERVED_GUAMI_AMF_SET_ID_0=1
+	            - SERVED_GUAMI_MCC_1=001  # 460
+	            - SERVED_GUAMI_MNC_1=01  # 11
+	            - SERVED_GUAMI_REGION_ID_1=10
+	            - SERVED_GUAMI_AMF_SET_ID_1=1
+	            - PLMN_SUPPORT_MCC=001
+	            - PLMN_SUPPORT_MNC=01
+	            - PLMN_SUPPORT_TAC=1 #0xa000 to connect gNB
+	            - SST_0=1
+	            - SD_0=1  #0xFFFFFF
+	           <b> - SST_1=1
+	            - SD_1=1 </b>
+	            - SST_2=222
+	            - SD_2=123 
+	            - AMF_INTERFACE_NAME_FOR_NGAP=eth0
+	            - AMF_INTERFACE_NAME_FOR_N11=eth0
+	            - SMF_INSTANCE_ID_0=1
+	            - SMF_FQDN_0=oai-smf
+	            - SMF_IPV4_ADDR_0=192.168.70.133
+	            - SMF_HTTP_VERSION_0=v1
+	            - SELECTED_0=true
+	            - SMF_INSTANCE_ID_1=2
+	            - SMF_FQDN_1=oai-smf
+	            - SMF_IPV4_ADDR_1=0.0.0.0
+	            - SMF_HTTP_VERSION_1=v1
+	            - SELECTED_1=false
+	            - MYSQL_SERVER=192.168.70.131
+	            - MYSQL_USER=root
+	            - MYSQL_PASS=linux
+	            - MYSQL_DB=oai_db
+	            - OPERATOR_KEY=504f20634f6320504f50206363500a4f
+	            - NRF_IPV4_ADDRESS=192.168.70.130
+	            - NRF_PORT=80
+	            - EXTERNAL_NRF=no
+	            - NF_REGISTRATION=yes
+	            - SMF_SELECTION=yes
+	            - USE_FQDN_DNS=yes
+	            - EXTERNAL_AUSF=yes
+	            - EXTERNAL_UDM=no
+	            - EXTERNAL_NSSF=no
+	            - USE_HTTP2=no
+	            - NRF_API_VERSION=v1
+	            - NRF_FQDN=oai-nrf
+	            - AUSF_IPV4_ADDRESS=192.168.70.138
+	            - AUSF_PORT=80
+	            - AUSF_API_VERSION=v1
+	            - AUSF_FQDN=oai-ausf
+	            - UDM_IPV4_ADDRESS=192.168.70.137
+	            - UDM_PORT=80
+	            - UDM_API_VERSION=v2
+	            - UDM_FQDN=oai-udm
+	            - HTTP_PROXY=${http_proxy}
+	            - HTTPS_PROXY=${https_proxy}
 	</p></pre>
-   	- Check `DNN_NI` in `oai-smf` service
-    	- <pre><p>
+ * In `docker-compose` [file](https://github.com/5g-ucl-idrbt/oai-core/blob/main/docker-compose/docker-compose-basic-nrf.yaml)
+   	- Check `DNN_NI` in `oai-smf` service. (Here the `DNN_NI` Name should be the `APN`)
+   	- <pre><p>
 		oai-smf:
-        container_name: "oai-smf"
-        image: oai-smf:v1.4.0
-        environment:
-            - TZ=Asia/India
-            - INSTANCE=0
-            - PID_DIRECTORY=/var/run
-            - SMF_INTERFACE_NAME_FOR_N4=eth0
-            - SMF_INTERFACE_NAME_FOR_SBI=eth0
-            - SMF_INTERFACE_PORT_FOR_SBI=80
-            - SMF_INTERFACE_HTTP2_PORT_FOR_SBI=9090
-            - SMF_API_VERSION=v1
-            - DEFAULT_DNS_IPV4_ADDRESS=172.21.3.100
-            - DEFAULT_DNS_SEC_IPV4_ADDRESS=8.8.8.8
-            - AMF_IPV4_ADDRESS=192.168.70.132
-            - AMF_PORT=80
-            - AMF_API_VERSION=v1
-            - AMF_FQDN=oai-amf
-            - UDM_IPV4_ADDRESS=192.168.70.137
-            - UDM_PORT=80
-            - UDM_API_VERSION=v2
-            - UDM_FQDN=oai-udm
-            - UPF_IPV4_ADDRESS=192.168.70.134
-            - UPF_FQDN_0=oai-spgwu
-            - NRF_IPV4_ADDRESS=192.168.70.130
-            - NRF_PORT=80
-            - NRF_API_VERSION=v1
-            - USE_LOCAL_SUBSCRIPTION_INFO=yes  #Set to yes if SMF uses local subscription information instead of from an UDM
-            - USE_NETWORK_INSTANCE=no  #Set yes if network instance is to be used for given UPF
-            - NRF_FQDN=oai-nrf
-            - REGISTER_NRF=yes
-            - DISCOVER_UPF=yes
-            - USE_FQDN_DNS=yes
-            - HTTP_VERSION=1        # Default: 1
-            - UE_MTU=1500
-            - DNN_NI0=oai </b>
-            - TYPE0=IPv4
-            - DNN_RANGE0=12.1.1.151 - 12.1.1.253
-            - NSSAI_SST0=1
-            - NSSAI_SD0=0xFFFFFF
-            - SESSION_AMBR_UL0=200Mbps
-            - SESSION_AMBR_DL0=400Mbps
-            <b>- DNN_NI1=oai.ipv4</b>
-            - TYPE1=IPv4
-            - DNN_RANGE1=12.1.1.51 - 12.1.1.150
-            - NSSAI_SST1=1
-            - NSSAI_SD1=1
-            - SESSION_AMBR_UL1=100Mbps
-            - SESSION_AMBR_DL1=200Mbps
-            - DNN_NI2=default
-            - TYPE2=IPv4
-            - DNN_RANGE2=12.1.1.2 - 12.1.1.50
-            - NSSAI_SST2=1  # 222
-            - NSSAI_SD2=1  # 123
-            - SESSION_AMBR_UL2=50Mbps
-            - SESSION_AMBR_DL2=100Mbps
-            - DNN_NI3=oai.ipv4  # ims
-            - TYPE3=IPv4  #IPv4v6
-            - DNN_RANGE3=14.1.1.2 - 14.1.1.253
-            - DEFAULT_CSCF_IPV4_ADDRESS=127.0.0.1  # only needed when ims is being used
-            - ENABLE_USAGE_REPORTING=no # Set yes if UE USAGE REPORTING is to be done at UPF
-            - HTTP_PROXY=${http_proxy}
-            - HTTPS_PROXY=${https_proxy}
+	        container_name: "oai-smf"
+	        image: oai-smf:v1.4.0
+	        environment:
+	            - TZ=Asia/India
+	            - INSTANCE=0
+	            - PID_DIRECTORY=/var/run
+	            - SMF_INTERFACE_NAME_FOR_N4=eth0
+	            - SMF_INTERFACE_NAME_FOR_SBI=eth0
+	            - SMF_INTERFACE_PORT_FOR_SBI=80
+	            - SMF_INTERFACE_HTTP2_PORT_FOR_SBI=9090
+	            - SMF_API_VERSION=v1
+	            - DEFAULT_DNS_IPV4_ADDRESS=172.21.3.100
+	            - DEFAULT_DNS_SEC_IPV4_ADDRESS=8.8.8.8
+	            - AMF_IPV4_ADDRESS=192.168.70.132
+	            - AMF_PORT=80
+	            - AMF_API_VERSION=v1
+	            - AMF_FQDN=oai-amf
+	            - UDM_IPV4_ADDRESS=192.168.70.137
+	            - UDM_PORT=80
+	            - UDM_API_VERSION=v2
+	            - UDM_FQDN=oai-udm
+	            - UPF_IPV4_ADDRESS=192.168.70.134
+	            - UPF_FQDN_0=oai-spgwu
+	            - NRF_IPV4_ADDRESS=192.168.70.130
+	            - NRF_PORT=80
+	            - NRF_API_VERSION=v1
+	            - USE_LOCAL_SUBSCRIPTION_INFO=yes  #Set to yes if SMF uses local subscription information instead of from an UDM
+	            - USE_NETWORK_INSTANCE=no  #Set yes if network instance is to be used for given UPF
+	            - NRF_FQDN=oai-nrf
+	            - REGISTER_NRF=yes
+	            - DISCOVER_UPF=yes
+	            - USE_FQDN_DNS=yes
+	            - HTTP_VERSION=1        # Default: 1
+	            - UE_MTU=1500
+	            - DNN_NI0=oai </b>
+	            - TYPE0=IPv4
+	            - DNN_RANGE0=12.1.1.151 - 12.1.1.253
+	            - NSSAI_SST0=1
+	            - NSSAI_SD0=0xFFFFFF
+	            - SESSION_AMBR_UL0=200Mbps
+	            - SESSION_AMBR_DL0=400Mbps
+	            <b>- DNN_NI1=oai.ipv4</b>
+	            - TYPE1=IPv4
+	            - DNN_RANGE1=12.1.1.51 - 12.1.1.150
+	            - NSSAI_SST1=1
+	            - NSSAI_SD1=1
+	            - SESSION_AMBR_UL1=100Mbps
+	            - SESSION_AMBR_DL1=200Mbps
+	            - DNN_NI2=default
+	            - TYPE2=IPv4
+	            - DNN_RANGE2=12.1.1.2 - 12.1.1.50
+	            - NSSAI_SST2=1  # 222
+	            - NSSAI_SD2=1  # 123
+	            - SESSION_AMBR_UL2=50Mbps
+	            - SESSION_AMBR_DL2=100Mbps
+	            - DNN_NI3=oai.ipv4  # ims
+	            - TYPE3=IPv4  #IPv4v6
+	            - DNN_RANGE3=14.1.1.2 - 14.1.1.253
+	            - DEFAULT_CSCF_IPV4_ADDRESS=127.0.0.1  # only needed when ims is being used
+	            - ENABLE_USAGE_REPORTING=no # Set yes if UE USAGE REPORTING is to be done at UPF
+	            - HTTP_PROXY=${http_proxy}
+	            - HTTPS_PROXY=${https_proxy}
 	</p></pre>
+ 
 
 
 
