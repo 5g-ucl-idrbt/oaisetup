@@ -54,9 +54,15 @@ sudo docker -f docker-compose-basic-nrf.yam logs --follow
 An error related to SMF means some issue in APN settings. To fix that, use the following steps.
 * In `oai_db3.sql` [file](https://github.com/5g-ucl-idrbt/oai-core/blob/main/docker-compose/database/oai_db3.sql)
   	- Find the values of `SST` and `SD`. e.g.
-  	- <pre><p>
-  	  INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES<br> ('001010000000037', '00101', <b>'{\"sst\": 1, \"sd\": \"1\"}'</b>,<br>'{\"default\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},\"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},\"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},\"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.10\"}]}}');
-	</p></pre>
+  	- <pre><code>
+  	  INSERT INTO `SessionManagementSubscriptionData`
+  	  (`ueid`, `servingPlmnid`, `singleNssai`, `dnnConfigurations`) VALUES
+	  ('001010000000037', '00101', <b>{\"sst\": 1, \"sd\": \"1\"}'</b>,
+	  '{\"default\":{\"pduSessionTypes\":{ \"defaultSessionType\": \"IPV4\"},\"sscModes\": {\"defaultSscMode\": \"SSC_MODE_1\"},
+	  \"5gQosProfile\": {\"5qi\": 6,\"arp\":{\"priorityLevel\": 1,\"preemptCap\": \"NOT_PREEMPT\",\"preemptVuln\":\"NOT_PREEMPTABLE\"},
+	  \"priorityLevel\":1},\"sessionAmbr\":{\"uplink\":\"100Mbps\", \"downlink\":\"100Mbps\"},
+	  \"staticIpAddress\":[{\"ipv4Addr\": \"12.1.1.10\"}]}}');
+	</code></pre>
  * In `docker-compose` [file](https://github.com/5g-ucl-idrbt/oai-core/blob/main/docker-compose/docker-compose-basic-nrf.yaml)
    	- Check `SST` and `SD` values in `oai-amf` service
    	- <pre><p>
