@@ -44,6 +44,7 @@ APN: OpenCells01 # SPN
 * Use the code `*#*#4636#*#*` to open the Testing configuration
 * `Phone Information` > `Set preferred Network Type` = `NR only` (To save the changes left swipe)
 * `Phone Information` > `...` (i.e. Settings icon in top right) > `Select Radio Band` > `Europe`
+* Restart the phone
 
 ### If UE is connected, but not connecting to the Internet
 Check the oai-core logs using 
