@@ -135,7 +135,7 @@ An error related to SMF means some issue in APN settings. To fix that, use the f
 	            - HTTPS_PROXY=${https_proxy}
 	</p></pre>
  * In `docker-compose` [file](https://github.com/5g-ucl-idrbt/oai-core/blob/main/docker-compose/docker-compose-basic-nrf.yaml)
-   	- Check `DNN_NI` in `oai-smf` service. (Here the `DNN_NI` Name should be the `APN`)
+   	- Check `DNN_NI` in `oai-smf` and `oai-spgwu` service. (Here the `DNN_NI` Name should be the `APN`)
    	- <pre><p>
 		oai-smf:
 	        container_name: "oai-smf"
