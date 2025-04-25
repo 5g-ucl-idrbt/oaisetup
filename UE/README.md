@@ -232,7 +232,9 @@ eSim QR contains the following information
 1. Other Network-specific Information: Depending on the carrier and eSIM implementation, the QR code may contain additional information specific to the network, such as authentication keys, network settings, and access credentials.
 When you scan the eSIM QR code using your device's camera or enter the data manually, your device uses this information to establish a connection with the SM-DP+ server, retrieve the eSIM profile, and activate the eSIM on your device. The specific details contained within the eSIM QR code may vary depending on the carrier, device, and eSIM implementation being used.
 
-
+OPERATOR_KEY=0C0A34601D4F07677303652C0462535B 
+INSERT INTO `AuthenticationSubscription` (`ueid`, `authenticationMethod`, `encPermanentKey`, `protectionParameterId`, `sequenceNumber`, `authenticationManagementField`, `algorithmId`, `encOpcKey`, `encTopcKey`, `vectorGenerationInHss`, `n5gcAuthMethod`, `rgAuthenticationInd`, `supi`) VALUES
+('001010000000032', '5G_AKA', '0C0A34601D4F07677303652C0462535B', '0C0A34601D4F07677303652C0462535B', '{\"sqn\": \"000000000020\", \"sqnScheme\": \"NON_TIME_BASED\", \"lastIndexes\": {\"ausf\": 0}}', '8000', 'milenage', '63bfa50ee6523365ff14c1f45f88737d', NULL, NULL, NULL, NULL, '001010000000032'),
 
 
 
